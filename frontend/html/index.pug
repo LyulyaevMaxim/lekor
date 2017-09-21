@@ -1,0 +1,17 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+
+include ../components/head/head
+include ../components/header/header
+
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Главная",
+      "description": "Главная страница",
+      "style_page": "styles/index.css"
+    })
+
++header()
++b.BODY.main-page 
