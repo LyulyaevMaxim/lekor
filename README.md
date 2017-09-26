@@ -1,2 +1,2 @@
-# lekor
-Redesign for https://lekor.ru/
+## ГЛАВНАЯ
+https://maxim-buslaev.github.io/lekor/public
