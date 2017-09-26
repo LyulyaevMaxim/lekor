@@ -1,2 +1,84 @@
 mixin header()
   header
+    +b.DIV.header__container
+      +e.A(href="#").logo
+      +b.FORM(action="/search" method="get").header-search
+        input(type="checkbox")#showSearchForm
+        label(for="showSearchForm")
+        input(type="search" placeholder="Поиск ортоп. товаров" autocomplete="off")
+        input(type="submit")
+      +b.header-address
+        +e.icon
+        +e.text Нижний Новгород
+      +b.header-timework
+        +e.text Ежедневно с 8 до 17
+      +b.header-login
+        +e.icon
+        +e.text Вход
+      +b.header-cart
+        +e.icon(quantity=2)
+        +e.text 2 690 руб
+      +b.header-menu
+        +e.catalog
+          #showCatalogMenu Каталог
+          .header-menu-catalog-body
+            .header-menu-catalog-body__title
+              .down
+              p Каталог
+              .close          
+            nav
+              ul.header-menu-catalog-body__root_menu
+                li: a(href="#") Товары по акции
+                li              
+                  ul.header-menu-catalog-body__submenu
+                    li: a(href="#") 1 1
+                    li: a(href="#") 1 2
+                    li: a(href="#") 1 3
+                  a(href="#") Ортопедические товары 
+                li     
+                  ul.header-menu-catalog-body__submenu
+                    li: a(href="#") Вкладные приспособления в обувь
+                    li                      
+                      ul.header-menu-catalog-body__submenu
+                        li: a(href="#") 3 2 1
+                        li: a(href="#") 3 2 2
+                        li: a(href="#") 3 2 3
+                        li: a(href="#") 3 2 3
+                      a(href="#") Компрессионный трикотаж
+                    li                      
+                      ul.header-menu-catalog-body__submenu
+                        li: a(href="#") Стельки взрослые
+                        li: a(href="#") Стельки детские
+                        li: a(href="#") Полустельки
+                      a(href="#") Стельки ортопедические
+                  a(href="#") Детская ортопедическая обувь  
+                              
+        +b.header-menu-main
+          input(type="checkbox")#showMainMenu
+          label(for="showMainMenu")  
+          nav
+            +e.UL.root-menu
+              li.header-for-buyer                
+                a(href="#") Покупателям
+                ul.submenu
+                  li: a(href="#") О магазине
+                  li: a(href="#") Отзывы
+                  li: a(href="#") Полезные статьи
+                  li: a(href="#") Гарантия и возврат
+                  li: a(href="#") Оплата и доставка
+                  li: a(href="#") Контакты                  
+              li.header-point-self-exportation: a(href="#") Пункты выдачи          
+              li.header-callback
+                .header-callback-phone
+                  .header-callback-phone__icon
+                  .header-callback-phone__numbers
+                    a(href="tel:88007754330") 8 800 775-43-30
+                a(href="#").header-callback-button Заказать звонок              
+              li.header-select-product
+                form
+                  input(type="checkbox")#showSelectProduct
+                  label(for="showSelectProduct") Подбор по заболеванию
+                  .body
+                    p Подбор товара по заболеванию
+                    .select Выберите заболевание
+                    input(type="submit" value="Подобрать")           
