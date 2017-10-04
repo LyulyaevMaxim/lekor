@@ -7,7 +7,7 @@
 // @import "../components/footer/footer.scss";
 
 /**************BEGIN: СЛАЙДЕРЫ ************************/
-// @import "../components/sliders/full-slider/full-slider.scss";
+@import "../components/sliders/full-slider/full-slider.scss";
 /***************END: СЛАЙДЕРЫ *****************/
 
 /**************BEGIN: ФОРМЫ ************************/
@@ -16,6 +16,8 @@
 /***************END: ФОРМЫ *****************/
 
 /**************BEGIN: КОНТЕНТ ************************/
+@import "../components/product-items/item.scss";
+@import "../components/product-items/items-section.scss";
 // @import "../components/content/block-with-img/block-with-img.scss";
 // @import "../components/content/content-with-img/content-with-img.scss";
 // @import "../components/content/block-for-articles/block-for-articles.scss";
@@ -26,8 +28,8 @@
 // @import "../components/select/select.scss";
 /***************END: ИНОЕ  *****************/
 
-              
-                            
+                     
+                                    
                                                                        
                   
-                                                  
+                                                    

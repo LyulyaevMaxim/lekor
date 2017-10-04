@@ -1,0 +1,158 @@
+item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 33px;
+  border: 1px solid $white;
+  background: $white;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 31px;
+  }
+
+  .picture {
+    width: 140px;
+    height: 140px;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      width: 215px;
+      height: 215px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    & + .description {
+      margin-top: 15px;
+
+      @media (min-width: $tablet) {
+        margin-top: 11px;
+      }
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 19px;
+    // align-self: flex-end;
+    @media (min-width: $tablet) {
+      height: calc(100% - 215px);
+    }
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    // word-break: break-all;
+    @media (min-width: $tablet) {
+      height: 60px;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-bottom: -9px;
+    }
+
+    & + .add-to-compare {
+      margin-top: 18px;
+
+      @media (min-width: $tablet) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .add-to-compare {
+    display: flex;
+    width: 100%;
+
+    &::before {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      min-width: 17px;
+      height: 18px;
+      margin-right: 3px;
+    }
+
+    &::after {
+      content: "Добавить к сравнению";
+      display: block;
+      color: $light-black;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    & + .price {
+      margin-top: 18px;
+
+      @media (min-width: $tablet) {
+        margin-top: 28px;
+      }
+    }
+  }
+
+  .price {
+    min-width: 99px;
+    padding-right: 10px;
+
+    p {
+      font-weight: $PTSansBold;
+      color: $black;
+      font-size: 20px;
+      line-height: 27px;
+
+      & + .old {
+        margin-top: 2px;
+
+        @media (min-width: $tablet) {
+          margin-top: 1px;
+        }
+      }
+    }
+
+    .old {
+      font-weight: $PTSansRegular;
+      color: #9b9b9b;
+      font-size: 14px;
+      line-height: 19px;
+      text-decoration: line-through;
+    }
+
+    & + .add-to-cart {
+      margin-top: 13px;
+
+      @media (min-width: $tablet) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .add-to-cart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 20px;
+    color: $white;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: $gold;
+    border-radius: 60px;
+    border: 1px solid $gold;
+  }
+}

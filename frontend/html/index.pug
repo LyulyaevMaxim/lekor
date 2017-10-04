@@ -5,6 +5,8 @@ include ../components/header/header
 //- include ../components/footer/footer
 include ../components/connect-js/scripts
 //- контент
+include ../components/product-items/items-section
+include ../components/product-items/item
 //- include ../components/content/block-with-img/block-with-img
 //- include ../components/content/content-with-img/content-with-img
 //- include ../components/content/block-for-features/block-for-features
@@ -18,7 +20,7 @@ include ../components/connect-js/scripts
 //- include ../components/forms/buy-one-click/buy-one-click
 //- слайдеры
 //- include ../components/sliders/tables/table
-//- include ../components/sliders/full-slider/full-slider
+include ../components/sliders/full-slider/full-slider
 //- include ../components/sliders/gallery/gallery
 
 doctype html
@@ -30,10 +32,32 @@ html(lang="ru")
     })
 
 +header()
-p 123
 +b.BODY.main-page
-
-+scripts() 
-
-//- script(src="js/jquery/jquery.min.js")
-//- script(src="js/header.js")   
+  +full-slider()
+  +items-section({ 
+    "section_class": "best-price",
+    "data-atribute": "Лучшая цена",
+    "section_title": "Лучшая цена",
+    "items_index": [0, 1, 2, 3, 4],
+    "item_picture": ["item--clock.jpg", "item--milk.jpg", "item--tonometr.jpg", "item--massage.jpg", "item--ultra.jpg"],
+    "item_title": ["Часы-пульсометры Beurer PM16", "Компрессорный небулайзер (ингалятор) CN-HT 05 «Джино»", "Тонометр Microlife BP A6 PC", "Массажер антицеллюлитный Cellules MD", "Ультразвуковой увлажнитель Ballu UHB-190"],
+    "item_price": ["3 390 р.", "3 390 р.", "5 540 р.", "5 540 р.","2 990 р."]
+  })
+  +items-section({ 
+    "section_class": "new-products",
+    "section_title": "Новинки",
+    "items_index": [0, 1, 2, 3],
+    "item_picture": ["item--clock.jpg", "item--ultra.jpg", "item--massage.jpg", "item--tonometr.jpg"],
+    "item_title": ["Часы-пульсометры Beurer PM16", "Ультразвуковой увлажнитель Ballu UHB-190", "Массажер антицеллюлитный Cellules MD", "Тонометр Microlife BP A6 PC"],
+    "item_price": ["3 390 р.", "2 390 р.", "5 540 р.", "5 540 р."]
+  })
+  +items-section({ 
+    "section_class": "popular-products",
+    "section_title": "Популярное",
+    "items_index": [0, 1, 2, 3],
+    "item_picture": ["item--tonometr.jpg", "item--massage.jpg", "item--clock.jpg","item--mesh.jpg"],
+    "item_title": ["Тонометр Microlife BP A6 PC", "Массажер антицеллюлитный Cellules MD", "Часы-пульсометры Beurer PM16", "Меш-небулайзер B.Well WN-114 child"],
+    "item_price": ["5 540 р.", "5 540 р.", "3 390 р.", "4 890 р."]
+  })  
+p 123 
++scripts()    

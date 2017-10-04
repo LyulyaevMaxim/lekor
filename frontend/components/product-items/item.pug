@@ -1,0 +1,13 @@
+mixin item(img, title, price)
+  item
+    .picture
+      img(src="img/content/" + img)
+    .description
+      .title #{title}
+      .add-to-compare
+      .price
+        p #{price}
+        p.old 18 199 р.
+      a(href="#").add-to-cart Купить
+      
+      

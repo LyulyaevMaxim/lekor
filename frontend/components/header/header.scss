@@ -1,5 +1,6 @@
 header {
   position: relative;
+  background: $white;
 }
 
 .header__container {
@@ -853,11 +854,12 @@ header {
 
   nav {
     height: 100vh;
-    background: white;
+    background: $white;
 
     @media (min-width: $desktop) {
       position: relative;
       height: auto;
+      background: none;
     }
   }
 }
@@ -1040,6 +1042,10 @@ header {
 
   li {
     display: none;
+
+    @media (min-width: $desktop) {
+      background: $white;
+    }
   }
 
   & > li:hover .header-menu-catalog-body__submenu {
@@ -1076,7 +1082,7 @@ header {
       & > ul {
         top: 0 !important;
         width: 33.4%;
-        left: 33.3%;
+        left: 33.4%;
         border-right: 1px solid #e7e7e7;
         border-bottom: 1px solid #e7e7e7;
         border-left: 1px solid #e7e7e7;

@@ -1,0 +1,14 @@
+mixin full-slider() 
+  slider.owl-carousel.owl-theme.owl-full-slider
+    slide
+      picture
+        source(media="(min-width: 1440px)" srcset="img/content/main-banner--1440.jpg")
+        source(media="(min-width: 1024px)" srcset="img/content/main-banner--1024.jpg")
+        source(media="(min-width: 768px)" srcset="img/content/main-banner--768.jpg")
+        img(src="img/content/main-banner--320.jpg" alt="")
+    slide
+      img(data-src="img/content/main-banner--1440.jpg" alt="").owl-lazy
+    slide
+      img(data-src="img/content/main-banner--1440.jpg" alt="").owl-lazy
+    slide
+      img(data-src="img/content/main-banner--1440.jpg" alt="").owl-lazy     

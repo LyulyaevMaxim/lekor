@@ -1,0 +1,111 @@
+slider.owl-full-slider {
+  overflow-x: hidden;
+  margin-top: -1px;
+  display: flex;
+
+  & + * {
+    margin-top: 21px;
+  }
+
+  picture,
+  .owl-carousel .owl-item img {
+    width: 100%;
+    display: flex;
+  }
+
+  .owl-nav {
+    margin: 0;
+
+    .owl-next,
+    .owl-prev,
+    .owl-next:hover,
+    .owl-prev:hover {
+      margin: 0;
+      position: absolute;
+      height: 66px;
+      width: 63px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-color: transparent;
+
+      @media (min-width: $big-desktop) {
+        top: 35.5%;
+      }
+    }
+
+    .owl-next {
+      right: 0;
+
+      @media (min-width: $tablet) {
+        right: 22px;
+      }
+
+      @media (min-width: $desktop) {
+        right: 40px;
+      }
+
+      @media (min-width: $big-desktop) {
+        right: 54px;
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+
+      @media (min-width: $tablet) {
+        left: 22px;
+      }
+
+      @media (min-width: $desktop) {
+        left: 40px;
+      }
+
+      @media (min-width: $big-desktop) {
+        left: 54px;
+      }
+    }
+  }
+}
+
+slider.owl-full-slider,
+slider.owl-full-slider img {
+  height: 301px;
+
+  @media (min-width: $tablet) {
+    height: 428px;
+  }
+
+  @media (min-width: $big-desktop) {
+    height: 601px;
+  }
+}
+
+slider.owl-full-slider .owl-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .owl-dot {
+    background: white;
+    border: 1px solid #979797;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    span {
+      display: none;
+    }
+
+    &.active {
+      background: $gold;
+      border-color: $gold;
+    }
+
+    & + .owl-dot {
+      margin-left: 13px;
+    }
+  }
+}
