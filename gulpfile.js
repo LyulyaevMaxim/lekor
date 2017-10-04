@@ -51,9 +51,9 @@ const
 const base_plugins = [
   precss,
   assets({ loadPaths: ['img/'] }),
-  sprites({
-    spritePath: './public/img'
-  }),
+  // sprites({
+  //   spritePath: './public/img'
+  // }),
   // postcss_css_reset,
   autoprefixer({ browsers: ['last 3 version'] }),
   mqpacker({ sort: true })
@@ -81,7 +81,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('public/js'))
 });
 
-gulp.task('js-es', function () {
+gulp.task('scripts-es', function () {
   return gulp.src('public/js/*.js')
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -90,6 +90,23 @@ gulp.task('js-es', function () {
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/js'))
+});
+
+gulp.task('scripts-components', function () {
+  return gulp.src('frontend/components/**/*.js', { since: gulp.lastRun('scripts-components') })
+    .pipe(newer('public/js/components'))
+    .pipe(gulp.dest('public/js/components'))
+});
+
+gulp.task('components-es', function () {
+  return gulp.src('public/js/components/**/*.js')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('public/js/components'))
 });
 /*---------------------END: Scripts--------------------------*/
 
@@ -115,11 +132,11 @@ gulp.task('сss-optim', function () {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('clean', function () {
-  return del('public/img/sprite');
-});
+// gulp.task('clean', function () {
+//   return del('public/img/sprite');
+// });
 
-gulp.task('build', gulp.parallel('js-optim', 'сss-optim', 'clean'));
+gulp.task('build', gulp.parallel('js-optim', 'сss-optim'));
 /*---------------------END: Build--------------------------*/
 
 
@@ -132,7 +149,7 @@ gulp.task('reload', function (done) {
 /*---------------------END: RELOAD BROWSERS--------------------------*/
 
 
-gulp.task('default', gulp.series(gulp.parallel(gulp.series('img', 'css'), gulp.series('scripts', 'js-es'), gulp.series('html', function () {
+gulp.task('default', gulp.series(gulp.parallel(gulp.series('img', 'css'), gulp.series('scripts', 'scripts-components', 'scripts-es', 'components-es'), gulp.series('html', function () {
   browserSync.init({
     server: {
       baseDir: "./public/"
@@ -140,7 +157,7 @@ gulp.task('default', gulp.series(gulp.parallel(gulp.series('img', 'css'), gulp.s
   })
   gulp.watch('frontend/img/**/*.*', gulp.series('img', 'reload'));
   gulp.watch(['frontend/css/*.scss'], gulp.series('css', 'reload'));
-  gulp.watch(['frontend/js/**/*.js'], gulp.series('scripts', 'js-es', 'reload'));
+  gulp.watch(['frontend/js/**/*.js', 'frontend/components/**/*.js'], gulp.series('scripts', 'scripts-components', 'scripts-es', 'components-es', 'reload'));
   gulp.watch(['frontend/html/*.pug'], gulp.series('html', 'reload'));
 }))
 ));

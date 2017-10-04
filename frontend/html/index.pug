@@ -1,21 +1,39 @@
+include ../components/head/head
 include _assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
-
-include ../components/head/head
 include ../components/header/header
+//- include ../components/footer/footer
+include ../components/connect-js/scripts
+//- контент
+//- include ../components/content/block-with-img/block-with-img
+//- include ../components/content/content-with-img/content-with-img
+//- include ../components/content/block-for-features/block-for-features
+//- include ../components/content/block-for-advantages/block-for-advantages
+//- include ../components/content/block-for-articles/block-for-articles
+//- include ../components/content/block-for-lists/block-for-lists
+//- include ../components/content/files-for-download/files-for-download
+//- формы
+//- include ../components/forms/calculation-cost/calculation-cost
+//- include ../components/forms/feedback/feedback
+//- include ../components/forms/buy-one-click/buy-one-click
+//- слайдеры
+//- include ../components/sliders/tables/table
+//- include ../components/sliders/full-slider/full-slider
+//- include ../components/sliders/gallery/gallery
 
 doctype html
 html(lang="ru")
   head
     +head({
       "title": "Главная",
-      "description": "Главная страница",
-      "style_page": "styles/index.css"
+      "description": "Главная страница"
     })
 
 +header()
-p 12
+p 123
 +b.BODY.main-page
 
-script(src="js/jquery/jquery.min.js")
-script(src="js/header.js")   
++scripts() 
+
+//- script(src="js/jquery/jquery.min.js")
+//- script(src="js/header.js")   

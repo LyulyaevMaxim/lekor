@@ -8,7 +8,11 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<meta name="format-detection" content="telephone=no"/>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-		<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;amp;subset=cyrillic" crossorigin="crossorigin"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-regular.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-italic.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700-italic.woff2"/>
+		<link rel="stylesheet" href="styles/img.css"/>
 		<link href="img/favicons/favicon.ico" rel="shortcut icon"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
@@ -16,8 +20,7 @@
 		<link rel="manifest" href="img/favicons/manifest.json"/>
 		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
 		<meta name="theme-color" content="#ffffff"/>
-		<link rel="stylesheet" href="styles/img.css"/>
-		<link rel="stylesheet" href="styles/index.css"/>
+		<link rel="stylesheet" href="styles/styles.css"/>
 	</head>
 </html>
 <header>
@@ -132,8 +135,8 @@
 		</div>
 	</div>
 </header>
-<p>12</p>
+<p>123</p>
 <body class="main-page">
 </body>
 <script src="js/jquery/jquery.min.js"></script>
-<script src="js/header.js">  </script>
+<script src="js/components/header/header.js" async="async"></script>
