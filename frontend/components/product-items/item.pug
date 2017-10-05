@@ -1,13 +1,14 @@
-mixin item(img, title, price)
+mixin item(attribute, img, title, price)
   item
+    .label: span #{attribute}
     .picture
       img(src="img/content/" + img)
     .description
-      .title #{title}
+      .title: span #{title}
       .add-to-compare
       .price
         p #{price}
         p.old 18 199 р.
-      a(href="#").add-to-cart Купить
+      .add-to-cart Купить
       
       

@@ -6,9 +6,47 @@ item {
   padding-bottom: 33px;
   border: 1px solid $white;
   background: $white;
+  position: relative;
 
   @media (min-width: $tablet) {
     padding-bottom: 31px;
+  }
+
+  .label {
+    @media (min-width: $big-desktop) {
+      position: absolute;
+      left: 6px;
+      top: 14px;
+      display: flex;
+      align-items: center;
+      height: 90px;
+      width: 90px;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 24px;
+
+      span {
+        font-size: 16px;
+        line-height: 18px;
+        color: $white;
+        display: block;
+        width: 65px;
+        z-index: 1;
+      }
+
+      &::before {
+        content: "";
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width: 90px;
+        height: 90px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 
   .picture {
@@ -49,14 +87,9 @@ item {
   }
 
   .title {
-    font-size: 16px;
-    line-height: 18px;
-    color: $black;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+
     // word-break: break-all;
+
     @media (min-width: $tablet) {
       height: 60px;
       margin-bottom: 12px;
@@ -64,6 +97,16 @@ item {
 
     @media (min-width: $big-desktop) {
       margin-bottom: -9px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 18px;
+      color: $black;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
     }
 
     & + .add-to-compare {
@@ -86,6 +129,7 @@ item {
       min-width: 17px;
       height: 18px;
       margin-right: 3px;
+      cursor: pointer;
     }
 
     &::after {
@@ -94,6 +138,7 @@ item {
       color: $light-black;
       font-size: 14px;
       line-height: 17px;
+      cursor: pointer;
     }
 
     & + .price {
@@ -154,5 +199,6 @@ item {
     background: $gold;
     border-radius: 60px;
     border: 1px solid $gold;
+    cursor: pointer;
   }
 }

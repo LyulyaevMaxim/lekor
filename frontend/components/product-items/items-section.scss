@@ -31,8 +31,14 @@ items-section {
     background: $green;
   }
 
-  &.popular-products::before {
-    background: $blue;
+  &.popular-products {
+    &::before {
+      background: $blue;
+    }
+
+    .label span {
+      text-transform: uppercase;
+    }
   }
 
   & > .title {
@@ -88,8 +94,13 @@ block-for-items {
   @media (min-width: $big-desktop) {
     margin-left: 56px;
     margin-right: 55px;
-    flex-wrap: nowrap;
     overflow: hidden;
+    height: 424px;
+    // opacity: 0;
+  }
+
+  @media (max-width: 1439px) {
+    height: auto !important;
   }
 
   item {
