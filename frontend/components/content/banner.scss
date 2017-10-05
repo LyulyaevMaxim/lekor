@@ -1,0 +1,104 @@
+block-for-img {
+  display: block;
+  margin-top: 19px;
+
+  @media (min-width: $tablet) {
+    margin-left: $margin-768;
+    margin-right: $margin-768;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: $margin-1024;
+    margin-right: $margin-1024;
+  }
+
+  @media (min-width: $big-desktop) {
+    margin-left: $margin-1440;
+    margin-right: $margin-1440;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.block-for-pig {
+  background-color: $gold;
+  padding-top: 35px;
+  padding-left: 23px;
+  padding-right: 23px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    padding-top: 71px;
+    padding-left: 41px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 78px;
+    padding-bottom: 105px;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 36px;
+    line-height: 42px;
+
+    @media (min-width: $tablet) {
+      width: 57%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70%;
+    }
+
+    & + .block-for-pig__description {
+      margin-top: 19px;
+
+      @media (min-width: $desktop) {
+        margin-top: 21px;
+      }
+
+      @media (min-width: $big-desktop) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__description {
+    color: $white;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 5px;
+
+    @media (min-width: $tablet) {
+      width: 61%;
+    }
+
+    @media (min-width: $big-desktop) {
+      width: 40%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    width: 207px;
+    height: 167px;
+    margin-left: auto;
+    margin-top: 37px;
+
+    @media (min-width: $tablet) {
+      position: absolute;
+      right: 39px;
+      bottom: 0;
+      margin: 0;
+    }
+
+    @media (min-width: $desktop) {
+      right: 96px;
+    }
+  }
+}

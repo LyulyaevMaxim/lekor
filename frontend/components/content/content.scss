@@ -12,6 +12,10 @@ content {
     padding-bottom: 46px;
   }
 
+  @media (min-width: $desktop) {
+    padding-right: 60px;
+  }
+
   @media (min-width: $big-desktop) {
     padding-top: 43px;
     padding-bottom: 74px;
