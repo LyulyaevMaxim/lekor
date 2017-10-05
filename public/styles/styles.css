@@ -233,6 +233,8 @@ NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */optgr
   /* justify-content: space-between;*/
   /* opacity: 1;*/
   background: #ededed;
+  max-width: 100vw;
+    overflow-x: hidden;
 }header {
   position: relative;
   background: #ffffff;
@@ -1683,7 +1685,9 @@ NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */optgr
   }
 }
 
-                                                     
+ @media (min-width: 1024px) {
+   html {overflow: initial !important;
+   }}
                                                  
                                                                                   
                                      
