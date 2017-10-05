@@ -1,16 +1,24 @@
-.mobile-hide {
-  display: none;
-}
-
-@media (min-width: $tablet) {
-  .tablet-on {
-    display: block;
+@media (max-width: 767px) {
+  .mobile-hide {
+    display: none !important;
   }
 }
 
-@media (min-width: $desktop) {
-  .desktop-on {
-    display: block;
+@media (min-width: $tablet) and (max-width: 1023px) {
+  .tablet-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: $desktop) and (max-width: 1439px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: $big-desktop) {
+  .big-desktop-hide {
+    display: none !important;
   }
 }
 

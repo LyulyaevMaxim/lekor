@@ -1,7 +1,7 @@
 items-section {
   position: relative;
 
-  & + items-section {
+  & + * {
     margin-top: 19px;
 
     @media (min-width: $tablet) {

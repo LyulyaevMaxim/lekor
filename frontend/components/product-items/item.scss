@@ -13,6 +13,8 @@ item {
   }
 
   .label {
+    display: none;
+
     @media (min-width: $big-desktop) {
       position: absolute;
       left: 6px;
@@ -187,18 +189,6 @@ item {
   }
 
   .add-to-cart {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    padding: 20px;
-    color: $white;
-    font-size: 16px;
-    line-height: 18px;
     text-transform: uppercase;
-    background: $gold;
-    border-radius: 60px;
-    border: 1px solid $gold;
-    cursor: pointer;
   }
 }

@@ -7,6 +7,7 @@ include ../components/connect-js/scripts
 //- контент
 include ../components/product-items/items-section
 include ../components/product-items/item
+include ../components/content/content
 //- include ../components/content/block-with-img/block-with-img
 //- include ../components/content/content-with-img/content-with-img
 //- include ../components/content/block-for-features/block-for-features
@@ -60,6 +61,19 @@ html(lang="ru")
     "item_picture": ["item--tonometr.jpg", "item--massage.jpg", "item--clock.jpg","item--mesh.jpg"],
     "item_title": ["Тонометр Microlife BP A6 PC", "Массажер антицеллюлитный Cellules MD", "Часы-пульсометры Beurer PM16", "Меш-небулайзер B.Well WN-114 child"],
     "item_price": ["5 540 р.", "5 540 р.", "3 390 р.", "4 890 р."]
-  })  
-p 123 
+  })
+  .content_and_social-network
+    content 
+      h2 о компании
+      p.    
+       Современный мир стал настолько стремителен и беспощаден к тем, кто отстает и не успевает. Мы настолько заняты, что нам некогда посвятить себя своему же здоровью. У нас нет времени вылечить болезнь. Мы живем на бегу. Едим на ходу. Мы даже лечимся на ходу, употребляя таблетки горстями.
+      p.mobile-hide.
+       Но неужели только таблетки сделают нас здоровыми? Кто-то должен сказать стоп! Кто-то должен сказать, что таблетки нужны, но не везде и не всегда. Да, мы не можем заменить все таблетки, но сократить количество и норму потребления нам удастся всегда! И разве это не здорово? Разве это не результат? Выбор есть всегда!
+      p.mobile-hide.
+       Аптека без таблеток — это больше, чем компания по продаже домашней медтехники, это философия здоровья без таблеток. В нашем арсенале представлено множество приборов применяемых в профессиональной медицине. Многие российские и зарубежные производители давно уже «одомашнили» и «приручили» профессиональные приборы физиолечения, сделав их доступными по цене и понятными на языке бытовой техники.
+      a(href="#").classic-button.tablet-hide.desktop-hide.big-desktop-hide Подробнее
+    #vk_groups
+      .vk-group-label: span Мы ВКонтакте            
+
+  p 123 
 +scripts()    
