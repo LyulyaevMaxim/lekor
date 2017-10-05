@@ -1085,6 +1085,7 @@ NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */optgr
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: initial;
     background: none;
     width: auto;
     height: 50px;
