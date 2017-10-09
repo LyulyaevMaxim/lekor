@@ -856,6 +856,11 @@ header {
     height: 100vh;
     background: $white;
 
+    @media (max-width: 1023px) {
+      overflow-y: auto;
+      padding-bottom: 50px;
+    }
+
     @media (min-width: $desktop) {
       position: relative;
       height: auto;
@@ -1090,6 +1095,7 @@ header {
         min-height: 100%;
         height: auto;
         position: absolute;
+        background: $white;
 
         &::before {
           display: none;

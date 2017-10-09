@@ -2,7 +2,7 @@ include ../components/head/head
 include _assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
 include ../components/header/header
-//- include ../components/footer/footer
+include ../components/footer/footer
 include ../components/connect-js/scripts
 //- контент
 include ../components/product-items/items-section
@@ -74,7 +74,8 @@ html(lang="ru")
       a(href="#").classic-button.tablet-hide.desktop-hide.big-desktop-hide Подробнее
     #vk_groups
       .vk-group-label: span Мы ВКонтакте
-  +banner()             
+  +banner()
+  +footer()             
 
   p 123 
 +scripts()    

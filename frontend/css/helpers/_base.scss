@@ -31,4 +31,16 @@ body {
   // justify-content: space-between;
   // opacity: 1;
   background: #ededed;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  html {
+    overflow: initial !important;
+  }
+}
+
+.block-html {
+  overflow-y: hidden !important;
 }
