@@ -2,6 +2,36 @@ mixin footer()
   footer
     +b.footer-info
       +e.NAV.menu
-        ul
-          li
-    .footer-creators
+        .footer-info-menu__main
+          a(href="#") о компании
+        ul.footer-info-menu__additional
+          li: a(href="#") О магазине
+          li: a(href="#") Отзывы
+          li: a(href="#") Полезные статьи
+          li: a(href="#") Гарантия и возврат
+          li: a(href="#") Оплата и доставка
+          li: a(href="#") Контакты
+      .footer-info-wrapper
+        +b.footer-info-callback
+          +e.icon
+          +e.numbers
+            a(href="tel:88007754330") 8 800 775-43-30
+            p Звонок бесплатный
+        +b.footer-info-social-network
+          p поделиться
+          +e.A(href="#").icon.twitter
+          +e.A(href="#").icon.vkontakte
+          +e.A(href="#").icon.facebook
+      +b.footer-info-for-payment
+        p принимаем к&nbsp;оплате
+        +e.A(href="#").icon.master-card
+        +e.A(href="#").icon.visa
+    +b.footer-creators
+      +e.owner
+        p Lekor, товары для здоровья и красоты.&nbsp;©&nbsp;2017
+      +e.A(href="http://www.webmechanica.ru/" target="_blank").company-creator
+        p Вебмеханика — создание сайта
+      +e.people-creators
+        a(href="mailto:maxim.lulaev@gmail.com") Frontend — Максим Люляев
+        p Дизайн сайта — Андрей Чикин 
+      
