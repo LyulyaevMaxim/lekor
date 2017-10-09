@@ -1504,7 +1504,7 @@ NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */optgr
     display: none;
   }
 }@media (min-width: 1024px) {
-  html {
+  html, html.block-html {
     overflow: initial !important;
   }
   .header__container {
