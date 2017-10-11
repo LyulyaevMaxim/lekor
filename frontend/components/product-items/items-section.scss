@@ -17,25 +17,30 @@ items-section {
     position: absolute;
     left: 0;
     top: 0;
+    background: $green;
 
     @media (min-width: $tablet) {
       height: 280px;
     }
   }
 
-  &.best-price::before {
+  &.red::before {
     background: $pink;
   }
 
-  &.new-products::before {
+  &.green::before {
     background: $green;
   }
 
-  &.popular-products {
-    &::before {
-      background: $blue;
-    }
+  &.blue::before {
+    background: $blue;
+  }
 
+  &.purple::before {
+    background: $purple;
+  }
+
+  &.popular-products {
     .label span {
       text-transform: uppercase;
     }

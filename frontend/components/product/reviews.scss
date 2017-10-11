@@ -1,0 +1,232 @@
+review-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  &:not(:checked) {
+    & > input {
+      position: absolute;
+      left: -9999px;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    & > label {
+      min-width: 15px;
+      min-height: 15px;
+      display: inline-block;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+  }
+}
+
+review-rating::before {
+  content: attr(average-rating);
+  display: block;
+  margin-left: 12px;
+  font-size: 25px;
+  line-height: 29px;
+  color: $light-black;
+}
+
+product-reviews {
+  display: block;
+  margin-top: 21px;
+  background: white;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 39px;
+
+  & > h2 {
+    font-size: 24px;
+    line-height: 29px;
+    color: $light-black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+product-reviews-block {
+  display: block;
+
+  average-rating {
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 40px;
+
+    h3 {
+      color: $light-black;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    p {
+      color: $light-black;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 6px;
+    }
+
+    span {
+      color: #9b9b9b;
+      font-size: 14px;
+      line-height: 17px;
+      display: block;
+      margin-top: 13px;
+      padding-right: 14px;
+    }
+
+    & > review-rating {
+      margin-top: 13px;
+
+      &::before {
+        margin-top: 1px;
+      }
+
+      &:not(:checked) > label {
+        min-width: 20px;
+        min-height: 20px;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+product-review {
+  display: block;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 33px;
+
+  author {
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    color: $light-black;
+    margin-bottom: 4px;
+  }
+
+  date {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: $light-black;
+    margin-top: 11px;
+  }
+
+  advantages,
+  limitations {
+    display: block;
+    color: $light-black;
+    font-size: 14px;
+    line-height: 17px;
+
+    &::before {
+      display: block;
+      font-weight: $PTSansBold;
+      color: $light-black;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  advantages {
+    margin-top: 11px;
+
+    &::before {
+      content: "Достоинства:";
+      margin-bottom: 6px;
+    }
+  }
+
+  limitations {
+    margin-top: 18px;
+
+    &::before {
+      content: "Недостатки:";
+      margin-bottom: 3px;
+    }
+  }
+
+  recommendation {
+    display: flex;
+    margin-top: 19px;
+
+    &::before {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      width: 24px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    p {
+      color: $light-black;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 6px;
+    }
+  }
+}
+
+ratings-distribution {
+  display: block;
+  margin-top: 29px;
+
+  h3 {
+    margin-bottom: 23px;
+  }
+
+  review-rating {
+    width: 100%;
+
+    &::before {
+      order: -1;
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0;
+      min-width: 15px;
+      text-align: right;
+      margin-right: 13px;
+      padding-left: 3px;
+    }
+
+    & + review-rating {
+      margin-top: 5px;
+    }
+
+    label {
+      margin-right: 4px;
+    }
+  }
+
+  rating-line {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    height: 20px;
+    width: 100%;
+    order: -1;
+    border-radius: 60px;
+    position: relative;
+    margin-left: 13px;
+
+    &::before {
+      content: "";
+      display: block;
+      // width: calc(attr(votes) + attr(all-votes));
+      border: 1px solid $gold;
+      border-radius: 60px;
+      background: $gold;
+      height: 18px;
+      width: 100%;
+    }
+  }
+}

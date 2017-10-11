@@ -18,9 +18,14 @@
 /**************BEGIN: КОНТЕНТ ************************/
 @import "../components/content/content.scss";
 @import "../components/content/banner.scss";
+@import "../components/content/breadcrumbs.scss";
 @import "../components/product-items/item.scss";
 @import "../components/product-items/items-section.scss";
-
+@import "../components/product/block.scss";
+@import "../components/product/description.scss";
+@import "../components/product/characteristics.scss";
+@import "../components/product/files.scss";
+@import "../components/product/reviews.scss";
 // @import "../components/content/block-with-img/block-with-img.scss";
 // @import "../components/content/content-with-img/content-with-img.scss";
 // @import "../components/content/block-for-articles/block-for-articles.scss";

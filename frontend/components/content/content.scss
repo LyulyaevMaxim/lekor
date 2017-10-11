@@ -160,3 +160,15 @@ content {
     }
   }
 }
+
+.product-page {
+  & > h1 {
+    color: $light-black;
+    font-size: 36px;
+    line-height: 42px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 19px;
+    padding-bottom: 20px;
+  }
+}
