@@ -36,7 +36,8 @@ body {
 }
 
 @media (min-width: 1024px) {
-  html {
+  html,
+  .block-html {
     overflow: initial !important;
   }
 }

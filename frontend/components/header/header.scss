@@ -496,6 +496,10 @@ header {
       position: initial;
       padding: 0;
     }
+
+    @media (min-width: $desktop) {
+      overflow: initial;
+    }
   }
 }
 
