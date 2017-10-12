@@ -55,7 +55,7 @@ const base_plugins = [
   //   spritePath: './public/img'
   // }),
   // postcss_css_reset,
-  autoprefixer({ browsers: ['last 3 version'] }),
+  autoprefixer({ browsers: ['last 5 version'] }),
   mqpacker({ sort: true })
 ];
 

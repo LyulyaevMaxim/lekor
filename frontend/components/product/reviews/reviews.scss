@@ -60,7 +60,6 @@ product-reviews-block {
     display: block;
     padding-left: 22px;
     padding-right: 22px;
-    padding-bottom: 40px;
 
     @media (min-width: $tablet) {
       padding-left: 30px;
@@ -229,9 +228,12 @@ product-review {
 ratings-distribution {
   display: block;
   margin-top: 29px;
+  padding-left: 22px;
+  padding-right: 22px;
 
   @media (min-width: $tablet) {
-    padding-left: 6px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @media (min-width: $desktop) {
@@ -311,7 +313,7 @@ ratings-distribution {
   width: 100%;
   border-top: 1px solid #b7b7b7;
 
-  .classic-button {
+  .show-more {
     border-color: #b7b7b7;
     width: 275px;
     background: white;
@@ -321,12 +323,22 @@ ratings-distribution {
     color: $light-black;
     font-weight: $PTSansBold;
     margin-top: 21px;
+
+    @media (min-width: $tablet) {
+      width: auto;
+      display: inline-flex;
+      margin-left: 27px;
+    }
   }
 }
 
 average-rating + product-review,
 ratings-distribution + product-review {
-  margin-top: 20px;
+  margin-top: 40px;
+
+  @media (min-width: $desktop) {
+    margin-top: 20px;
+  }
 
   @media (min-width: $big-desktop) {
     margin-top: 39px;

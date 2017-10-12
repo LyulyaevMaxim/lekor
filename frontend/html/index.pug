@@ -5,8 +5,8 @@ include ../components/header/header
 include ../components/footer/footer
 include ../components/connect-js/scripts
 //- контент
-include ../components/product-items/items-section
-include ../components/product-items/item
+include ../components/items/items-section
+include ../components/items/item
 include ../components/content/content
 //- include ../components/content/block-with-img/block-with-img
 //- include ../components/content/content-with-img/content-with-img
@@ -77,4 +77,7 @@ html(lang="ru")
   +banner()
   +footer()             
   
-+scripts()    
++scripts()
+script(src="//vk.com/js/api/openapi.js?149")
+script.
+  VK.Widgets.Group("vk_groups", {mode: 3, width: "auto",  color3: '5E81A7'}, 105166553);    
