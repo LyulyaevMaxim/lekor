@@ -1,6 +1,6 @@
 mixin product-header()
-  product-header
-    product-slider
+  product-header(name="product-header")
+    +product-slider
     product-characteristics-list
       feature
         description Производитель:
@@ -23,4 +23,19 @@ mixin product-header()
       feature
         description Наличие стетоскопа:
         value Нет
-      a(href="#") Все характеристики  
+      a(href="#product-header").show-more Все характеристики
+    product-information 
+      .price
+        p 2 634 р.
+        p.old 18 199 р.
+      .classic-button.add-to-cart Купить
+      .buy-one-click Купить в один клик
+      +rating("-current-item", 4)
+      .add-to-compare 
+      .product-in-stock: p В наличии 
+      .delivery-product
+        .delivery-product-title: p Доставка курьером
+        p Сегодня, уже через 3 часа, 300 руб.
+        p Завтра и позже, бесплатно
+        h6 Самовывоз из 2 магазинов
+        p  Сегодня и позже, бесплатно

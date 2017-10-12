@@ -192,6 +192,7 @@ content {
 .product-page {
   @media (min-width: $big-desktop) {
     product-grid {
+      display: block;
       display: grid;
       grid-template-columns: 49.2% 49.2%;
       grid-column-gap: 23px;

@@ -29,6 +29,7 @@ include ../components/product/reviews/reviews
 //- слайдеры
 //- include ../components/sliders/tables/table
 include ../components/sliders/full-slider/full-slider
+include ../components/sliders/product-slider/product-slider
 //- include ../components/sliders/gallery/gallery
 
 doctype html
@@ -47,8 +48,8 @@ html(lang="ru")
   })
   
   h1 Тонометры
-
-  //- +product-header() 
+  +product-header() 
+  
   product-grid
     +product-description()
     +product-characteristics()
@@ -86,4 +87,9 @@ html(lang="ru")
   +banner()
   +footer()             
   
-+scripts()    
++scripts()
+script(src="js/lightslider/lightslider.js") 
+script(src="js/components/sliders/product-slider/product-slider.js" async)
+script(src="js/components/items/items-section.js" async)
+script(src="js/components/product/product.js" async)
+script(src="js/components/content/rating/rating.js" async)    

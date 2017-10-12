@@ -1,0 +1,148 @@
+product-slider {
+  display: block;
+  position: relative;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 25px;
+
+  .labels-container {
+    display: flex;
+    position: absolute;
+    top: 19px;
+    left: 33%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @media (min-width: $tablet) {
+      top: 20px;
+      left: 24%;
+    }
+
+    @media (min-width: $desktop) {
+      left: 26.5%;
+    }
+
+    @media (min-width: $big-desktop) {
+      left: 25.5%;
+    }
+
+    .label {
+      position: relative;
+      height: 90px;
+      width: 90px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding-top: 12px;
+      padding-bottom: 24px;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        background-repeat: no-repeat;
+        background-position: 50%;
+        width: 90px;
+        height: 90px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        font-size: 16px;
+        line-height: 18px;
+        color: #ffffff;
+        display: block;
+        width: 65px;
+        z-index: 1;
+      }
+    }
+
+    .best-price::after {
+      content: "Лучшая цена";
+    }
+
+    .new-products::after {
+      content: "Новинка";
+    }
+
+    .popular-products::after {
+      content: "ХИТ";
+    }
+  }
+
+  .lSPager.lSGallery {
+    @media (min-width: $tablet) {
+      margin-left: 34px !important;
+
+      li {
+        margin-right: 20px !important;
+        width: auto !important;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      width: 100% !important;
+    }
+  }
+
+  .lSSlideOuter .lSPager.lSpg {
+    li {
+      padding: 0px 7px;
+
+      &.active a {
+        background-color: $gold;
+        border-color: $gold;
+      }
+
+      a {
+        border: 1px solid #979797;
+        background-color: white;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .product-slider-container {
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 36px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: $tablet) {
+        padding-right: 46px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-right: 5px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-right: 22px;
+      }
+    }
+
+    img {
+      width: 276px;
+      height: 276px;
+
+      @media (min-width: $tablet) {
+        width: 360px;
+        height: 360px;
+      }
+    }
+  }
+}
