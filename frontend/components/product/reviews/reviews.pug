@@ -1,5 +1,5 @@
 mixin product-reviews(data)
-  product-reviews
+  product-reviews(name="product-reviews")
     h2 отзывы
     product-reviews-block
       average-rating
@@ -7,17 +7,18 @@ mixin product-reviews(data)
         +rating("-average", 4, 4.7)
         p на основании #{data.total_votes} отзывов
         span 95% покупателей рекомендуют эти товары
-      ratings-distribution
+      ratings-distribution(all-votes=data.total_votes)
           h3 Распределение рейтингов:
           each index in [5, 4, 3, 2, 1]
-            review-rating(average-rating=data.distribution[index])
+            review-rating(receive-votes=data.distribution[index])
               each i in [5,4,3,2,1]
                 if (i == index)
                   input(type="radio" name="rating-distribution" + index id="star" + index + i value=i checked)
                 else
                   input(type="radio" name="rating-distribution" + index id="star" + index + i value=i)
                 label(for="star" + index + i)
-              rating-line(all-votes=data.total_votes votes=data.distribution[index])                   
+              rating-line
+                progress-bar                  
       each index in data.product_index
         product-review
           author #{data.author[index]}
@@ -27,4 +28,4 @@ mixin product-reviews(data)
           limitations #{data.limitations[index]}
           recommendation: p Я рекомендую этот товар другим!
       .product-review__button
-        a(href="#").classic-button.show-more Показать все
+        a(href="#product-reviews").classic-button.show-more Показать все

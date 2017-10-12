@@ -24,7 +24,7 @@ review-rating {
 }
 
 review-rating::before {
-  content: attr(average-rating);
+  content: attr(receive-votes);
   display: block;
   margin-left: 12px;
   font-size: 25px;

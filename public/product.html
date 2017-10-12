@@ -142,10 +142,10 @@
 	</breadcrumbs>
 	<h1>Тонометры</h1>
 	<product-grid>
-		<product-description>
+		<product-description name="product-description">
 			<h2>описание</h2>
 			<p>Автоматический тонометр с функцией выявления риска инсульта. Тонометр «BP A6 PC» оснащен уникальной Afib-технологией, которая выявляет риски возникновения инсульта.Другое достоинство прибора – наличие МАМ-технологии, позволяющей автоматически проводить три последовательных измерения, не снимая манжеты. Клинические испытания показали, что тонометр «BP A6 PC» позволяет измерять артериальное давление с высокой воспроизводимостью результатов даже у пациентов с мерцательной аритмией, что является непревзойденным показателем точности. Прибор оснащен технологией Gentle+ - это новейший алгоритм накачки давления в манжету, необходимого для точного и комфортного процесса измерения.Тонометр «BP A6 PC» оснащен памятью на 99 измерений. В его комплект входит жесткая конусообразная манжета (22-42 см) и сетевой адаптер. Прибор может даже подключаться к персональному компьютеру, имеет большой дисплей.</p>
-			<div class="product-description__button"><a class="classic-button show-more tablet-hide desktop-hide big-desktop-hide" href="#">Показать ещё</a></div>
+			<div class="product-description__button"><a class="classic-button show-more tablet-hide desktop-hide big-desktop-hide" href="#product-description">Показать ещё</a></div>
 			<h3>отличительные особенности</h3>
 			<ul>
 				<li>
@@ -189,7 +189,7 @@
 				</li>
 			</ul>
 		</product-description>
-		<product-characteristics-table>
+		<product-characteristics-table name="product-characteristics-table">
 			<h2>технические характеристики</h2>
 			<product-characteristics-block>
 				<product-characteristic>
@@ -229,7 +229,7 @@
 					<value>4 х 1,5 В, батареи типа ААА. Блок питания постоянного тока</value>
 				</product-characteristic>
 			</product-characteristics-block>
-			<div class="product-characteristics__button"><a class="classic-button show-more tablet-hide desktop-hide big-desktop-hide" href="#">Показать всё</a></div>
+			<div class="product-characteristics__button"><a class="classic-button show-more tablet-hide desktop-hide big-desktop-hide" href="#product-characteristics-table">Показать всё</a></div>
 		</product-characteristics-table>
 		<product-files>
 			<h2>для скачивания</h2>
@@ -243,12 +243,12 @@
 						<size>PDF, 1333 KB</size>
 					</description></a></product-files-block>
 		</product-files>
-		<product-reviews>
+		<product-reviews name="product-reviews">
 			<h2>отзывы</h2>
 			<product-reviews-block>
 				<average-rating>
 					<h3>Средний рейтинг:</h3>
-					<review-rating average-rating="4.7">
+					<review-rating receive-votes="4.7">
 						<input type="radio" name="rating-average" id="star-average5" value="5"/>
 						<label for="star-average5"> </label>
 						<input type="radio" name="rating-average" id="star-average4" value="4" checked="checked"/>
@@ -262,9 +262,9 @@
 					</review-rating>
 					<p>на основании 21 отзывов</p><span>95% покупателей рекомендуют эти товары</span>
 				</average-rating>
-				<ratings-distribution>
+				<ratings-distribution all-votes="21">
 					<h3>Распределение рейтингов:</h3>
-					<review-rating average-rating="17">
+					<review-rating receive-votes="17">
 						<input type="radio" name="rating-distribution5" id="star55" value="5" checked="checked"/>
 						<label for="star55"></label>
 						<input type="radio" name="rating-distribution5" id="star54" value="4"/>
@@ -275,9 +275,11 @@
 						<label for="star52"></label>
 						<input type="radio" name="rating-distribution5" id="star51" value="1"/>
 						<label for="star51"></label>
-						<rating-line all-votes="21" votes="17">                  </rating-line>
+						<rating-line>
+							<progress-bar>                 </progress-bar>
+						</rating-line>
 					</review-rating>
-					<review-rating average-rating="3">
+					<review-rating receive-votes="3">
 						<input type="radio" name="rating-distribution4" id="star45" value="5"/>
 						<label for="star45"></label>
 						<input type="radio" name="rating-distribution4" id="star44" value="4" checked="checked"/>
@@ -288,9 +290,11 @@
 						<label for="star42"></label>
 						<input type="radio" name="rating-distribution4" id="star41" value="1"/>
 						<label for="star41"></label>
-						<rating-line all-votes="21" votes="3">                  </rating-line>
+						<rating-line>
+							<progress-bar>                 </progress-bar>
+						</rating-line>
 					</review-rating>
-					<review-rating average-rating="0">
+					<review-rating receive-votes="0">
 						<input type="radio" name="rating-distribution3" id="star35" value="5"/>
 						<label for="star35"></label>
 						<input type="radio" name="rating-distribution3" id="star34" value="4"/>
@@ -301,9 +305,11 @@
 						<label for="star32"></label>
 						<input type="radio" name="rating-distribution3" id="star31" value="1"/>
 						<label for="star31"></label>
-						<rating-line all-votes="21" votes="0">                  </rating-line>
+						<rating-line>
+							<progress-bar>                 </progress-bar>
+						</rating-line>
 					</review-rating>
-					<review-rating average-rating="0">
+					<review-rating receive-votes="0">
 						<input type="radio" name="rating-distribution2" id="star25" value="5"/>
 						<label for="star25"></label>
 						<input type="radio" name="rating-distribution2" id="star24" value="4"/>
@@ -314,9 +320,11 @@
 						<label for="star22"></label>
 						<input type="radio" name="rating-distribution2" id="star21" value="1"/>
 						<label for="star21"></label>
-						<rating-line all-votes="21" votes="0">                  </rating-line>
+						<rating-line>
+							<progress-bar>                 </progress-bar>
+						</rating-line>
 					</review-rating>
-					<review-rating average-rating="1">
+					<review-rating receive-votes="1">
 						<input type="radio" name="rating-distribution1" id="star15" value="5"/>
 						<label for="star15"></label>
 						<input type="radio" name="rating-distribution1" id="star14" value="4"/>
@@ -327,7 +335,9 @@
 						<label for="star12"></label>
 						<input type="radio" name="rating-distribution1" id="star11" value="1" checked="checked"/>
 						<label for="star11"></label>
-						<rating-line all-votes="21" votes="1">                  </rating-line>
+						<rating-line>
+							<progress-bar>                 </progress-bar>
+						</rating-line>
 					</review-rating>
 				</ratings-distribution>
 				<product-review>
@@ -372,7 +382,7 @@
 						<p>Я рекомендую этот товар другим!</p>
 					</recommendation>
 				</product-review>
-				<div class="product-review__button"><a class="classic-button show-more" href="#">Показать все</a></div>
+				<div class="product-review__button"><a class="classic-button show-more" href="#product-reviews">Показать все</a></div>
 			</product-reviews-block>
 		</product-reviews>
 	</product-grid>
@@ -570,3 +580,4 @@
 <script src="js/components/sliders/full-slider/full-slider.js" async="async"></script>
 <script src="js/components/items/items-section.js" async="async"></script>
 <script src="js/components/product/product.js" async="async"></script>
+<script src="js/components/content/rating/rating.js" async="async"></script>

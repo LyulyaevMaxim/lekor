@@ -1,5 +1,5 @@
 mixin product-characteristics()
-  product-characteristics-table
+  product-characteristics-table(name="product-characteristics-table")
     h2 технические характеристики
     product-characteristics-block
       product-characteristic
@@ -30,4 +30,4 @@ mixin product-characteristics()
         description Источник питания
         value 4 х 1,5 В, батареи типа ААА. Блок питания постоянного тока
     .product-characteristics__button
-      a(href="#").classic-button.show-more.tablet-hide.desktop-hide.big-desktop-hide Показать всё
+      a(href="#product-characteristics-table").classic-button.show-more.tablet-hide.desktop-hide.big-desktop-hide Показать всё

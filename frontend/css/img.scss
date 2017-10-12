@@ -183,9 +183,9 @@ review-rating:not(:checked) > label {
 }
 
 //rating (жёлтый)
-review-rating > input:checked ~ label,
-review-rating > label:hover,
-review-rating > label:hover ~ label {
+// review-rating > label:hover,
+// review-rating > label:hover ~ label, 
+review-rating > input:checked ~ label {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EFill 1%3C/title%3E%3Cpath d='M16 6.4l-3 4v5.2l-3.4-1.2c-.3-.2-.8-.4-1.2-.4-.3 0-.8.3-1 .4l-3.6 1.2v-3.8-1.3c0-.3-.5-.7-.7-1l-2-3C2 6 3 5.6 4.3 5.2c.4 0 .8-.2 1-.4.4-.2.7-.8 1-1l2-3V.7l2.2 3c.2.4.5 1 .7 1 .3.3.8.4 1.2.5 1 .4 2.3.8 3.5 1' fill='%23F9A61A' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 

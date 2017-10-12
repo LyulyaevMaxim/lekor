@@ -104,6 +104,7 @@ product-reviews-block {
 
     & > review-rating {
       margin-top: 13px;
+      pointer-events: none;
 
       &::before {
         margin-top: 1px;
@@ -223,6 +224,10 @@ product-review {
       margin-top: 6px;
     }
   }
+
+  review-rating {
+    pointer-events: none;
+  }
 }
 
 ratings-distribution {
@@ -257,6 +262,7 @@ ratings-distribution {
 
   review-rating {
     width: 100%;
+    pointer-events: none;
 
     &::before {
       order: -1;
@@ -296,15 +302,13 @@ ratings-distribution {
     position: relative;
     margin-left: 13px;
 
-    &::before {
-      content: "";
+    progress-bar {
       display: block;
-      // width: calc(attr(votes) + attr(all-votes));
-      border: 1px solid $gold;
       border-radius: 60px;
       background: $gold;
-      height: 18px;
-      width: 100%;
+      height: 20px;
+      width: 0;
+      // transition: all 2s ease;
     }
   }
 }
