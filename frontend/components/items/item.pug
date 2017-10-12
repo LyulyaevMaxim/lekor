@@ -1,0 +1,14 @@
+mixin item(attribute, img, title, price)
+  item
+    .label: span #{attribute}
+    .picture
+      img(src="img/content/" + img)
+    .description
+      .title: span #{title}
+      .add-to-compare
+      .price
+        p #{price}
+        p.old 18 199 р.
+      .classic-button.add-to-cart Купить
+      
+      

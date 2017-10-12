@@ -1,0 +1,138 @@
+product-characteristics-table {
+  display: block;
+  background: white;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 38px;
+  padding-bottom: 39px;
+  margin-top: 21px;
+
+  @media (min-width: $tablet) {
+    margin-left: $margin-768;
+    margin-right: $margin-768;
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: $margin-1024;
+    margin-right: $margin-1024;
+    margin-top: 32px;
+    padding-top: 42px;
+  }
+
+  @media (min-width: $big-desktop) {
+    grid-area: product-characteristics-table;
+    grid-column: 1;
+    grid-row: 3 / 6;
+    padding-top: 47px;
+    padding-bottom: 28px;
+    margin: 0;
+  }
+
+  &:not(.all-shown) {
+    @media (max-width: 767px) {
+      .product-characteristics__button ~ * {
+        display: none;
+      }
+    }
+  }
+
+  &.all-shown {
+    .product-characteristics__button {
+      display: none;
+    }
+  }
+
+  h2 {
+    color: $light-black;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    @media (min-width: $tablet) {
+      text-align: left;
+      padding-left: 35px;
+      padding-right: 35px;
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .show-more {
+    display: flex;
+    width: 275px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $light-black;
+    border-color: #b7b7b7;
+    background: transparent;
+  }
+}
+
+product-characteristics-block {
+  display: block;
+}
+
+product-characteristic {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e1e1e1;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  description,
+  value {
+    width: 50%;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  description {
+    color: #9b9b9b;
+    padding-left: 23px;
+    padding-right: 8px;
+
+    @media (min-width: $tablet) {
+      width: 44.5%;
+      padding-left: 38px;
+    }
+
+    @media (min-width: $big-desktop) {
+      width: 38%;
+    }
+  }
+
+  value {
+    color: $light-black;
+    padding-left: 15px;
+    padding-right: 25px;
+
+    @media (min-width: $tablet) {
+      padding-right: 33px;
+      width: 55%;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 27px;
+      padding-right: 125px;
+    }
+
+    @media (min-width: $big-desktop) {
+      width: 57%;
+      padding-right: 0;
+    }
+  }
+}

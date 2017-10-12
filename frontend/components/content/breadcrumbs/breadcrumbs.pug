@@ -1,0 +1,4 @@
+mixin breadcrumbs(data)
+  breadcrumbs
+    each i in data.index
+      a(href="#") #{data.title[i]}

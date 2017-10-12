@@ -1,0 +1,334 @@
+product-reviews {
+  display: block;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  background: white;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 39px;
+  padding-bottom: 38px;
+
+  @media (min-width: $tablet) {
+    margin-left: $margin-768;
+    margin-right: $margin-768;
+    padding-top: 27px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-left: $margin-1024;
+    // margin-right: $margin-1024;
+    margin-left: 47px;
+    margin-right: 39px;
+    margin-top: 23px;
+  }
+
+  @media (min-width: $big-desktop) {
+    grid-area: product-reviews;
+    grid-column: 2;
+    grid-row: 2 / 6;
+    margin: 0;
+    padding-bottom: 24px;
+  }
+
+  & > h2 {
+    font-size: 24px;
+    line-height: 29px;
+    color: $light-black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      text-align: left;
+      padding-left: 31px;
+      padding-right: 31px;
+    }
+  }
+}
+
+product-reviews-block {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  average-rating {
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      padding-left: 30px;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-bottom: 31px;
+    }
+
+    h3 {
+      color: $light-black;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    p {
+      color: $light-black;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 6px;
+
+      @media (min-width: $tablet) {
+        display: inline-flex;
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+
+    span {
+      color: #9b9b9b;
+      font-size: 14px;
+      line-height: 17px;
+      display: block;
+      margin-top: 13px;
+      padding-right: 14px;
+
+      @media (min-width: $tablet) {
+        padding-left: 5px;
+        margin-top: 10px;
+      }
+    }
+
+    & > review-rating {
+      margin-top: 13px;
+
+      &::before {
+        margin-top: 1px;
+
+        @media (min-width: $tablet) {
+          margin-left: 12px;
+        }
+      }
+
+      &:not(:checked) > label {
+        min-width: 20px;
+        min-height: 20px;
+        margin-right: 4px;
+
+        @media (min-width: $tablet) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+product-review {
+  display: block;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 30px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 33px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    padding-right: 70px;
+  }
+
+  @media (min-width: $big-desktop) {
+    padding-right: 30px;
+    padding-bottom: 27px;
+  }
+
+  author {
+    display: block;
+    font-size: 18px;
+    line-height: 21px;
+    color: $light-black;
+    margin-bottom: 4px;
+  }
+
+  date {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: $light-black;
+    margin-top: 11px;
+  }
+
+  advantages,
+  limitations {
+    display: block;
+    color: $light-black;
+    font-size: 14px;
+    line-height: 17px;
+
+    &::before {
+      display: block;
+      font-weight: $PTSansBold;
+      color: $light-black;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  advantages {
+    margin-top: 11px;
+
+    &::before {
+      content: "Достоинства:";
+      margin-bottom: 6px;
+    }
+  }
+
+  limitations {
+    margin-top: 18px;
+
+    @media (min-width: $tablet) {
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: "Недостатки:";
+      margin-bottom: 3px;
+    }
+  }
+
+  recommendation {
+    display: flex;
+    margin-top: 19px;
+
+    @media (min-width: $desktop) {
+      margin-top: 21px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      width: 24px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    p {
+      color: $light-black;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 6px;
+    }
+  }
+}
+
+ratings-distribution {
+  display: block;
+  margin-top: 29px;
+
+  @media (min-width: $tablet) {
+    padding-left: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    width: 50%;
+    padding-left: 0;
+  }
+
+  @media (min-width: $big-desktop) {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  h3 {
+    color: $light-black;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 23px;
+  }
+
+  review-rating {
+    width: 100%;
+
+    &::before {
+      order: -1;
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0;
+      min-width: 15px;
+      text-align: right;
+      margin-right: 13px;
+      padding-left: 3px;
+
+      @media (min-width: $tablet) {
+        text-align: left;
+        min-width: initial;
+        margin-left: 8px;
+      }
+    }
+
+    & + review-rating {
+      margin-top: 5px;
+    }
+
+    label {
+      margin-right: 4px;
+    }
+  }
+
+  rating-line {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    height: 20px;
+    width: 100%;
+    max-width: 257px;
+    order: -1;
+    border-radius: 60px;
+    position: relative;
+    margin-left: 13px;
+
+    &::before {
+      content: "";
+      display: block;
+      // width: calc(attr(votes) + attr(all-votes));
+      border: 1px solid $gold;
+      border-radius: 60px;
+      background: $gold;
+      height: 18px;
+      width: 100%;
+    }
+  }
+}
+
+.product-review__button {
+  width: 100%;
+  border-top: 1px solid #b7b7b7;
+
+  .classic-button {
+    border-color: #b7b7b7;
+    width: 275px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    color: $light-black;
+    font-weight: $PTSansBold;
+    margin-top: 21px;
+  }
+}
+
+average-rating + product-review,
+ratings-distribution + product-review {
+  margin-top: 20px;
+
+  @media (min-width: $big-desktop) {
+    margin-top: 39px;
+  }
+}

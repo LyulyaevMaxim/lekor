@@ -1,7 +1,0 @@
-mixin items-section(data)
-  items-section(class=data.section_class)
-    .title: span #{data.section_title}
-    block-for-items
-      each index in data.items_index
-        +item(data.data_attribute, data.item_picture[index], data.item_title[index], data.item_price[index])
-      

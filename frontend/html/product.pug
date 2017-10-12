@@ -5,11 +5,16 @@ include ../components/header/header
 include ../components/footer/footer
 include ../components/connect-js/scripts
 //- контент
-include ../components/product-items/items-section
-include ../components/product-items/item
+include ../components/items/items-section
+include ../components/items/item
 include ../components/content/content
-include ../components/content/rating
-include ../components/product/reviews
+include ../components/content/breadcrumbs/breadcrumbs
+include ../components/content/rating/rating
+include ../components/product/header/header
+include ../components/product/description/description
+include ../components/product/characteristics/characteristics
+include ../components/product/files/files
+include ../components/product/reviews/reviews
 //- include ../components/content/block-with-img/block-with-img
 //- include ../components/content/content-with-img/content-with-img
 //- include ../components/content/block-for-features/block-for-features
@@ -36,111 +41,28 @@ html(lang="ru")
 
 +header()
 +b.BODY.product-page
-  breadcrumbs
-    a(href="#") Главная
-    a(href="#") Каталог
-    a(href="#") Диагностика организма
-    a(href="#") Тонометры
-  h1 Тонометры
-  //- product-block
-  //-   product-slider
-  //-   product-characteristics-list
-  //-     feature
-  //-       description Производитель:
-  //-       value B.Well
-  //-     feature
-  //-       description Место наложения манжеты:
-  //-       value Плечо
-  //-     feature
-  //-       description Размер манжеты:
-  //-       value от 22 до 42 см
-  //-     feature
-  //-       description Питание:
-  //-       value 4 элемента типа ААА, от сети 220В
-  //-     feature
-  //-       description Возможность подключения адаптера: 
-  //-       value Да
-  //-     feature
-  //-       description Наличие адаптера в комплекте:
-  //-       value Да
-  //-     feature
-  //-       description Наличие стетоскопа:
-  //-       value Нет
-  //-     a(href="#") Все характеристики  
-
-  product-description
-    h2 описание
-    p.
-      Автоматический тонометр с функцией выявления риска инсульта. Тонометр «BP A6 PC» оснащен уникальной Afib-технологией, которая выявляет риски возникновения инсульта.Другое достоинство прибора – наличие МАМ-технологии, позволяющей автоматически проводить три последовательных измерения, не снимая манжеты. Клинические испытания показали, что тонометр «BP A6 PC» позволяет измерять артериальное давление с высокой воспроизводимостью результатов даже у пациентов с мерцательной аритмией, что является непревзойденным показателем точности. Прибор оснащен технологией Gentle+ - это новейший алгоритм накачки давления в манжету, необходимого для точного и комфортного процесса измерения.Тонометр «BP A6 PC» оснащен памятью на 99 измерений. В его комплект входит жесткая конусообразная манжета (22-42 см) и сетевой адаптер. Прибор может даже подключаться к персональному компьютеру, имеет большой дисплей.
-
-    a(href="#").classic-button.tablet-hide.desktop-hide.big-desktop-hide Показать ещё
-
-    h3 отличительные особенности
-    ul
-      li Высший класс точности А/А.
-      li Afib-технология выявляет риски инсульта.
-      li МАМ-технология для более точного результата.
-      li Технология Gentle+, обеспечивающая комфорт процедуры.
-      li Память на 99 измерений для двух пользователей.
-      li Дата и время.
-      li Жесткая конусообразная манжета (22-42 см).
-      li USB порт.
-      li Подставка для хранения прибора и манжеты.
-      li Индикация уровня артериального давления.
-      li Индикация правильности надевания манжеты.
-      li Индикация движения руки.
-      li Сетевой адаптер в комплекте.
-  product-characteristics-table
-    h2 технические характеристики
-    product-characteristics-block
-      product-characteristic
-        description Диапазон измерения давления
-        value 20-280 мм рт. ст.
-      product-characteristic
-        description Масса
-        value 354г (включая батареи)
-      product-characteristic
-        description Точность измерения пульса
-        value ±5% считанного значения
-      product-characteristic
-        description Диапазон измерения пульса
-        value 40-200 ударов в минуту
-      product-characteristic
-        description Индикация давления в манжете
-        value 0-299 ударов в мин
-      product-characteristic
-        description Размеры
-        value 160 x 80 x 32 мм
-      product-characteristic
-        description Статистическая точность
-        value давление в пределах ± 3 мм. рт. ст.
-      product-characteristic
-        description Минимальный шаг индикации
-        value  1 мм рт.ст.			
-      product-characteristic
-        description Источник питания
-        value 4 х 1,5 В, батареи типа ААА. Блок питания постоянного тока
-    a(href="#").classic-button.tablet-hide.desktop-hide.big-desktop-hide Показать всё
-
-  product-files
-    h2 для скачивания
-    product-files-block
-      a(href="#" download):  description
-        name Свидетельство о поверке BP A6 PC
-        size PDF, 1333 KB
-      a(href="#" download):  description
-        name Тонометр BP A6 PC инструкция
-        size PDF, 1333 KB
-  
-  +product-reviews({
-    "product_index": [0, 1],
-    "author": ["Константин", "Валерий"],
-    "date": ["28.06.2017", "28.06.2017"],
-    "advantages": ["с первого применения прекратились боли в шее и пояснице", "Хороший пластик, шарик удобно держать в руках. Понравились пружинки для массажа пальцев. Хорошая штука для массажа рук."],
-    "limitations": ["цена жутко завышена! якобы 'по акции' он по 500 рублей был, надо было мне сперва погуглить, а я сразу взяла, о чем теперь сожалею, на сайте официального распространителя в каталоге он 170 рублей стоит!", "Екатерина"],
-    "distribution": ["-1", "1", "0", "0", "3", "17"],
-    "total_votes": "21"
+  +breadcrumbs({"index": [0, 1, 2, 3],
+    "title": ["Главная", "Каталог", "Диагностика организма", 
+    "Тонометры"]
   })
+  
+  h1 Тонометры
+
+  //- +product-header() 
+  product-grid
+    +product-description()
+    +product-characteristics()
+    +product-files()
+  
+    +product-reviews({
+      "product_index": [0, 1],
+      "author": ["Константин", "Валерий"],
+      "date": ["28.06.2017", "28.06.2017"],
+      "advantages": ["с первого применения прекратились боли в шее и пояснице", "Хороший пластик, шарик удобно держать в руках. Понравились пружинки для массажа пальцев. Хорошая штука для массажа рук."],
+      "limitations": ["цена жутко завышена! якобы 'по акции' он по 500 рублей был, надо было мне сперва погуглить, а я сразу взяла, о чем теперь сожалею, на сайте официального распространителя в каталоге он 170 рублей стоит!", "Екатерина"],
+      "distribution": ["-1", "1", "0", "0", "3", "17"],
+      "total_votes": "21"
+    })
   
   +items-section({ 
     "section_class": "popular-products blue",

@@ -1,0 +1,155 @@
+items-section {
+  position: relative;
+
+  & + * {
+    margin-top: 19px;
+
+    @media (min-width: $tablet) {
+      margin-top: 21px;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $green;
+
+    @media (min-width: $tablet) {
+      height: 280px;
+    }
+  }
+
+  &.red::before {
+    background: $pink;
+  }
+
+  &.green::before {
+    background: $green;
+  }
+
+  &.blue::before {
+    background: $blue;
+  }
+
+  &.purple::before {
+    background: $purple;
+  }
+
+  &.popular-products {
+    .label span {
+      text-transform: uppercase;
+    }
+  }
+
+  & > .title {
+    font-size: 36px;
+    line-height: 42px;
+    color: $white;
+    display: flex;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 27px;
+    padding-bottom: 12px;
+
+    @media (min-width: $desktop) {
+      padding-left: 42px;
+      padding-right: 42px;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      min-width: 60px;
+      min-height: 60px;
+      transform: translate(18%, -12%);
+
+      @media (min-width: $tablet) {
+        transform: translate(54%, -15%);
+      }
+    }
+  }
+}
+
+block-for-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 42px;
+    margin-right: 43px;
+  }
+
+  @media (min-width: $big-desktop) {
+    margin-left: 56px;
+    margin-right: 55px;
+    overflow: hidden;
+    height: 424px;
+    // opacity: 0;
+  }
+
+  @media (max-width: 1439px) {
+    height: auto !important;
+  }
+
+  item {
+    width: 50%;
+    border-bottom: 1px solid #e1e1e1;
+
+    @media (min-width: $tablet) {
+      width: 33.33%;
+      border-top: 1px solid #e1e1e1;
+    }
+
+    @media (min-width: $desktop) {
+      width: 25%;
+    }
+
+    @media (min-width: $big-desktop) {
+      min-width: 265.8px;
+      width: 265.8px;
+    }
+
+    &:nth-child(2n+1) {
+      border-right: 1px solid #e1e1e1;
+
+      @media (min-width: $tablet) {
+        border-left: 1px solid #e1e1e1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $tablet) and (max-width: 1023px) {
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop) and (max-width: 1439px) {
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+  }
+}

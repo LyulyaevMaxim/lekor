@@ -1,0 +1,33 @@
+review-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+
+  &:not(:checked) {
+    & > input {
+      position: absolute;
+      left: -9999px;
+      clip: rect(0, 0, 0, 0);
+    }
+
+    & > label {
+      min-width: 15px;
+      min-height: 15px;
+      display: inline-block;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      margin-right: 4px;
+    }
+  }
+}
+
+review-rating::before {
+  content: attr(average-rating);
+  display: block;
+  margin-left: 12px;
+  font-size: 25px;
+  line-height: 29px;
+  color: $light-black;
+}

@@ -170,5 +170,36 @@ content {
     padding-right: 22px;
     padding-top: 19px;
     padding-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      padding-left: 36px;
+      padding-top: 12px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: $margin-1024;
+      padding-right: $margin-1024;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-left: $margin-1440;
+      padding-right: $margin-1440;
+    }
+  }
+}
+
+.product-page {
+  @media (min-width: $big-desktop) {
+    product-grid {
+      display: grid;
+      grid-template-columns: 49.2% 49.2%;
+      grid-column-gap: 23px;
+      grid-row-gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      margin-left: $margin-1440;
+      margin-right: $margin-1440;
+    }
   }
 }
