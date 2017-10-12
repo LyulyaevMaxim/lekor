@@ -1067,6 +1067,10 @@ header {
 }
 
 @media (min-width: $desktop) {
+  .header-menu-catalog-body {
+    position: absolute;
+  }
+
   .header-menu-catalog-body ul {
     li:hover {
       display: flex;
