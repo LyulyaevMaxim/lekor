@@ -1,0 +1,11 @@
+mixin block-for-filters()
+  block-for-filters
+    button Фильтры
+    current-filters
+      p Выбранные фильтры
+      .current-filters-block
+        label(for="check:2:4") AND
+        label(for="check:2:3") Omron
+      a(href="catalog-block")#resetFiltersLink 
+        p Сбросить <span>фильтр</span>
+      

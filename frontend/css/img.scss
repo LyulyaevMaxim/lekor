@@ -33,10 +33,14 @@
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 23 23' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cpath d='M7 3.5c.8 1 2 2 2 3.3C8.7 8.2 7 8.2 7 9.5c-.4 1.7 1.5 3.3 2.3 4l1.8 1.7c.6.4 1.5 1 2.4.8 1.2-.2 1.5-1.8 2.7-2 1 0 1.4.5 2 .8l1.4 1c1 .5 2.5 1.2 2.6 2.4 0 1.3-1.8 3-2.7 3.3-2.7 1.3-6-.5-8-1.7-3-2-6-5-8-8.2C2 10 0 6.4 1.4 3.6c.3-.7 1.8-2.4 3-2.6C5.8.8 6.5 2.5 7 3.5z' stroke='%23F9A61A' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-//кнопка закрыть
+//кнопка закрыть (жёлтая)
 .header-menu-main #showMainMenu:checked + label,
 .header-menu-catalog-body__title .close::before {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup Copy%3C/title%3E%3Cg stroke='%23F9A61A' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cpath d='M1 1l16 16M17 1L1 17'/%3E%3C/g%3E%3C/svg%3E");
+}
+//кнопка закрыть (серая)
+block-for-filters current-filters #resetFiltersLink::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup Copy%3C/title%3E%3Cg stroke='%239B9B9B' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cpath d='M1 1l16 16M17 1L1 17'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 //стрелка вправо (серая)
@@ -75,7 +79,6 @@ breadcrumbs a::before {
   }
 }
 
-
 // слайдер: стрелка влево (серая)
 slider.owl-full-slider .owl-nav .owl-prev {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 62 52' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 2 Copy%3C/title%3E%3Cg fill='none' fill-rule='evenodd' opacity='.5'%3E%3Cpath d='M8.8 43.7c9.8 9.7 25.6 9.7 35.4 0l16.2-16.3c.8-.8.8-2 0-2.8L44.2 8.3c-9.8-9.7-25.6-9.7-35.4 0C-1 18-1 34 8.8 43.7z' stroke='%23000' stroke-width='2'/%3E%3Cg fill='%23000'%3E%3Cpath d='M19.8 26c0-.3 0-.7.4-1l1-.8 4.4-5c.5-.3 1.2-.2 1.6.3.4.4.3 1 0 1.5l-4.8 5 4.7 5c.5.4.6 1 .2 1.6-.4.5-1 .5-1.6 0L21 28l-.8-1c-.3-.3-.4-.6-.4-1z'/%3E%3Cpath d='M40 26c0 .5-.4 1-1 1.2H23.4c-.6 0-1.2-.3-1.2-1 0-.6.3-1 1-1.2h15.5c.7 0 1.2.3 1.3 1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -89,6 +92,11 @@ slider.owl-full-slider .owl-nav .owl-prev:hover {
 // слайдерная стрелка вправо (серая)
 slider.owl-full-slider .owl-nav .owl-next {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 62 52' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 2%3C/title%3E%3Cg fill='none' fill-rule='evenodd' opacity='.5'%3E%3Cpath d='M53.2 43.7c-9.8 9.7-25.6 9.7-35.4 0L1.6 27.4c-.8-.8-.8-2 0-2.8L17.8 8.3c9.8-9.7 25.6-9.7 35.4 0C63 18 63 34 53.2 43.7z' stroke='%23000' stroke-width='2'/%3E%3Cg fill='%23000'%3E%3Cpath d='M42.2 26c0-.3 0-.7-.4-1l-1-.8-4.4-5c-.5-.3-1.2-.2-1.6.3-.4.4-.3 1 0 1.5l4.8 5-4.7 5c-.5.4-.6 1-.2 1.6.4.5 1 .5 1.6 0L41 28l.8-1c.3-.3.4-.6.4-1z'/%3E%3Cpath d='M22 26c0 .5.4 1 1 1.2h15.6c.6 0 1.2-.3 1.2-1 0-.6-.3-1-1-1.2H23.4c-.7 0-1.2.3-1.3 1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// слайдерная стрелка вправо (серая с чёрной стрелкой)
+pagination .next {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 62 52' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 2%3C/title%3E%3Cg fill='none' fill-rule='evenodd' opacity='.5'%3E%3Cpath d='M53.2 43.7c-9.8 9.7-25.6 9.7-35.4 0L1.6 27.4c-.8-.8-.8-2 0-2.8L17.8 8.3c9.8-9.7 25.6-9.7 35.4 0C63 18 63 34 53.2 43.7z' stroke='%239B9B9B' stroke-width='2'/%3E%3Cg fill='%234A4A4A'%3E%3Cpath d='M42.2 26c0-.3 0-.7-.4-1l-1-.8-4.4-5c-.5-.3-1.2-.2-1.6.3-.4.4-.3 1 0 1.5l4.8 5-4.7 5c-.5.4-.6 1-.2 1.6.4.5 1 .5 1.6 0L41 28l.8-1c.3-.3.4-.6.4-1z'/%3E%3Cpath d='M22 26c0 .5.4 1 1 1.2h15.6c.6 0 1.2-.3 1.2-1 0-.6-.3-1-1-1.2H23.4c-.7 0-1.2.3-1.3 1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 // слайдерная стрелка вправо (жёлтая)
@@ -139,8 +147,6 @@ product-information .add-to-compare::before {
     background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 29 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EFill 1%3C/title%3E%3Cpath d='M24.8 11.2l.2-.6c.8 0 1.3 0 2-.4l1.3-.8h-1.6L25.3 9h.9l1-.4 1-1-1.7.2c-.3 0-1.5 0-1.6-.3l-.5-1.3L24 5c-.6-.7-1.2-1.3-2-1.8l-3-.8c.2-.2 1-.3 1.2-.4 1.3-.4 1.2-.8 1-1-.5 0-1.5.3-2 .5l.8-1c-.8.2-1.4.6-2 1l.3-.6c-.8 0-2.3 2-2.7 2.8L14 7.4c-.2 0-1.2-1-2-1.5-.6-.5-1.5-1-2.2-1.3l-5-2C4.5 4.3 5.7 5.2 7 6l-1.6.3c0 .7.6 1.4 1 1.8.8.7 1 .7 1.8 1h.2c-1 .3-.8 0-1.8.8 0 .4 1 1.3 1.7 1.5l1.6.2-.5.2c-.2 0-.2.2-.3.3-.3.3-.4.6-.2 1l1.8.8c0 .2-.7.7-1 .8C9 15.4 7.7 16 6 16c-1.2 0-2.3 0-3-.5-1-.4-1.5-.7-2.3-1.3.2.4.7 1 1 1.2 3 3 7.7 4.8 12.6 4 3-.6 5-1.6 6.7-3 .3 0 1-.7 1.2-1 .8-.8 1.5-1.6 2-2.6 0-.3.6-1.3.6-1.6' fill='%23f9a61a' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
 }
-
-
 
 //ВК (серый)
 .footer-info-social-network__icon.vkontakte {
@@ -193,7 +199,7 @@ product-information review-rating:not(:checked) > label {
 
 //rating (жёлтый)
 // review-rating > label:hover,
-// review-rating > label:hover ~ label, 
+// review-rating > label:hover ~ label,
 review-rating > input:checked ~ label {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EFill 1%3C/title%3E%3Cpath d='M16 6.4l-3 4v5.2l-3.4-1.2c-.3-.2-.8-.4-1.2-.4-.3 0-.8.3-1 .4l-3.6 1.2v-3.8-1.3c0-.3-.5-.7-.7-1l-2-3C2 6 3 5.6 4.3 5.2c.4 0 .8-.2 1-.4.4-.2.7-.8 1-1l2-3V.7l2.2 3c.2.4.5 1 .7 1 .3.3.8.4 1.2.5 1 .4 2.3.8 3.5 1' fill='%23F9A61A' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
@@ -211,4 +217,30 @@ product-information .product-in-stock::before {
 // супермен (жёлтый)
 product-information .delivery-product-title::before {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg stroke='%23F9A61A' stroke-width='2' fill='none' fill-rule='evenodd'%3E%3Cpath d='M17.5 1.8c-.6 0-1 .6-.7 1.3 0 .7.6 1 1.3 1 .6 0 1-.7.8-1.3 0-.7-.5-1-1.3-1zM19.2 7.3h1s0-.2.2-.3h-.3c-.3.2-.5.3-.8.3zm-1 0h-1c-1.2 0-1.8.2-2.3.4-.3 0-.6.2-1 .5l-.5.4c-.2.2-1 .8-1 1l-.7.4c-.7.6-1 1-1 1.4-.2.6 0 .8.7 1.5h.3c.6.7 1 1 1.3 1.6l.3.5-.2.6c-.2.5-.6.8-1 1.3h-.4c-.5.5-.6.6-.6.8h.2s.4 0 .8-.5l.7-.8.4-.3.5-.4c.5-.4.7-.7.7-.8l-.6-1h-.2l-.3-.4-.4-.5c-.3-.3-.4-.5-.4-1s.4-.8 1.4-1.6h.2l1-1c.3 0 1-.7 1-.7l.4-.3 1.4-1h.7zm0 0H19.2h-1zM10.6 5.5c-.8.2-1.7.5-2.7 1-.3 0-.4 0-.7.2-2.2 1-3.6 1.6-5 1.6.5 1.7 1.4 3 2.7 3.6.6-.5 1.2-1 1.7-1.7C6.7 8.8 7.5 8 9 7c0-.2.5-.6.7-.8.2 0 .6-.4 1-.7zM9.2 14L7 16.2c-.2.2-1 1-1.2 1L5 18l-.3.4H5c-.2 0 0 0 .2-.2l.2-.2.3-.2c0-.2.2-.2.2-.3l1.4-1.3c.7-.6 1-1 1.5-1.3l.2-.4s.3 0 .4-.2l-.2-.2-.2-.2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+block-for-toggles sort-mode .price.to-top::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%234A4A4A' fill-rule='evenodd'%3E%3Cpath d='M13 7.6c.6.5 1.3.6 1.8.2.4-.4.5-1.2 0-1.7l-5-4.6-.8-1C8.6 0 8 0 7.4.5c-.5.4-.6 1-.2 1.6l6 5.6z'/%3E%3Cpath d='M3 7.6c-.5.5-1.2.6-1.7.2C.8 7.4.7 6.6 1 6l5-4.6 1-1C7.4 0 8.2 0 8.7.5c.4.4.5 1 0 1.6L3 7.6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+block-for-toggles sort-mode .price.to-bottom::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%239B9B9B' fill-rule='evenodd'%3E%3Cpath d='M13 .5c.6-.5 1.3-.6 1.8-.2.4.4.5 1 0 1.6l-5 4.7-.8.8c-.4.5-1 .6-1.6.2-.5-.4-.6-1-.2-1.6l6-5.5z'/%3E%3Cpath d='M3 .5C2.4 0 1.7 0 1.2.3.8.7.7 1.3 1 2c0 0 3.4 3 5 4.7l1 .8c.4.5 1.2.6 1.7.2.4-.4.5-1 0-1.6L3 .6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+//табличный режим просмотра (чёрный)
+block-for-toggles view-mode .table-mode.active {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 6%3C/title%3E%3Cg fill='%234A4A4A' fill-rule='evenodd'%3E%3Cpath d='M0 0h4v4H0zM0 8h4v4H0zM0 16h4v4H0zM8 0h4v4H8zM8 8h4v4H8zM8 16h4v4H8zM16 0h4v4h-4zM16 8h4v4h-4zM16 16h4v4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+//табличный режим просмотра (серый)
+block-for-toggles view-mode .table-mode {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 6%3C/title%3E%3Cg fill='%239B9B9B' fill-rule='evenodd'%3E%3Cpath d='M0 0h4v4H0zM0 8h4v4H0zM0 16h4v4H0zM8 0h4v4H8zM8 8h4v4H8zM8 16h4v4H8zM16 0h4v4h-4zM16 8h4v4h-4zM16 16h4v4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+block-for-toggles view-mode .list-mode {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 2%3C/title%3E%3Cg fill='%239B9B9B' fill-rule='evenodd'%3E%3Cpath d='M5 18h15v2H5M0 18h2v2H0M5 9h15v2H5M0 9h2v2H0M5 0h15v2H5M0 0h2v2H0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+block-for-toggles view-mode .list-mode.active {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup 2%3C/title%3E%3Cg fill='%234A4A4A' fill-rule='evenodd'%3E%3Cpath d='M5 18h15v2H5M0 18h2v2H0M5 9h15v2H5M0 9h2v2H0M5 0h15v2H5M0 0h2v2H0'/%3E%3C/g%3E%3C/svg%3E");
 }

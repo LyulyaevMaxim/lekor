@@ -89,7 +89,6 @@ item {
   }
 
   .title {
-
     // word-break: break-all;
 
     @media (min-width: $tablet) {
@@ -153,7 +152,7 @@ item {
   }
 
   .price {
-    min-width: 99px;
+    min-width: 98px;
     padding-right: 10px;
 
     p {

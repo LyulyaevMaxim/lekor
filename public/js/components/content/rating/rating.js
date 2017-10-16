@@ -1,1 +1,10 @@
-"use strict";!function(){var t=$("ratings-distribution"),i=parseFloat(t.attr("all-votes")),r=0,s=0;t.find("review-rating").each(function(){r=parseFloat($(this).attr("receive-votes")),(s=parseFloat(r/i*100))>0?$(this).find("progress-bar").css("width",s+"%"):$(this).find("progress-bar").hide()})}();
+"use strict";
+!function () {
+  var t = $("ratings-distribution"),
+      i = parseFloat(t.attr("all-votes")),
+      r = 0,
+      s = 0;t.find("review-rating").each(function () {
+    r = parseFloat($(this).attr("receive-votes")), (s = parseFloat(r / i * 100)) > 0 ? $(this).find("progress-bar").css("width", s + "%") : $(this).find("progress-bar").hide();
+  });
+}();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRlbnQvcmF0aW5nL3JhdGluZy5qcyJdLCJuYW1lcyI6WyJ0IiwiJCIsImkiLCJwYXJzZUZsb2F0IiwiYXR0ciIsInIiLCJzIiwiZmluZCIsImVhY2giLCJjc3MiLCJoaWRlIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFhLENBQUMsWUFBVTtBQUFDLE1BQUlBLElBQUVDLEVBQUUsc0JBQUYsQ0FBTjtBQUFBLE1BQWdDQyxJQUFFQyxXQUFXSCxFQUFFSSxJQUFGLENBQU8sV0FBUCxDQUFYLENBQWxDO0FBQUEsTUFBa0VDLElBQUUsQ0FBcEU7QUFBQSxNQUFzRUMsSUFBRSxDQUF4RSxDQUEwRU4sRUFBRU8sSUFBRixDQUFPLGVBQVAsRUFBd0JDLElBQXhCLENBQTZCLFlBQVU7QUFBQ0gsUUFBRUYsV0FBV0YsRUFBRSxJQUFGLEVBQVFHLElBQVIsQ0FBYSxlQUFiLENBQVgsQ0FBRixFQUE0QyxDQUFDRSxJQUFFSCxXQUFXRSxJQUFFSCxDQUFGLEdBQUksR0FBZixDQUFILElBQXdCLENBQXhCLEdBQTBCRCxFQUFFLElBQUYsRUFBUU0sSUFBUixDQUFhLGNBQWIsRUFBNkJFLEdBQTdCLENBQWlDLE9BQWpDLEVBQXlDSCxJQUFFLEdBQTNDLENBQTFCLEdBQTBFTCxFQUFFLElBQUYsRUFBUU0sSUFBUixDQUFhLGNBQWIsRUFBNkJHLElBQTdCLEVBQXRIO0FBQTBKLEdBQWxNO0FBQW9NLENBQXpSLEVBQUQiLCJmaWxlIjoiY29udGVudC9yYXRpbmcvcmF0aW5nLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7IWZ1bmN0aW9uKCl7dmFyIHQ9JChcInJhdGluZ3MtZGlzdHJpYnV0aW9uXCIpLGk9cGFyc2VGbG9hdCh0LmF0dHIoXCJhbGwtdm90ZXNcIikpLHI9MCxzPTA7dC5maW5kKFwicmV2aWV3LXJhdGluZ1wiKS5lYWNoKGZ1bmN0aW9uKCl7cj1wYXJzZUZsb2F0KCQodGhpcykuYXR0cihcInJlY2VpdmUtdm90ZXNcIikpLChzPXBhcnNlRmxvYXQoci9pKjEwMCkpPjA/JCh0aGlzKS5maW5kKFwicHJvZ3Jlc3MtYmFyXCIpLmNzcyhcIndpZHRoXCIscytcIiVcIik6JCh0aGlzKS5maW5kKFwicHJvZ3Jlc3MtYmFyXCIpLmhpZGUoKX0pfSgpOyJdfQ==

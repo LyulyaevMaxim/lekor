@@ -1,0 +1,94 @@
+include ../components/head/head
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+include ../components/header/header
+include ../components/footer/footer
+include ../components/connect-js/scripts
+//- контент
+include ../components/items/items-section
+include ../components/items/item
+include ../components/content/content
+include ../components/content/breadcrumbs/breadcrumbs
+include ../components/content/rating/rating
+//- product
+include ../components/product/header/header
+include ../components/product/description/description
+include ../components/product/characteristics/characteristics
+include ../components/product/files/files
+include ../components/product/reviews/reviews
+//- catalog
+include ../components/catalog/toggles/toggles
+include ../components/catalog/filters/filters
+include ../components/catalog/pagination/pagination
+include ../components/catalog/items/items
+//- слайдеры
+include ../components/sliders/full-slider/full-slider
+include ../components/sliders/product-slider/product-slider
+
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Каталог",
+      "description": "Страница каталога"
+    })
+
++header()
++b.BODY.catalog-page
+  +breadcrumbs({"index": [0, 1, 2],
+    "title": ["Главная", "Каталог", "Диагностика организма"]
+  })
+  
+  h1 Тонометры  
+  
+  catalog-block(name="catalog-block")
+    +block-for-toggles()
+    +block-for-filters()
+    +catalog-items({ 
+    "section_class": "list",
+    "items_index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "item_picture": [
+      "item--bwell.jpg", "product.jpg", "item--medisana.jpg",  "item--medisanaBU.jpg",
+      
+      "item--medisana.jpg", "item--medisanaBU.jpg", "item--bwell.jpg", "product.jpg",
+
+      "item--bwell.jpg", "product.jpg", "item--medisana.jpg",  "item--medisanaBU.jpg",
+      
+      "item--bwell.jpg", "product.jpg", "item--medisana.jpg"
+      ],
+
+    "item_title": [
+        "Тонометр B.Well WA-55 c адаптером и ман dgdgdg", "Плечевой тонометр Medisana Cardio sgfdg", "Тонометр Microlife BP A6 PC", "Плечевой тонометр Medisana BU 550 dgdgfd",
+        
+        "Плечевой тонометр Medisana BU 575 dgdgfd", "Тонометр B.Well WA-33 манжета М", "Тонометр B.Well WA-55 c адаптером и ман adAsSA", "Плечевой тонометр Medisana Cardio sgfdg",
+
+        "Тонометр Microlife BP A6 PC", "Плечевой тонометр Medisana BU 550 SBVCB", "Плечевой тонометр Medisana BU 575 DGFD", "Тонометр B.Well WA-33 манжета М", "Тонометр B.Well WA-33 манжета М",
+
+         "Тонометр B.Well WA-55 c адаптером и ман dgdgdg", "Плечевой тонометр Medisana Cardio sgfdg", "Тонометр Microlife BP A6 PC"
+        ],
+    "item_price": ["2 634 р.", "5 540 р.", "5 540 р.", "6 736 р.", 
+                   "5 540 р.", "1 640 р.", "2 634 р.", "5 540 р.",
+                   "5 540 р.", "6 736 р.", "5 540 р.", "1 640 р.",
+                   "2 634 р.", "5 540 р.", "5 540 р."
+                  ]
+  }) 
+ 
+  +items-section({ 
+    "section_class": "popular-products purple",
+    "data_attribute": "Хит",
+    "section_title": "Вы смотрели",
+    "items_index": [0, 1, 2, 3, 4],
+    "item_picture": ["item--clock.jpg", "item--milk.jpg", "item--tonometr.jpg", "item--massage.jpg", "item--ultra.jpg"],
+    "item_title": ["Часы-пульсометры Beurer PM16", "Компрессорный небулайзер (ингалятор) CN-HT 05 «Джино»", "Тонометр Microlife BP A6 PC", "Массажер антицеллюлитный Cellules MD", "Ультразвуковой увлажнитель Ballu UHB-190"],
+    "item_price": ["3 390 р.", "3 990 р.", "5 540 р.", "5 540 р.", "2 990 р." ]
+  }) 
+   
+  +banner()
+  +footer()             
+  
++scripts()
+script(src="js/lightslider/lightslider.js") 
+script(src="js/components/sliders/product-slider/product-slider.js" async)
+script(src="js/components/items/items-section.js" async)
+script(src="js/components/product/product.js" async)
+script(src="js/components/content/rating/rating.js" async)    

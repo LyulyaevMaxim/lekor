@@ -1,0 +1,73 @@
+catalog-block {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    margin-left: $margin-768;
+    margin-right: $margin-768;
+    display: grid;
+    align-items: flex-start;
+    grid-template: "filters toggles" "filters items";
+
+    block-for-filters {
+      grid-area: filters;
+      width: 234px;
+      border-left: 1px solid #e1e1e1;
+    }
+    block-for-toggles {
+      grid-area: toggles;
+      border-left: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
+    }
+
+    catalog-items-section {
+      grid-area: items;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: $margin-1024;
+    margin-right: $margin-1024;
+  }
+  @media (min-width: $big-desktop) {
+    margin-left: $margin-1440;
+    margin-right: $margin-1440;
+  }
+
+  catalog-items-section pagination {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 21px;
+    justify-content: center;
+    @media (min-width: $tablet) {
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+  }
+
+  catalog-items-section block-for-items {
+    @media (min-width: $tablet) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.catalog-page {
+  & > h1 {
+    color: #4a4a4a;
+    font-size: 36px;
+    line-height: 42px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 19px;
+    padding-bottom: 22px;
+    @media (min-width: $tablet) {
+      padding-top: 13px;
+      padding-bottom: 30px;
+      padding-left: $margin-768;
+      padding-right: $margin-768;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+block-for-filters {
+  display: block;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 12px;
+
+  @media (min-width: $tablet) {
+    background: $white;
+  }
+
+  & > button {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    justify-content: center;
+    padding-right: 15px;
+    color: $gold;
+    font-size: 18px;
+    line-height: 21px;
+    border: 1px solid $light-black;
+    border-radius: 60px;
+    background: $light-black;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 17px;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3pt 2pt $gold;
+    }
+
+    &:hover {
+      border-color: $gold;
+      background: $gold;
+      color: $light-black;
+    }
+  }
+
+  current-filters {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 19px;
+    padding-bottom: 23px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background: $white;
+
+    @media (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 20px;
+    }
+
+    & > p {
+      width: 100%;
+      color: $black;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 21px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 20px;
+      }
+    }
+
+    #resetFiltersLink {
+      display: flex;
+      align-items: center;
+      color: $black;
+      font-size: 14px;
+      line-height: 16px;
+      cursor: pointer;
+
+      span {
+        display: none;
+
+        @media (min-width: $tablet) {
+          display: inline;
+        }
+      }
+
+      @media (min-width: $tablet) {
+        width: 100%;
+        margin-top: 23px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 13px;
+        margin-left: 18px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        @media (min-width: $tablet) {
+          height: 14px;
+          margin-left: 21px;
+        }
+      }
+    }
+  }
+  .current-filters-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      border: 1px solid #8ccaaa;
+      border-radius: 4px;
+      background: #8ccaaa;
+      font-size: 14px;
+      line-height: 17px;
+      height: 40px;
+      padding-left: 13px;
+      padding-right: 13px;
+      cursor: pointer;
+
+      @media (min-width: $tablet) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      & + label {
+        margin-left: 9px;
+        @media (min-width: $tablet) {
+          margin-left: 11px;
+        }
+      }
+
+      &:hover {
+        border-color: $gold;
+        color: $gold;
+      }
+    }
+  }
+}

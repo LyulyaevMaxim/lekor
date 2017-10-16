@@ -1,0 +1,6 @@
+mixin catalog-items(data)
+  catalog-items-section(class=data.section_class)
+    block-for-items
+      each index in data.items_index
+        +item(data.data_attribute, data.item_picture[index], data.item_title[index], data.item_price[index])
+    +pagination()      
