@@ -79,17 +79,25 @@ block-for-filters {
       line-height: 16px;
       cursor: pointer;
 
+      @media (min-width: $tablet) {
+        width: 100%;
+        margin-top: 23px;
+        font-size: 15px;
+      }
+      @media (min-width: $big-desktop) {
+        width: auto;
+        margin-top: 0;
+        font-size: 14px;
+      }
       span {
         display: none;
 
         @media (min-width: $tablet) {
           display: inline;
         }
-      }
-
-      @media (min-width: $tablet) {
-        width: 100%;
-        margin-top: 23px;
+        @media (min-width: $big-desktop) {
+          display: none;
+        }
       }
 
       &::after {
@@ -100,9 +108,11 @@ block-for-filters {
         margin-left: 18px;
         background-repeat: no-repeat;
         background-position: 50%;
+
         @media (min-width: $tablet) {
           height: 14px;
-          margin-left: 21px;
+          margin-left: 13px;
+          margin-top: -3px;
         }
       }
     }
@@ -111,6 +121,10 @@ block-for-filters {
     display: flex;
     flex-wrap: wrap;
     margin-right: 20px;
+
+    @media (min-width: $big-desktop) {
+      margin-right: 10px;
+    }
 
     label {
       display: flex;

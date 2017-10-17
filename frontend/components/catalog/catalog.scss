@@ -32,6 +32,9 @@ catalog-block {
   @media (min-width: $big-desktop) {
     margin-left: $margin-1440;
     margin-right: $margin-1440;
+    block-for-filters {
+      width: 266px;
+    }
   }
 
   catalog-items-section pagination {
@@ -47,6 +50,7 @@ catalog-block {
   }
 
   catalog-items-section block-for-items {
+    border-bottom: none;
     @media (min-width: $tablet) {
       margin-left: 0;
       margin-right: 0;
@@ -63,11 +67,20 @@ catalog-block {
     padding-right: 22px;
     padding-top: 19px;
     padding-bottom: 22px;
+
     @media (min-width: $tablet) {
       padding-top: 13px;
       padding-bottom: 30px;
       padding-left: $margin-768;
       padding-right: $margin-768;
+    }
+    @media (min-width: $desktop) {
+      padding-left: $margin-1024;
+      padding-right: $margin-1024;
+    }
+    @media (min-width: $big-desktop) {
+      padding-left: $margin-1440;
+      padding-right: $margin-1440;
     }
   }
 }

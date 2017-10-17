@@ -2,13 +2,21 @@ catalog-items-section {
   display: block;
 
   block-for-items {
-    border-bottom: 1px solid #e1e1e1;
+    @media (min-width: $tablet) {
+      border-top: 1px solid #e1e1e1;
+    }
+    @media (min-width: $big-desktop) {
+      height: auto !important;
+    }
+
     item {
-      border-bottom: none;
+      border-top: none;
+
       @media (max-width: 767px) {
         &:nth-child(n + 5) {
           display: flex;
         }
+
         &:nth-child(n + 13) {
           display: none;
         }
@@ -43,7 +51,67 @@ catalog-items-section {
         &:nth-child(n + 5) {
           display: flex;
         }
+
         &:nth-child(n + 16) {
+          display: none;
+        }
+      }
+
+      @media (min-width: $desktop) {
+        width: 33.33%;
+        border-left: 1px solid #e1e1e1;
+        border-right: 1px solid #e1e1e1;
+
+        @media (max-width: 1439px) {
+          &:nth-child(3n + 2):not(:last-child) {
+            border-left: none;
+            border-right: none;
+          }
+        }
+
+        .description {
+          padding-right: 16px;
+        }
+
+        &:nth-child(n + 16) {
+          display: flex;
+          border-bottom: 1px solid #e1e1e1;
+        }
+
+        &:nth-child(n + 19) {
+          display: none;
+        }
+      }
+
+      @media (min-width: $big-desktop) {
+        width: 25%;
+        min-width: 0;
+
+        &:nth-child(4n + 2) {
+          border-left: none;
+        }
+        &:nth-child(4n + 3) {
+          border-left: none;
+        }
+        &:nth-child(4n + 3):not(:last-child) {
+          border-right: none;
+        }
+
+        .title {
+          height: 40px;
+        }
+        .title span {
+          -webkit-line-clamp: 2;
+        }
+        .description {
+          padding-right: 13px;
+        }
+
+        &:nth-child(n + 16) {
+          display: flex;
+        }
+
+        &:nth-child(n + 29) {
           display: none;
         }
       }

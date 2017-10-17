@@ -15,6 +15,14 @@ block-for-toggles {
     padding-right: 37px;
   }
 
+  @media (min-width: $desktop) {
+    padding-right: 41px;
+  }
+
+  @media (min-width: $big-desktop) {
+    padding-right: 28px;
+  }
+
   sort-mode {
     display: flex;
 
