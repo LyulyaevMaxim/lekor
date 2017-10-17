@@ -24,7 +24,7 @@ include ../components/catalog/items/items
 //- слайдеры
 include ../components/sliders/full-slider/full-slider
 include ../components/sliders/product-slider/product-slider
-
+ 
 doctype html
 html(lang="ru")
   head
@@ -45,7 +45,7 @@ html(lang="ru")
     +block-for-toggles()
     +block-for-filters()
     +catalog-items({ 
-    "section_class": "list",
+    "section_class": "table",
     "items_index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
     "item_picture": [
       "item--bwell.jpg", "product.jpg", "item--medisanaBU.jpg", "item--medisana.jpg",        
@@ -88,8 +88,6 @@ html(lang="ru")
   +footer()             
   
 +scripts()
-script(src="js/lightslider/lightslider.js") 
-script(src="js/components/sliders/product-slider/product-slider.js" async)
 script(src="js/components/items/items-section.js" async)
-script(src="js/components/product/product.js" async)
+script(src="js/components/catalog/catalog.js" async)
 script(src="js/components/content/rating/rating.js" async)    

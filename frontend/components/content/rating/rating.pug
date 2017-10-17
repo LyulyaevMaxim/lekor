@@ -1,5 +1,5 @@
 mixin rating(index, checkedElem, averageRating)
-  review-rating(receive-votes=averageRating)
+  rating-block(receive-votes=averageRating)
     each i in [5,4,3,2,1]
       if (i == checkedElem)
         input(type="radio" name="rating" + index id="star" + index + i value=i checked)

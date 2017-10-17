@@ -1,4 +1,4 @@
-; (function () {
+(function() {
   calculateRatings();
 
   function calculateRatings() {
@@ -7,16 +7,19 @@
       receivedVotes = 0,
       widthProgressBar = 0;
 
-    ratingsDistribution.find("review-rating").each(function () {
+    ratingsDistribution.find("rating-block").each(function() {
       receivedVotes = parseFloat($(this).attr("receive-votes"));
-      widthProgressBar = parseFloat((receivedVotes / allVotes) * 100);
+      widthProgressBar = parseFloat(receivedVotes / allVotes * 100);
 
       if (widthProgressBar > 0) {
-        $(this).find("progress-bar").css("width", widthProgressBar + "%");
-      }
-      else {
-        $(this).find("progress-bar").hide();
+        $(this)
+          .find("progress-bar")
+          .css("width", widthProgressBar + "%");
+      } else {
+        $(this)
+          .find("progress-bar")
+          .hide();
       }
     });
   }
-}());
+})();

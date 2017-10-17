@@ -10,7 +10,7 @@ mixin product-reviews(data)
       ratings-distribution(all-votes=data.total_votes)
           h3 Распределение рейтингов:
           each index in [5, 4, 3, 2, 1]
-            review-rating(receive-votes=data.distribution[index])
+            rating-block(receive-votes=data.distribution[index])
               each i in [5,4,3,2,1]
                 if (i == index)
                   input(type="radio" name="rating-distribution" + index id="star" + index + i value=i checked)

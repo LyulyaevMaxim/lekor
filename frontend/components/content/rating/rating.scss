@@ -1,4 +1,4 @@
-review-rating {
+rating-block {
   display: inline-flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -23,7 +23,7 @@ review-rating {
   }
 }
 
-review-rating::before {
+rating-block::before {
   content: attr(receive-votes);
   display: block;
   margin-left: 12px;

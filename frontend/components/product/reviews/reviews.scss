@@ -102,7 +102,7 @@ product-reviews-block {
       }
     }
 
-    & > review-rating {
+    & > rating-block {
       margin-top: 13px;
       pointer-events: none;
 
@@ -225,7 +225,7 @@ product-review {
     }
   }
 
-  review-rating {
+  rating-block {
     pointer-events: none;
   }
 }
@@ -260,7 +260,7 @@ ratings-distribution {
     margin-bottom: 23px;
   }
 
-  review-rating {
+  rating-block {
     width: 100%;
     pointer-events: none;
 
@@ -281,7 +281,7 @@ ratings-distribution {
       }
     }
 
-    & + review-rating {
+    & + rating-block {
       margin-top: 5px;
     }
 

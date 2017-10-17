@@ -14,6 +14,7 @@ item {
 
   .label {
     display: none;
+    grid-area: label;
 
     @media (min-width: $big-desktop) {
       position: absolute;
@@ -55,10 +56,13 @@ item {
     width: 140px;
     height: 140px;
     text-align: center;
+    grid-area: picture;
 
     @media (min-width: $tablet) {
       width: 215px;
       height: 215px;
+      min-width: 215px;
+      min-height: 215px;
     }
 
     img {
@@ -82,13 +86,60 @@ item {
     width: 100%;
     padding-left: 13px;
     padding-right: 19px;
-    // align-self: flex-end;
+    grid-area: description;
+
     @media (min-width: $tablet) {
       height: calc(100% - 215px);
     }
   }
 
+  .product-in-stock {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 0px;
+    grid-area: product-in-stock;
+
+    @media (min-width: $tablet) {
+      margin-top: 15px;
+      margin-left: 6px;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: $big-desktop) {
+      grid-column: 1;
+      margin-top: 10px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      min-width: 12px;
+      height: 12px;
+      margin-right: 9px;
+      cursor: pointer;
+    }
+
+    p {
+      color: #4a4a4a;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  product-characteristics-list {
+    display: none;
+    grid-area: product-characteristics-list;
+  }
+  rating-block {
+    display: none;
+    grid-area: rating-block;
+    pointer-events: none;
+  }
   .title {
+    grid-area: title;
     // word-break: break-all;
 
     @media (min-width: $tablet) {
@@ -122,6 +173,7 @@ item {
   .add-to-compare {
     display: flex;
     width: 100%;
+    grid-area: add-to-compare;
 
     &::before {
       content: "";
@@ -154,6 +206,7 @@ item {
   .price {
     min-width: 98px;
     padding-right: 10px;
+    grid-area: price;
 
     p {
       font-weight: $PTSansBold;
@@ -189,5 +242,6 @@ item {
 
   .add-to-cart {
     text-transform: uppercase;
+    grid-area: add-to-cart;
   }
 }

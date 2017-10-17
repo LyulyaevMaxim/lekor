@@ -41,7 +41,7 @@ product-header product-slider {
   }
 }
 
-product-header product-characteristics-list {
+product-characteristics-list {
   display: none;
 
   @media (min-width: $desktop) {
@@ -182,9 +182,10 @@ product-header product-information {
     }
   }
 
-  review-rating {
+  rating-block {
     margin-left: 18px;
     margin-top: 19px;
+    pointer-events: none;
 
     @media (min-width: $tablet) {
       margin-left: 5px;
@@ -354,4 +355,3 @@ product-header product-information {
     }
   }
 }
-
