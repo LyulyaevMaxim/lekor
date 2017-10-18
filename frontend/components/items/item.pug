@@ -28,11 +28,12 @@ mixin item(attribute, img, title, price)
           description Наличие стетоскопа:
           value Нет
       +rating("-current-item", 4)
-      .add-to-compare
-      .product-in-stock: p В наличии 
+      .add-to-compare      
       .price
         p #{price}
         p.old 18 199 р.
       .classic-button.add-to-cart Купить
+      .product-in-stock: p В наличии 
+      
       
       
