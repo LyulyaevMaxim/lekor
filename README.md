@@ -1,5 +1,8 @@
 ## ГЛАВНАЯ
 https://maxim-buslaev.github.io/lekor/public
 
-## СТРАНИЦА "ТОВАРА"
+## ШАБЛОН "ТОВАР"
 https://maxim-buslaev.github.io/lekor/public/product.html
+
+## ШАБЛОН "КАТАЛОГ"
+https://maxim-buslaev.github.io/lekor/public/catalog.html
