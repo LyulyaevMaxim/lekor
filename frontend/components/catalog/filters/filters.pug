@@ -1,5 +1,5 @@
 mixin block-for-filters()
-  block-for-filters
+  block-for-filters.active
     button Фильтры
     current-filters
       p Выбранные фильтры
@@ -8,4 +8,12 @@ mixin block-for-filters()
         label(for="check:2:3") Omron
       a(href="catalog-block")#resetFiltersLink 
         p Сбросить <span>фильтр</span>
+    accordion
+      input(type="checkbox" checked)#showCallForm    
+      label(for="showCallForm")
+        p Цена    
+      accordion-content
+        input(type="range" min="0" max="150" value="0,140")
+        .range__min-value: p 0
+        .range__max-value: p 17893
       

@@ -10,6 +10,7 @@ include ../components/items/item
 include ../components/content/content
 include ../components/content/breadcrumbs/breadcrumbs
 include ../components/content/rating/rating
+include ../components/content/accordion/accordion
 //- product
 include ../components/product/header/header
 include ../components/product/description/description
@@ -21,12 +22,13 @@ include ../components/catalog/toggles/toggles
 include ../components/catalog/filters/filters
 include ../components/catalog/pagination/pagination
 include ../components/catalog/items/items
+include ../components/catalog/items/item
 //- слайдеры
 include ../components/sliders/full-slider/full-slider
 include ../components/sliders/product-slider/product-slider
  
 doctype html
-html(lang="ru")
+html(lang="ru").block-html
   head
     +head({
       "title": "Каталог",
@@ -73,7 +75,7 @@ html(lang="ru")
                    "5 540 р.", "6 736 р."
                   ]
   }) 
- 
+  
   +items-section({ 
     "section_class": "popular-products purple",
     "data_attribute": "Хит",
@@ -89,5 +91,6 @@ html(lang="ru")
   
 +scripts()
 script(src="js/components/items/items-section.js" async)
+script(src="js/nativeMultipleRange/nativeMultipleRange.js") 
 script(src="js/components/catalog/catalog.js" async)
-script(src="js/components/content/rating/rating.js" async)    
+script(src="js/components/content/rating/rating.js" async)

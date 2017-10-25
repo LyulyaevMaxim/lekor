@@ -84,17 +84,20 @@ block-for-filters {
         margin-top: 23px;
         font-size: 15px;
       }
+
       @media (min-width: $big-desktop) {
         width: auto;
         margin-top: 0;
         font-size: 14px;
       }
+
       span {
         display: none;
 
         @media (min-width: $tablet) {
           display: inline;
         }
+
         @media (min-width: $big-desktop) {
           display: none;
         }
@@ -117,6 +120,7 @@ block-for-filters {
       }
     }
   }
+
   .current-filters-block {
     display: flex;
     flex-wrap: wrap;
@@ -148,6 +152,7 @@ block-for-filters {
 
       & + label {
         margin-left: 9px;
+
         @media (min-width: $tablet) {
           margin-left: 11px;
         }
@@ -157,6 +162,85 @@ block-for-filters {
         border-color: $gold;
         color: $gold;
       }
+    }
+  }
+}
+
+block-for-filters.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  background: $white;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: 27px;
+  overflow-y: scroll;
+
+  &::before {
+    content: "Фильтры";
+    display: inline-flex;
+    font-size: 24px;
+    line-height: 29px;
+    color: $light-black;
+    margin-left: 22px;
+  }
+
+  & > button {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    font-size: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-origin: content-box;
+    padding: 16px;
+    margin-left: 0;
+    margin-right: 7px;
+    margin-top: -13px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  current-filters {
+    margin-top: 6px;
+    border-top: 1px solid #e1e1e1;
+    padding-bottom: 21px;
+
+    #resetFiltersLink {
+      width: 100%;
+      margin-top: 22px;
+      font-size: 15px;
+
+      &::after {
+        margin-left: 14px;
+      }
+
+      span {
+        display: inline;
+      }
+    }
+  }
+
+  accordion {
+    border-top: 1px solid #e1e1e1;
+
+    accordion-content {
+      margin-top: 13px;
+    }
+
+    .nativeMultiple {
+      width: 64.2%;
+      margin-left: 1px;
     }
   }
 }

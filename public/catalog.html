@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="block-html" lang="ru">
 	<head>
 		<title>Каталог</title>
 		<meta charset="utf-8"/>
@@ -12,7 +12,6 @@
 		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700.woff2"/>
 		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-italic.woff2"/>
 		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700-italic.woff2"/>
-		<link rel="stylesheet" href="styles/img.css"/>
 		<link href="img/favicons/favicon.ico" rel="shortcut icon"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
@@ -23,7 +22,9 @@
 		<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
 		<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
 		<link href="js/lightslider/lightslider.css" rel="stylesheet"/>
+		<link href="js/nativeMultipleRange/nativeMultipleRange.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="styles/styles.css"/>
+		<link rel="stylesheet" href="styles/img.css"/>
 	</head>
 </html>
 <header>
@@ -157,7 +158,7 @@
 				<div class="list-mode"></div>
 			</view-mode>
 		</block-for-toggles>
-		<block-for-filters>
+		<block-for-filters class="active">
 			<button>Фильтры</button>
 			<current-filters>
 				<p>Выбранные фильтры</p>
@@ -167,6 +168,21 @@
 				</div><a href="catalog-block" id="resetFiltersLink"> 
 					<p>Сбросить <span>фильтр</span></p></a>
 			</current-filters>
+			<accordion>
+				<input type="checkbox" checked="checked" id="showCallForm"/>
+				<label for="showCallForm">
+					<p>Цена    </p>
+				</label>
+				<accordion-content>
+					<input type="range" min="0" max="150" value="0,140"/>
+					<div class="range__min-value">
+						<p>0</p>
+					</div>
+					<div class="range__max-value">
+						<p>17893</p>
+					</div>
+				</accordion-content>
+			</accordion>
 		</block-for-filters>
 		<catalog-items-section class="table">
 			<block-for-items>
@@ -1805,290 +1821,65 @@
 				<div class="label"><span>Хит</span></div>
 				<div class="picture"><img src="img/content/item--clock.jpg"/></div>
 				<div class="description">
-					<div class="title"><span>Часы-пульсометры Beurer PM16</span></div>
-					<product-characteristics-list>
-						<feature>
-							<description>Производитель:</description>
-							<value>B.Well</value>
-						</feature>
-						<feature>
-							<description>Место наложения манжеты:</description>
-							<value>Плечо</value>
-						</feature>
-						<feature>
-							<description>Размер манжеты:</description>
-							<value>от 22 до 42 см</value>
-						</feature>
-						<feature>
-							<description>Питание:</description>
-							<value>4 элемента типа ААА, от сети 220В</value>
-						</feature>
-						<feature>
-							<description>Возможность подключения адаптера: </description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие адаптера в комплекте:</description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие стетоскопа:</description>
-							<value>Нет</value>
-						</feature>
-					</product-characteristics-list>
-					<rating-block>
-						<input type="radio" name="rating-current-item" id="star-current-item5" value="5"/>
-						<label for="star-current-item5"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item4" value="4" checked="checked"/>
-						<label for="star-current-item4"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item3" value="3"/>
-						<label for="star-current-item3"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item2" value="2"/>
-						<label for="star-current-item2"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item1" value="1"/>
-						<label for="star-current-item1"> </label>
-					</rating-block>
+					<div class="title"><span>Часы-пульсометры Beurer PM16     </span></div>
 					<div class="add-to-compare">     </div>
 					<div class="price">
 						<p>3 390 р.</p>
 						<p class="old">18 199 р.</p>
 					</div>
 					<div class="classic-button add-to-cart">Купить</div>
-					<div class="product-in-stock">
-						<p>В наличии </p>
-					</div>
 				</div>
 			</item>
 			<item>
 				<div class="label"><span>Хит</span></div>
 				<div class="picture"><img src="img/content/item--milk.jpg"/></div>
 				<div class="description">
-					<div class="title"><span>Компрессорный небулайзер (ингалятор) CN-HT 05 «Джино»</span></div>
-					<product-characteristics-list>
-						<feature>
-							<description>Производитель:</description>
-							<value>B.Well</value>
-						</feature>
-						<feature>
-							<description>Место наложения манжеты:</description>
-							<value>Плечо</value>
-						</feature>
-						<feature>
-							<description>Размер манжеты:</description>
-							<value>от 22 до 42 см</value>
-						</feature>
-						<feature>
-							<description>Питание:</description>
-							<value>4 элемента типа ААА, от сети 220В</value>
-						</feature>
-						<feature>
-							<description>Возможность подключения адаптера: </description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие адаптера в комплекте:</description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие стетоскопа:</description>
-							<value>Нет</value>
-						</feature>
-					</product-characteristics-list>
-					<rating-block>
-						<input type="radio" name="rating-current-item" id="star-current-item5" value="5"/>
-						<label for="star-current-item5"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item4" value="4" checked="checked"/>
-						<label for="star-current-item4"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item3" value="3"/>
-						<label for="star-current-item3"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item2" value="2"/>
-						<label for="star-current-item2"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item1" value="1"/>
-						<label for="star-current-item1"> </label>
-					</rating-block>
+					<div class="title"><span>Компрессорный небулайзер (ингалятор) CN-HT 05 «Джино»     </span></div>
 					<div class="add-to-compare">     </div>
 					<div class="price">
 						<p>3 990 р.</p>
 						<p class="old">18 199 р.</p>
 					</div>
 					<div class="classic-button add-to-cart">Купить</div>
-					<div class="product-in-stock">
-						<p>В наличии </p>
-					</div>
 				</div>
 			</item>
 			<item>
 				<div class="label"><span>Хит</span></div>
 				<div class="picture"><img src="img/content/item--tonometr.jpg"/></div>
 				<div class="description">
-					<div class="title"><span>Тонометр Microlife BP A6 PC</span></div>
-					<product-characteristics-list>
-						<feature>
-							<description>Производитель:</description>
-							<value>B.Well</value>
-						</feature>
-						<feature>
-							<description>Место наложения манжеты:</description>
-							<value>Плечо</value>
-						</feature>
-						<feature>
-							<description>Размер манжеты:</description>
-							<value>от 22 до 42 см</value>
-						</feature>
-						<feature>
-							<description>Питание:</description>
-							<value>4 элемента типа ААА, от сети 220В</value>
-						</feature>
-						<feature>
-							<description>Возможность подключения адаптера: </description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие адаптера в комплекте:</description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие стетоскопа:</description>
-							<value>Нет</value>
-						</feature>
-					</product-characteristics-list>
-					<rating-block>
-						<input type="radio" name="rating-current-item" id="star-current-item5" value="5"/>
-						<label for="star-current-item5"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item4" value="4" checked="checked"/>
-						<label for="star-current-item4"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item3" value="3"/>
-						<label for="star-current-item3"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item2" value="2"/>
-						<label for="star-current-item2"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item1" value="1"/>
-						<label for="star-current-item1"> </label>
-					</rating-block>
+					<div class="title"><span>Тонометр Microlife BP A6 PC     </span></div>
 					<div class="add-to-compare">     </div>
 					<div class="price">
 						<p>5 540 р.</p>
 						<p class="old">18 199 р.</p>
 					</div>
 					<div class="classic-button add-to-cart">Купить</div>
-					<div class="product-in-stock">
-						<p>В наличии </p>
-					</div>
 				</div>
 			</item>
 			<item>
 				<div class="label"><span>Хит</span></div>
 				<div class="picture"><img src="img/content/item--massage.jpg"/></div>
 				<div class="description">
-					<div class="title"><span>Массажер антицеллюлитный Cellules MD</span></div>
-					<product-characteristics-list>
-						<feature>
-							<description>Производитель:</description>
-							<value>B.Well</value>
-						</feature>
-						<feature>
-							<description>Место наложения манжеты:</description>
-							<value>Плечо</value>
-						</feature>
-						<feature>
-							<description>Размер манжеты:</description>
-							<value>от 22 до 42 см</value>
-						</feature>
-						<feature>
-							<description>Питание:</description>
-							<value>4 элемента типа ААА, от сети 220В</value>
-						</feature>
-						<feature>
-							<description>Возможность подключения адаптера: </description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие адаптера в комплекте:</description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие стетоскопа:</description>
-							<value>Нет</value>
-						</feature>
-					</product-characteristics-list>
-					<rating-block>
-						<input type="radio" name="rating-current-item" id="star-current-item5" value="5"/>
-						<label for="star-current-item5"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item4" value="4" checked="checked"/>
-						<label for="star-current-item4"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item3" value="3"/>
-						<label for="star-current-item3"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item2" value="2"/>
-						<label for="star-current-item2"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item1" value="1"/>
-						<label for="star-current-item1"> </label>
-					</rating-block>
+					<div class="title"><span>Массажер антицеллюлитный Cellules MD     </span></div>
 					<div class="add-to-compare">     </div>
 					<div class="price">
 						<p>5 540 р.</p>
 						<p class="old">18 199 р.</p>
 					</div>
 					<div class="classic-button add-to-cart">Купить</div>
-					<div class="product-in-stock">
-						<p>В наличии </p>
-					</div>
 				</div>
 			</item>
 			<item>
 				<div class="label"><span>Хит</span></div>
 				<div class="picture"><img src="img/content/item--ultra.jpg"/></div>
 				<div class="description">
-					<div class="title"><span>Ультразвуковой увлажнитель Ballu UHB-190</span></div>
-					<product-characteristics-list>
-						<feature>
-							<description>Производитель:</description>
-							<value>B.Well</value>
-						</feature>
-						<feature>
-							<description>Место наложения манжеты:</description>
-							<value>Плечо</value>
-						</feature>
-						<feature>
-							<description>Размер манжеты:</description>
-							<value>от 22 до 42 см</value>
-						</feature>
-						<feature>
-							<description>Питание:</description>
-							<value>4 элемента типа ААА, от сети 220В</value>
-						</feature>
-						<feature>
-							<description>Возможность подключения адаптера: </description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие адаптера в комплекте:</description>
-							<value>Да</value>
-						</feature>
-						<feature>
-							<description>Наличие стетоскопа:</description>
-							<value>Нет</value>
-						</feature>
-					</product-characteristics-list>
-					<rating-block>
-						<input type="radio" name="rating-current-item" id="star-current-item5" value="5"/>
-						<label for="star-current-item5"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item4" value="4" checked="checked"/>
-						<label for="star-current-item4"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item3" value="3"/>
-						<label for="star-current-item3"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item2" value="2"/>
-						<label for="star-current-item2"> </label>
-						<input type="radio" name="rating-current-item" id="star-current-item1" value="1"/>
-						<label for="star-current-item1"> </label>
-					</rating-block>
+					<div class="title"><span>Ультразвуковой увлажнитель Ballu UHB-190     </span></div>
 					<div class="add-to-compare">     </div>
 					<div class="price">
 						<p>2 990 р.</p>
 						<p class="old">18 199 р.</p>
 					</div>
 					<div class="classic-button add-to-cart">Купить</div>
-					<div class="product-in-stock">
-						<p>В наличии </p>
-					</div>
 				</div>
 			</item>
 		</block-for-items>
@@ -2144,5 +1935,6 @@
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/components/header/header.js" async="async"></script>
 <script src="js/components/items/items-section.js" async></script>
+<script src="js/nativeMultipleRange/nativeMultipleRange.js"> </script>
 <script src="js/components/catalog/catalog.js" async></script>
-<script src="js/components/content/rating/rating.js" async>   </script>
+<script src="js/components/content/rating/rating.js" async></script>

@@ -1,0 +1,55 @@
+accordion {
+  display: block;
+  width: 100%;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  & > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:checked ~ accordion-content {
+      height: auto;
+      overflow-y: initial;
+      overflow-x: hidden;
+    }
+  }
+
+  & > label {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      width: 50px;
+      height: 50px;
+      padding: 17px;
+      box-sizing: border-box;
+      position: absolute;
+      top: -14px;
+      right: -17px;
+    }
+
+    p {
+      color: $black;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  accordion-content {
+    display: block;
+    height: 0;
+    overflow-y: hidden;
+    width: 100%;
+  }
+}

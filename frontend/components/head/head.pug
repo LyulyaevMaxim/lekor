@@ -11,10 +11,7 @@ mixin head(data)
   link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-regular.woff2")
   link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700.woff2")
   link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-italic.woff2")
-  link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700-italic.woff2")
-
-  //- фоновые изображения   
-  link(rel="stylesheet" href="styles/img.css")  
+  link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/pt-sans-700-italic.woff2")  
 
   //- favicon
   link(href="img/favicons/favicon.ico" rel="shortcut icon")
@@ -28,7 +25,11 @@ mixin head(data)
   //- плагины
   link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
   link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
-  link(href='js/lightslider/lightslider.css' rel='stylesheet' ) 
+  link(href='js/lightslider/lightslider.css' rel='stylesheet')
+  link(href='js/nativeMultipleRange/nativeMultipleRange.css' rel='stylesheet')  
 
   //- основные стили
   link(rel="stylesheet" href="styles/styles.css")
+  
+  //- фоновые изображения   
+  link(rel="stylesheet" href="styles/img.css")  

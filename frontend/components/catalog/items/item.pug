@@ -1,0 +1,36 @@
+mixin catalog-item(attribute, img, title, price)
+  item
+    .label: span #{attribute}
+    .picture
+      img(src="img/content/" + img)
+    .description
+      .title: span #{title}
+      product-characteristics-list
+        feature
+          description Производитель:
+          value B.Well
+        feature
+          description Место наложения манжеты:
+          value Плечо
+        feature
+          description Размер манжеты:
+          value от 22 до 42 см
+        feature
+          description Питание:
+          value 4 элемента типа ААА, от сети 220В
+        feature
+          description Возможность подключения адаптера: 
+          value Да
+        feature
+          description Наличие адаптера в комплекте:
+          value Да
+        feature
+          description Наличие стетоскопа:
+          value Нет
+      +rating("-current-item", 4)
+      .add-to-compare      
+      .price
+        p #{price}
+        p.old 18 199 р.
+      .classic-button.add-to-cart Купить
+      .product-in-stock: p В наличии 
