@@ -3,4 +3,3 @@
 $(".product-page .show-more").on("click", function () {
   $(this).parent().parent().addClass("all-shown");
 });
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2R1Y3QvcHJvZHVjdC5qcyJdLCJuYW1lcyI6WyIkIiwib24iLCJwYXJlbnQiLCJhZGRDbGFzcyJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQWEsRUFBQSxBQUFFLDRCQUFGLEFBQThCLEdBQTlCLEFBQWlDLFNBQVEsWUFBVSxBQUFDO0lBQUEsQUFBRSxNQUFGLEFBQVEsU0FBUixBQUFpQixTQUFqQixBQUEwQixTQUE5RSxBQUFvRCxBQUFtQyxBQUFhIiwiZmlsZSI6InByb2R1Y3QvcHJvZHVjdC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiOyQoXCIucHJvZHVjdC1wYWdlIC5zaG93LW1vcmVcIikub24oXCJjbGlja1wiLGZ1bmN0aW9uKCl7JCh0aGlzKS5wYXJlbnQoKS5wYXJlbnQoKS5hZGRDbGFzcyhcImFsbC1zaG93blwiKX0pOyJdfQ==

@@ -1,43 +1,43 @@
-/* Gulp Project. Copyright © 2017. 
+/* Gulp Project. Copyright © 2017.
  * Maxim Buslaev, maximys@protonmail.com
  * ISC Licensed */
 'use strict';
 
-const
-  newer = require('gulp-newer'),
+const newer = require('gulp-newer'),
   plumber = require('gulp-plumber'),
   gulp = require('gulp');
 
-
 /*---------------------PUG -> HTML--------------------------*/
-const
-  pug = require('gulp-pug');
+const pug = require('gulp-pug');
 
 gulp.task('html', function () {
-  return gulp.src('frontend/html/*.pug', { since: gulp.lastRun('html') })
+  return gulp
+    .src('frontend/html/*.pug', {
+    since: gulp.lastRun('html')
+  })
     .pipe(plumber())
     .pipe(newer('public'))
-    .pipe(pug({ pretty: '\t' }))
+    .pipe(pug({pretty: '\t'}))
     .pipe(gulp.dest('public'))
 });
 /*---------------------END: PUG -> HTML--------------------------*/
-
 
 /*---------------------IMG--------------------------*/
 const imagemin = require('gulp-imagemin');
 
 gulp.task('img', function () {
-  return gulp.src('frontend/img/**/*.*', { since: gulp.lastRun('img') })
+  return gulp
+    .src('frontend/img/**/*.*', {
+    since: gulp.lastRun('img')
+  })
     .pipe(newer('public/img/'))
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
     .pipe(gulp.dest('public/img/'))
 });
 /*---------------------END: IMG--------------------------*/
 
-
 /*---------------------PostCSS--------------------------*/
-const
-  postcss = require('gulp-postcss'),
+const postcss = require('gulp-postcss'),
   sourcemaps = require('gulp-sourcemaps'),
   rename = require('gulp-rename'),
   syntax_scss = require('postcss-scss'),
@@ -50,95 +50,94 @@ const
 
 const base_plugins = [
   precss,
-  assets({ loadPaths: ['img/'] }),
-  // sprites({
-  //   spritePath: './public/img'
-  // }),
-  // postcss_css_reset,
-  autoprefixer({ browsers: ['last 5 version'] }),
-  mqpacker({ sort: true })
+  assets({loadPaths: ['img/']}),
+  // sprites({   spritePath: './public/img' }), postcss_css_reset,
+  autoprefixer({browsers: ['last 5 version']}),
+  mqpacker({sort: true})
 ];
 
 gulp.task('css', function () {
-  return gulp.src('frontend/css/*.scss', { since: gulp.lastRun('css') })
+  return gulp
+    .src('frontend/css/*.scss', {
+    since: gulp.lastRun('css')
+  })
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(postcss(base_plugins, { parser: syntax_scss }))
-    .pipe(rename({ extname: '.css' }))
+    .pipe(postcss(base_plugins, {parser: syntax_scss}))
+    .pipe(rename({extname: '.css'}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/styles'))
 });
 /*---------------------END: PostCSS--------------------------*/
 
-
 /*---------------------Scripts--------------------------*/
-const
-  babel = require('gulp-babel');
+const babel = require('gulp-babel');
 
 gulp.task('scripts', function () {
-  return gulp.src('frontend/js/**/*.*', { since: gulp.lastRun('scripts') })
+  return gulp
+    .src('frontend/js/**/*.*', {
+    since: gulp.lastRun('scripts')
+  })
     .pipe(newer('public/js'))
     .pipe(gulp.dest('public/js'))
 });
 
 gulp.task('scripts-es', function () {
-  return gulp.src('public/js/*.js')
+  return gulp
+    .src('public/js/*.js')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.init())
+    .pipe(babel({presets: ['env']}))
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/js'))
 });
 
 gulp.task('scripts-components', function () {
-  return gulp.src('frontend/components/**/*.js', { since: gulp.lastRun('scripts-components') })
+  return gulp
+    .src('frontend/components/**/*.js', {
+    since: gulp.lastRun('scripts-components')
+  })
     .pipe(newer('public/js/components'))
     .pipe(gulp.dest('public/js/components'))
 });
 
 gulp.task('components-es', function () {
-  return gulp.src('public/js/components/**/*.js')
+  return gulp
+    .src('public/js/components/**/*.js')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.init())
+    .pipe(babel({presets: ['env']}))
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/js/components'))
 });
 /*---------------------END: Scripts--------------------------*/
 
-
 /*---------------------Build--------------------------*/
-const
-  uglify = require('gulp-uglify'),
+const uglify = require('gulp-uglify'),
   cssnano = require('cssnano'),
   optimization_plugins = [cssnano],
   del = require('del');
 
 gulp.task('js-optim', function () {
-  return gulp.src('public/js/**/*.js')
+  return gulp
+    .src('public/js/**/*.js')
     .pipe(plumber())
     .pipe(uglify())
     .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('сss-optim', function () {
-  return gulp.src('public/**/*.css')
+  return gulp
+    .src('public/**/*.css')
     .pipe(plumber())
     .pipe(postcss(optimization_plugins))
     .pipe(gulp.dest('public'));
 });
 
-// gulp.task('clean', function () {
-//   return del('public/img/sprite');
-// });
+// gulp.task('clean', function () {   return del('public/img/sprite'); });
 
 gulp.task('build', gulp.parallel('js-optim', 'сss-optim'));
 /*---------------------END: Build--------------------------*/
-
 
 /*---------------------RELOAD BROWSERS--------------------------*/
 const browserSync = require('browser-sync').create();
@@ -148,7 +147,6 @@ gulp.task('reload', function (done) {
 });
 /*---------------------END: RELOAD BROWSERS--------------------------*/
 
-
 gulp.task('default', gulp.series(gulp.parallel(gulp.series('img', 'css'), gulp.series('scripts', 'scripts-components', 'scripts-es', 'components-es'), gulp.series('html', function () {
   browserSync.init({
     server: {
@@ -157,7 +155,8 @@ gulp.task('default', gulp.series(gulp.parallel(gulp.series('img', 'css'), gulp.s
   })
   gulp.watch('frontend/img/**/*.*', gulp.series('img', 'reload'));
   gulp.watch(['frontend/css/*.scss'], gulp.series('css', 'reload'));
-  gulp.watch(['frontend/js/**/*.js', 'frontend/components/**/*.js'], gulp.series('scripts', 'scripts-components', 'scripts-es', 'components-es', 'reload'));
+  gulp.watch([
+    'frontend/js/**/*.js', 'frontend/components/**/*.js'
+  ], gulp.series('scripts', 'scripts-components', 'scripts-es', 'components-es', 'reload'));
   gulp.watch(['frontend/html/*.pug'], gulp.series('html', 'reload'));
-}))
-));
+}))));
