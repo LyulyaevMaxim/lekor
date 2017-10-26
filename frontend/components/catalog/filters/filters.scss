@@ -6,6 +6,7 @@ block-for-filters {
 
   @media (min-width: $tablet) {
     background: $white;
+    padding-bottom: 49px;
   }
 
   & > button {
@@ -32,14 +33,12 @@ block-for-filters {
       display: none;
     }
 
-    &:focus {
-      box-shadow: 0 0 3pt 2pt $gold;
-    }
-
     &:hover {
-      border-color: $gold;
-      background: $gold;
-      color: $light-black;
+      @media (min-width: $desktop) {
+        border-color: $gold;
+        background: $gold;
+        color: $light-black;
+      }
     }
   }
 
@@ -164,6 +163,85 @@ block-for-filters {
       }
     }
   }
+
+  filters-button {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #showResultsButton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: $gold;
+      border: 1px solid $gold;
+      border-radius: 60px;
+      height: 50px;
+      padding: 0 20px;
+      width: 165px;
+      margin-right: auto;
+
+      @media (min-width: $tablet) {
+        width: 100%;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-weight: $PTSansBold;
+        color: $white;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    #resetAllButton {
+      display: inline-flex;
+      align-items: center;
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+
+      p {
+        color: $black;
+        font-size: 15px;
+        line-height: 16px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
+        margin-left: 14px;
+      }
+    }
+  }
+}
+
+block-for-filters:not(.active) {
+  @media (max-width: 767px) {
+    current-filters ~ * {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    & > * {
+      opacity: 0;
+    }
+  }
 }
 
 block-for-filters.active {
@@ -172,14 +250,21 @@ block-for-filters.active {
   justify-content: space-between;
   align-content: flex-start;
   background: $white;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
   padding-top: 27px;
-  overflow-y: scroll;
+
+  @media (max-width: 767px) {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: scroll;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 12px;
+  }
 
   &::before {
     content: "Фильтры";
@@ -188,6 +273,10 @@ block-for-filters.active {
     line-height: 29px;
     color: $light-black;
     margin-left: 22px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 
   & > button {
@@ -206,8 +295,8 @@ block-for-filters.active {
     margin-right: 7px;
     margin-top: -13px;
 
-    &:focus {
-      box-shadow: none;
+    @media (min-width: $tablet) {
+      display: none;
     }
   }
 
@@ -215,6 +304,11 @@ block-for-filters.active {
     margin-top: 6px;
     border-top: 1px solid #e1e1e1;
     padding-bottom: 21px;
+
+    @media (min-width: $tablet) {
+      border-top: none;
+      margin-top: 0;
+    }
 
     #resetFiltersLink {
       width: 100%;
@@ -234,13 +328,94 @@ block-for-filters.active {
   accordion {
     border-top: 1px solid #e1e1e1;
 
-    accordion-content {
-      margin-top: 13px;
+    @media (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
-    .nativeMultiple {
-      width: 64.2%;
-      margin-left: 1px;
+    accordion-content {
+      margin-top: 13px;
+      padding-top: 8px;
+    }
+
+    .range__min-value,
+    .range__max-value {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $grey;
+      border-radius: 60px;
+      height: 50px;
+      min-width: 94px;
+      padding: 0px 12px;
+
+      p,
+      &::before {
+        font-size: 14px;
+        line-height: 17px;
+        color: $black;
+      }
+
+      &::before {
+        margin-right: 7px;
+      }
+    }
+
+    .range__min-value {
+      margin-right: 10px;
+
+      @media (min-width: $tablet) {
+        margin-left: -1px;
+        margin-right: 0;
+      }
+
+      &::before {
+        content: "от";
+      }
+    }
+
+    .range__max-value {
+      @media (min-width: $tablet) {
+        margin-right: -9px;
+        margin-left: 9px;
+      }
+
+      &::before {
+        content: "до";
+      }
+    }
+
+    .range-min-max {
+      height: 3px;
+      background: #d8d8d8;
+      border: none;
+      margin-bottom: 25px;
+      max-width: 64.13%;
+      min-width: 170px;
+      margin-left: 6px;
+
+      &:first-child {
+        margin-top: 7px;
+      }
+    }
+
+    .ui-slider-handle {
+      background: $gold;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      border: none;
+      transform: translateY(-50%);
+      outline: none;
+    }
+
+    .ui-slider-range {
+      background: $light-black;
+    }
+
+    checkbox {
+      margin-left: 2px;
     }
   }
 }

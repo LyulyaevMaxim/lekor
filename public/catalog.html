@@ -22,7 +22,7 @@
 		<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
 		<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
 		<link href="js/lightslider/lightslider.css" rel="stylesheet"/>
-		<link href="js/nativeMultipleRange/nativeMultipleRange.css" rel="stylesheet"/>
+		<link href="js/jquery/UI slider/ui-slider.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="styles/styles.css"/>
 		<link rel="stylesheet" href="styles/img.css"/>
 	</head>
@@ -169,20 +169,274 @@
 					<p>Сбросить <span>фильтр</span></p></a>
 			</current-filters>
 			<accordion>
-				<input type="checkbox" checked="checked" id="showCallForm"/>
-				<label for="showCallForm">
+				<input type="checkbox" checked="checked" id="showAccordion_00"/>
+				<label for="showAccordion_00">
 					<p>Цена    </p>
 				</label>
 				<accordion-content>
-					<input type="range" min="0" max="150" value="0,140"/>
+					<div class="range-min-max" min="0" value="17893" max="20000"></div>
 					<div class="range__min-value">
-						<p>0</p>
+						<p> </p>
 					</div>
 					<div class="range__max-value">
-						<p>17893</p>
+						<p></p>
 					</div>
 				</accordion-content>
 			</accordion>
+			<accordion><input type="checkbox" checked id="showAccordion_01" />
+				<label for="showAccordion_01">
+					<p>Тип</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-01-0"/>
+						<label for="checkbox-01-0">
+							<p>Автоматические</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox" checked id="checkbox-01-1"/>
+						<label for="checkbox-01-1">
+							<p>Механические</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox" checked id="showAccordion_02" />
+				<label for="showAccordion_02">
+					<p>Производитель</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-02-0"/>
+						<label for="checkbox-02-0">
+							<p>Little Doctor (LD)</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-1"/>
+						<label for="checkbox-02-1">
+							<p>Nissei</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-2"/>
+						<label for="checkbox-02-2">
+							<p>Omron</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-3"/>
+						<label for="checkbox-02-3">
+							<p>AND</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-4"/>
+						<label for="checkbox-02-4">
+							<p>Citizen</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-5"/>
+						<label for="checkbox-02-5">
+							<p>Medisana</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-6"/>
+						<label for="checkbox-02-6">
+							<p>VitaDock</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-7"/>
+						<label for="checkbox-02-7">
+							<p>B.Well</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-02-8"/>
+						<label for="checkbox-02-8">
+							<p>Microlife</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox" checked id="showAccordion_03" />
+				<label for="showAccordion_03">
+					<p>Место наложения манжеты</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-03-0"/>
+						<label for="checkbox-03-0">
+							<p>Запястье</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox" checked id="checkbox-03-1"/>
+						<label for="checkbox-03-1">
+							<p>Плечо</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox" checked id="showAccordion_04" />
+				<label for="showAccordion_04">
+					<p>Размер манжеты</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-04-0"/>
+						<label for="checkbox-04-0">
+							<p>от 12,5 до 21,5 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-1"/>
+						<label for="checkbox-04-1">
+							<p>от 13,5 до 19,5 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-2"/>
+						<label for="checkbox-04-2">
+							<p>от 22 до 32 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-3"/>
+						<label for="checkbox-04-3">
+							<p>от 23 до 43 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-4"/>
+						<label for="checkbox-04-4">
+							<p>от 25 до 36 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-5"/>
+						<label for="checkbox-04-5">
+							<p>от 22 до 30 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-6"/>
+						<label for="checkbox-04-6">
+							<p>от 32 до 45 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-7"/>
+						<label for="checkbox-04-7">
+							<p>от 17 до 32 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-8"/>
+						<label for="checkbox-04-8">
+							<p>от 13,5 до 21,5 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-9"/>
+						<label for="checkbox-04-9">
+							<p>от 12,5 до 20,5 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-10"/>
+						<label for="checkbox-04-10">
+							<p>от 23 до 37 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-11"/>
+						<label for="checkbox-04-11">
+							<p>от 23 до 32 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-12"/>
+						<label for="checkbox-04-12">
+							<p>от 32 до 43 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-13"/>
+						<label for="checkbox-04-13">
+							<p>от 13,5 до 21,5 см</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-04-14"/>
+						<label for="checkbox-04-14">
+							<p>от 22 до 42 см</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox" checked id="showAccordion_05" />
+				<label for="showAccordion_05">
+					<p>Питание</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-05-0"/>
+						<label for="checkbox-05-0">
+							<p>4 элемента типа АА</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox" checked id="checkbox-05-1"/>
+						<label for="checkbox-05-1">
+							<p>2 элемента типа АА</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-05-2"/>
+						<label for="checkbox-05-2">
+							<p>От сети 220В</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-05-3"/>
+						<label for="checkbox-05-3">
+							<p>USB</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-05-4"/>
+						<label for="checkbox-05-4">
+							<p>4 элемента типа АAА, от сети 220В</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox"  id="showAccordion_06" />
+				<label for="showAccordion_06">
+					<p>Возможность подключения адаптера</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-06-0"/>
+						<label for="checkbox-06-0">
+							<p>Автоматические</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-06-1"/>
+						<label for="checkbox-06-1">
+							<p>Механические</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox"  id="showAccordion_07" />
+				<label for="showAccordion_07">
+					<p>Наличие адаптера в комплекте</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox"  id="checkbox-07-0"/>
+						<label for="checkbox-07-0">
+							<p>Автоматические</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox" checked id="checkbox-07-1"/>
+						<label for="checkbox-07-1">
+							<p>Механические</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<accordion><input type="checkbox"  id="showAccordion_08" />
+				<label for="showAccordion_08">
+					<p>Наличие стетоскопа</p>
+				</label>
+				<accordion-content>
+					<checkbox><input type="checkbox" checked id="checkbox-08-0"/>
+						<label for="checkbox-08-0">
+							<p>Автоматические</p>
+						</label>
+					</checkbox>
+					<checkbox><input type="checkbox"  id="checkbox-08-1"/>
+						<label for="checkbox-08-1">
+							<p>Механические</p>
+						</label>
+					</checkbox>
+				</accordion-content>
+			</accordion>
+			<filters-button><a href="#" id="showResultsButton">
+					<p>показать</p></a><a href="#" id="resetAllButton">
+					<p>Сбросить</p></a></filters-button>
 		</block-for-filters>
 		<catalog-items-section class="table">
 			<block-for-items>
@@ -1935,6 +2189,6 @@
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/components/header/header.js" async="async"></script>
 <script src="js/components/items/items-section.js" async></script>
-<script src="js/nativeMultipleRange/nativeMultipleRange.js"> </script>
+<script src="js/jquery/UI slider/ui-slider.js"> </script>
 <script src="js/components/catalog/catalog.js" async></script>
 <script src="js/components/content/rating/rating.js" async></script>

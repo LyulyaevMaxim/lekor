@@ -11,12 +11,6 @@ accordion {
     width: 0;
     height: 0;
     position: absolute;
-
-    &:checked ~ accordion-content {
-      height: auto;
-      overflow-y: initial;
-      overflow-x: hidden;
-    }
   }
 
   & > label {
@@ -46,10 +40,11 @@ accordion {
     }
   }
 
+  & > input:not(:checked) ~ accordion-content {
+    display: none;
+  }
+
   accordion-content {
     display: block;
-    height: 0;
-    overflow-y: hidden;
-    width: 100%;
   }
 }

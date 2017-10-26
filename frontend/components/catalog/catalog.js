@@ -1,8 +1,8 @@
 (function () {
+  inputRangeShowValues();
   toggleViewMode();
   toggleSortMode();
   filtersShow();
-  inputRangeShowValues();
 
   function toggleViewMode() {
     let Catalog = $("catalog-items-section"),
@@ -69,27 +69,40 @@
         $("html").removeClass('block-html');
       }
     });
+
+    if (document.documentElement.clientWidth > 767) {
+      $("catalog-block  block-for-filters").addClass("active");
+    }
   }
 
   function inputRangeShowValues() {
     let filters = $("block-for-filters");
 
     filters
-      .find("accordion")
+      .find("accordion .range-min-max")
       .each(function () {
-        let input = $(this).find("input[type=range]"),
+        let input = $(this),
           buttonMinValue = input.find("~ .range__min-value > p"),
-          buttonMaxValue = input.find("~ .range__max-value > p");
+          buttonMaxValue = input.find("~ .range__max-value > p"),
+          min = parseFloat(input.attr("min")),
+          max = parseFloat(input.attr("max")),
+          initialMinValue = 0,
+          initialMaxValue = 0.7 * max;
 
-        input.nativeMultiple({
-          onCreate: function (first_value, second_value) {
-            console.log(first_value, second_value);
-          },
-          onChange: function (first_value, second_value) {
-            buttonMinValue.text(first_value);
-            buttonMaxValue.text(second_value);
-          },
-          onSlide: function (first_value, second_value) {}
+        //инициализация значений кнопок
+        buttonMinValue.text(initialMinValue);
+        buttonMaxValue.text(initialMaxValue);
+        $(".range-min-max").slider({
+          range: true,
+          min: min,
+          max: max,
+          values: [
+            initialMinValue, initialMaxValue
+          ],
+          slide: function (event, ui) {
+            buttonMinValue.text(ui.values[0]);
+            buttonMaxValue.text(ui.values[1]);
+          }
         });
       });
 

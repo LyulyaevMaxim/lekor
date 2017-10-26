@@ -6,6 +6,7 @@ catalog-items-section.table {
     @media (min-width: $tablet) {
       border-top: 1px solid #e1e1e1;
     }
+
     @media (min-width: $big-desktop) {
       height: auto !important;
     }
@@ -36,27 +37,39 @@ catalog-items-section.table {
           padding-left: 13px;
           padding-right: 13px;
         }
+
         .title {
           margin-bottom: 8px;
         }
+
         .add-to-compare + .price {
           margin-top: 26px;
         }
+
         .price + .add-to-cart {
           margin-top: 15px;
         }
+
         .title + .add-to-compare {
           margin-top: 0;
         }
 
-        &:nth-child(n + 5) {
+        &:nth-child(n + 4) {
           display: flex;
         }
 
-        &:nth-child(n + 16) {
+        &:nth-child(n + 15) {
           display: none;
         }
       }
+
+      // @media (min-width: $tablet) and (max-width: 1023px) {
+      //   border-left: none;
+
+      //   &:nth-child(2n+1) {
+      //     border-right: none;
+      //   }
+      // }
 
       @media (min-width: $desktop) {
         width: 33.33%;
@@ -74,7 +87,7 @@ catalog-items-section.table {
           padding-right: 16px;
         }
 
-        &:nth-child(n + 16) {
+        &:nth-child(n + 15) {
           display: flex;
           border-bottom: 1px solid #e1e1e1;
         }
@@ -91,9 +104,11 @@ catalog-items-section.table {
         &:nth-child(4n + 2) {
           border-left: none;
         }
+
         &:nth-child(4n + 3) {
           border-left: none;
         }
+
         &:nth-child(4n + 3):not(:last-child) {
           border-right: none;
         }
@@ -101,9 +116,11 @@ catalog-items-section.table {
         .title {
           height: 40px;
         }
+
         .title span {
           -webkit-line-clamp: 2;
         }
+
         .description {
           padding-right: 13px;
         }

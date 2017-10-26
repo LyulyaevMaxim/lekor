@@ -133,18 +133,22 @@ item {
     display: none;
     grid-area: product-characteristics-list;
   }
+
   rating-block {
     display: none;
     grid-area: rating-block;
     pointer-events: none;
   }
+
   .title {
     grid-area: title;
     // word-break: break-all;
+    margin-bottom: 18px;
 
     @media (min-width: $tablet) {
       height: 60px;
       margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
     @media (min-width: $big-desktop) {
@@ -161,13 +165,13 @@ item {
       overflow: hidden;
     }
 
-    & + .add-to-compare {
-      margin-top: 18px;
+    // & + .add-to-compare {
+    //   margin-top: 18px;
 
-      @media (min-width: $tablet) {
-        margin-top: 0;
-      }
-    }
+    //   @media (min-width: $tablet) {
+    //     margin-top: 0;
+    //   }
+    // }
   }
 
   .add-to-compare {

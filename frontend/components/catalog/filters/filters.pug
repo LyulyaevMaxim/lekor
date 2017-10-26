@@ -9,11 +9,87 @@ mixin block-for-filters()
       a(href="catalog-block")#resetFiltersLink 
         p Сбросить <span>фильтр</span>
     accordion
-      input(type="checkbox" checked)#showCallForm    
-      label(for="showCallForm")
+      input(type="checkbox" checked)#showAccordion_00   
+      label(for="showAccordion_00")
         p Цена    
       accordion-content
-        input(type="range" min="0" max="150" value="0,140")
-        .range__min-value: p 0
-        .range__max-value: p 17893
+        .range-min-max(min="0" value="17893" max="20000")
+        .range__min-value: p 
+        .range__max-value: p
+    +filter({      
+      "accordionIndex": "01",
+      "accordionLabel": "Тип",
+      "isChecked": "checked",
+      "checkboxIndex": [0, 1],
+      "checkboxLabel": ["Автоматические", "Механические"],
+      "checkboxChecked": ["", "checked"]
+    })
+    +filter({
+      "accordionIndex": "02",
+      "accordionLabel": "Производитель",
+      "isChecked": "checked",
+      "checkboxIndex": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "checkboxLabel": ["Little Doctor (LD)", "Nissei", "Omron", "AND", "Citizen", "Medisana", "VitaDock", "B.Well", "Microlife"],
+      "checkboxChecked": ["", "", "", "", "", "", "", "", ""]
+    })
+    +filter({
+      "accordionIndex": "03",
+      "accordionLabel": "Место наложения манжеты",
+      "isChecked": "checked",
+      "checkboxIndex": [0, 1],
+      "checkboxLabel": ["Запястье", "Плечо"],
+      "checkboxChecked": ["", "checked"]
+    })
+    +filter({
+      "accordionIndex": "04",
+      "accordionLabel": "Размер манжеты",
+      "isChecked": "checked",
+      "checkboxIndex": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "checkboxLabel": ["от 12,5 до 21,5 см", "от 13,5 до 19,5 см", "от 22 до 32 см", "от 23 до 43 см","от 25 до 36 см", "от 22 до 30 см", "от 32 до 45 см", "от 17 до 32 см", "от 13,5 до 21,5 см", "от 12,5 до 20,5 см","от 23 до 37 см", "от 23 до 32 см", "от 32 до 43 см", "от 13,5 до 21,5 см", "от 22 до 42 см"],
+      "checkboxChecked": ["", "", "", "", "", "", "", "", ""]
+    })
+    +filter({
+      "accordionIndex": "05",
+      "accordionLabel": "Питание",
+      "isChecked": "checked",
+      "checkboxIndex": [0, 1, 2, 3, 4],
+      "checkboxLabel": ["4 элемента типа АА", "2 элемента типа АА", "От сети 220В", "USB", "4 элемента типа АAА, от сети 220В"],
+      "checkboxChecked": ["", "checked", "", "", "", ""]
+    })
+    +filter({      
+      "accordionIndex": "06",
+      "accordionLabel": "Возможность подключения адаптера",
+      "isChecked": "",
+      "checkboxIndex": [0, 1],
+      "checkboxLabel": ["Автоматические", "Механические"],
+      "checkboxChecked": ["", ""]
+    })
+    +filter({      
+      "accordionIndex": "07",
+      "accordionLabel": "Наличие адаптера в комплекте",
+      "isChecked": "",
+      "checkboxIndex": [0, 1],
+      "checkboxLabel": ["Автоматические", "Механические"],
+      "checkboxChecked": ["", "checked"]
+    })
+    +filter({      
+      "accordionIndex": "08",
+      "accordionLabel": "Наличие стетоскопа",
+      "isChecked": "",
+      "checkboxIndex": [0, 1],
+      "checkboxLabel": ["Автоматические", "Механические"],
+      "checkboxChecked": ["checked", ""]
+    })
+    filters-button
+      a(href="#")#showResultsButton: p показать
+      a(href="#")#resetAllButton: p Сбросить
+
+    
+    
+    
+    
+    
+        
+    
+    
       

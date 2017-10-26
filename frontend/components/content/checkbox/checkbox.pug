@@ -1,0 +1,4 @@
+mixin checkbox(indexBlock, subIndex, label, isChecked) 
+  checkbox
+    <input type="checkbox" #{isChecked} id="checkbox-#{indexBlock}-#{subIndex}"/>
+    label(for="checkbox-" + indexBlock + "-" + subIndex): p #{label}

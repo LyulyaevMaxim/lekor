@@ -1,0 +1,7 @@
+mixin filter(data)
+    accordion
+      <input type="checkbox" #{data.isChecked} id="showAccordion_#{data.accordionIndex}" />
+      label(for="showAccordion_" + data.accordionIndex): p #{data.accordionLabel}
+      accordion-content
+        each index in data.checkboxIndex
+          +checkbox(data.accordionIndex, index, data.checkboxLabel[index], data.checkboxChecked[index])
