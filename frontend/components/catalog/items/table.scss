@@ -136,3 +136,15 @@ catalog-items-section.table {
     }
   }
 }
+
+catalog-items-section.table,
+catalog-items-section:not(.list) {
+  item {
+    @media (min-width: $desktop) and (max-width: 1439px) {
+      &:nth-child(3n + 2):not(:last-child) {
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+} 
