@@ -1,4 +1,5 @@
 footer {
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   background: $light-black;
@@ -186,7 +187,7 @@ footer {
     padding-top: 8px;
     padding-bottom: 8px;
 
-    &:nth-child(3n+3) {
+    &:nth-child(3n + 3) {
       margin-left: 15px;
       margin-right: 15px;
     }
@@ -235,7 +236,7 @@ footer {
     background-position: 50%;
     background-repeat: no-repeat;
 
-    &:nth-child(3n+3) {
+    &:nth-child(3n + 3) {
       margin-left: 19px;
       margin-right: 19px;
     }
@@ -286,11 +287,6 @@ footer {
     color: $grey;
     font-size: 16px;
     line-height: 18px;
-    text-align: center;
-
-    @media (min-width: $tablet) {
-      text-align: left;
-    }
   }
 }
 
@@ -317,7 +313,7 @@ footer {
     height: 33px;
     width: 111px;
     margin-bottom: 20px;
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: auto;
 
     @media (min-width: 449px) {
@@ -330,7 +326,7 @@ footer {
     color: $grey;
     font-size: 16px;
     line-height: 18px;
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: auto;
   }
 
@@ -346,12 +342,10 @@ footer {
   width: 225px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 
   @media (min-width: $tablet) {
     width: auto;
     margin-left: 0;
-    text-align: left;
   }
 
   @media (min-width: $desktop) {

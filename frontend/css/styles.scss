@@ -27,15 +27,15 @@
 @import "../components/content/checkbox/checkbox.scss";
 /***************END: КОНТЕНТ  *****************/
 
-/********************* BEGIN: PRODUCT*****************/
+/*************** BEGIN: PRODUCT*****************/
 @import "../components/product/header/header.scss";
 @import "../components/product/description/description.scss";
 @import "../components/product/characteristics/characteristics.scss";
 @import "../components/product/files/files.scss";
 @import "../components/product/reviews/reviews.scss";
-/***************END: PRODUCT  *****************/
+/***************  END: PRODUCT  ****************/
 
-/********************* BEGIN: CATALOG*****************/
+/**************** BEGIN: CATALOG*****************/
 @import "../components/catalog/toggles/toggles.scss";
 @import "../components/catalog/filters/filters.scss";
 @import "../components/catalog/items/list.scss";
@@ -43,6 +43,13 @@
 @import "../components/catalog/pagination/pagination.scss";
 @import "../components/catalog/catalog.scss";
 /***************END: CATALOG  *****************/
+
+/*************** BEGIN: BASKET *****************/
+@import "../components/basket/in-basket/basket-item.scss";
+@import "../components/basket/in-basket/in-basket.scss";
+@import "../components/basket/radio-block/radio-block.scss";
+@import "../components/basket/basket.scss";
+/***************  END: BASKET  ****************/
 
 /**************BEGIN: ИНОЕ ************************/
 // @import "../components/select/select.scss";

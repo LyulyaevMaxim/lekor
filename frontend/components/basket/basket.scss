@@ -1,0 +1,217 @@
+.basket-page {
+  & > h1 {
+    grid-area: title;
+    color: #4a4a4a;
+    font-size: 36px;
+    line-height: 42px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      padding-top: 11px;
+      padding-bottom: 31px;
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: $margin-1024;
+      padding-right: $margin-1024;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-left: $margin-1440;
+      padding-right: $margin-1440;
+    }
+  }
+
+  breadcrumbs {
+    @media (min-width: $tablet) {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 44px;
+      padding-right: 44px;
+    }
+    @media (min-width: $big-desktop) {
+      padding-left: 57px;
+      padding-right: 57px;
+    }
+  }
+
+  basket-step {
+    grid-area: steps;
+    display: flex;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-top: 19px;
+
+    @media (min-width: $tablet) {
+      justify-content: flex-end;
+      padding-right: $margin-768;
+    }
+
+    @media (min-width: $desktop) {
+      padding-right: $margin-1024;
+    }
+
+    a {
+      width: 31px;
+      height: 31px;
+      border: 1px solid $grey;
+      border-radius: 50%;
+
+      & + a {
+        margin-left: 10px;
+      }
+    }
+
+    .active {
+      background: $gold;
+      border-color: $gold;
+    }
+  }
+
+  & > form {
+    grid-area: form;
+
+    @media (min-width: $tablet) {
+      margin-left: $margin-768;
+      margin-right: $margin-768;
+    }
+    @media (min-width: $desktop) {
+      margin-left: $margin-1024;
+      margin-right: 21px;
+    }
+    @media (min-width: $big-desktop) {
+      margin-left: $margin-1440;
+      width: calc(100vw - 431px - 2*$margin-1440 - 20px);
+      margin-right: 19px;
+    }
+  }
+
+  basket-buttons {
+    .back,
+    .continue {
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+      font-weight: $PTSansBold;
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+      height: 50px;
+      border-radius: 30px;
+    }
+
+    .back {
+      display: none;
+      border-color: $grey;
+      color: $light-black;
+      margin-right: 10px;
+
+      @media (min-width: $tablet) {
+        display: inline-flex;
+        padding: 0 24px;
+        margin-right: 21px;
+      }
+    }
+
+    .continue {
+      display: inline-flex;
+      background: $gold;
+      color: $white;
+      border-color: $gold;
+      padding: 0px 26px;
+
+      @media (min-width: $tablet) {
+        padding: 0 33px;
+      }
+    }
+  }
+
+  in-basket {
+    basket-item {
+      margin-top: 29px;
+      display: block;
+      border-top: 1px solid #e1e1e1;
+      padding-top: 23px;
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+  }
+}
+
+.basket-page.delivery {
+  display: grid;
+  align-items: flex-start;
+  grid-template: "header header" "breadcrumbs breadcrumbs" "steps steps"
+    "title title" "form form" "footer footer";
+
+  @media (min-width: $tablet) {
+    grid-template: "header header" "breadcrumbs breadcrumbs" "title steps"
+      "form form" "footer footer";
+  }
+
+  @media (min-width: $desktop) {
+    grid-template: "header header" "breadcrumbs breadcrumbs" "title steps"
+      "form in-basket" "footer footer";
+  }
+
+  basket-buttons {
+    padding-top: 40px;
+    padding-bottom: 38px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background: white;
+
+    @media (min-width: $tablet) {
+      padding-top: 39px;
+      padding-bottom: 40px;
+      justify-content: flex-start;
+      padding-left: 33px;
+      padding-right: 33px;
+    }
+  }
+
+  in-basket {
+    grid-area: in-basket;
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      background: white;
+      width: 236px;
+      margin-right: 42px;
+      border: 1px solid #e1e1e1;
+      padding-top: 29px;
+
+      & > p {
+        font-size: 24px;
+        line-height: 29px;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-right: $margin-1440;
+      width: 431px;
+    }
+  }
+}
+
+.basket-page.contact-data {
+}
+
+.basket-page.payment {
+}

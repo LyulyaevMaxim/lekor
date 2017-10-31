@@ -1,0 +1,7 @@
+mixin radio-item(data) 
+  radio-item
+    <input type="radio" name="#{data.radioName}" value="#{data.value}" #{data.isRequired} id="radio-#{data.indexBlock}-#{data.subIndex}"/>
+    label(for="radio-" + data.indexBlock + "-" + data.subIndex)
+    radio-description
+      p.bright #{data.radioTitle}
+      p #{data.radioDescription}

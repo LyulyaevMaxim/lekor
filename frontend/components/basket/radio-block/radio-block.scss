@@ -1,0 +1,150 @@
+radio-block {
+  display: block;
+  background: $white;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 39px;
+  padding-bottom: 40px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+
+  @media (min-width: $tablet) {
+    padding-left: $margin-768;
+    padding-right: $margin-768;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  & + radio-block {
+    margin-top: 20px;
+  }
+
+  & > p {
+    color: $black;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  receipt-address {
+    display: block;
+    padding-left: calc(24px + 12px);
+    margin-top: 17px;
+
+    p,
+    span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p {
+      color: #9b9b9b;
+
+      & + a {
+        margin-top: 19px;
+      }
+    }
+
+    span {
+      color: $light-black;
+
+      &:first-child {
+        margin-right: 7px;
+
+        @media (min-width: $tablet) {
+          margin-right: 21px;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      color: $black;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+radio-item {
+  display: flex;
+  position: relative;
+
+  & + radio-item {
+    margin-top: 17px;
+  }
+
+  & > input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  & > input:checked + label {
+    background: $gold;
+    border-color: $gold;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  & > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    margin-right: 12px;
+
+    @media (min-width: $tablet) {
+      margin-right: 10px;
+    }
+
+    &::before {
+      content: "";
+      min-width: 12px;
+      min-height: 12px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0;
+      display: block;
+    }
+  }
+
+  radio-description {
+    display: block;
+    max-width: 78%;
+    padding-top: 5px;
+
+    @media (min-width: $tablet) {
+      max-width: 81.6%;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 84%;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      color: #9b9b9b;
+
+      & + p {
+        margin-top: 14px;
+      }
+    }
+
+    .bright {
+      color: $black;
+    }
+  }
+}

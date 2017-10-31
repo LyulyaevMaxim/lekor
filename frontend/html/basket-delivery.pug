@@ -1,0 +1,132 @@
+include ../components/head/head
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+include ../components/header/header
+include ../components/footer/footer
+include ../components/connect-js/scripts
+//- контент
+include ../components/content/content
+include ../components/content/breadcrumbs/breadcrumbs
+include ../components/content/rating/rating
+include ../components/content/accordion/accordion
+include ../components/content/checkbox/checkbox
+//- корзина
+include ../components/basket/in-basket/in-basket
+include ../components/basket/in-basket/basket-item
+include ../components/basket/radio-block/radio-item
+
+ 
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Доставка",
+      "description": "Страница корзины"
+    })
+
++header()
++b.BODY.basket-page.delivery
+  +breadcrumbs({"index": [0, 1, 2],
+    "title": ["Главная", "Корзина", "Доставка"]
+  })
+  
+  h1 Доставка 
+
+  basket-step
+    a(href="#").active
+    a(href="#")
+    a(href="#")
+  
+  in-basket
+    p В корзине
+    basket-item
+      p Тест
+
+  form
+    radio-block
+      p Самовывоз
+      radio-item
+        input(type="radio" name="delivery_id" value="0" required checked)#radio-0-0
+        label(for="radio-0-0")
+        radio-description
+          p.bright Склад Лекор
+          p г. Н. Новгород, ул. Переходникова, д. 1 "Г"
+          p (Получение покупки в день заказа товара, выдача товара производится в будние дни с 8.00 до 17.00)
+      radio-item
+        input(type="radio" name="delivery_id" value="1" required)#radio-0-1
+        label(for="radio-0-1")
+        radio-description
+          p.bright Офис курьерской службы «NORD EXPRESS»
+          p г. Н. Новгород, проспект Ленина, д.12А
+          p (Получение заказа на следующий день после заказа с 10 до 18 часов)
+      radio-item
+        input(type="radio" name="delivery_id" value="2" required)#radio-0-2
+        label(for="radio-0-2")
+        radio-description
+          p.bright Постаматы и пунты выдачи PICKPOINT
+          p Постаматы - автоматизированные терминалы по выдаче заказов. Узнать подробнее
+          p Стоимость доставки определяется тарифами перевозчика, информацию уточняйте у оператора.
+      receipt-address
+        p 
+          span Ваш заказ будет доставлен в пункт: 
+          span не&nbsp;выбрано
+        a(href="#") Выбрать пункты выдачи
+
+    radio-block
+      p Доставка по Н.Новгороду
+      +radio-item({
+        "indexBlock": "01",
+        "subIndex": "00",
+        "value": "3",
+        "isRequired": "required",
+        "radioName": "delivery_id",
+        "radioTitle": "Бесплатная курьерская доставка",
+        "radioDescription": "При сумме заказа от 2000 руб."
+      })
+      +radio-item({
+        "indexBlock": "01",
+        "subIndex": "01",
+        "value": "4",
+        "isRequired": "required",
+        "radioName": "delivery_id",
+        "radioTitle": "Платная курьерская доставка 250 руб.",
+        "radioDescription": "При сумме заказа менее 2000 руб."
+      })
+    
+    radio-block
+      p Доставка по России
+      +radio-item({
+        "indexBlock": "02",
+        "subIndex": "00",
+        "value": "5",
+        "isRequired": "required",
+        "radioName": "delivery_id",
+        "radioTitle": "Почта России",
+        "radioDescription": "Стоимость доставки определяется тарифами перевозчика, информацию уточняйте у оператора."
+      })
+      +radio-item({
+        "indexBlock": "02",
+        "subIndex": "01",
+        "value": "6",
+        "isRequired": "required",
+        "radioName": "delivery_id",
+        "radioTitle": "Служба экспресс-доставки СПСР",
+        "radioDescription": "Стоимость доставки определяется тарифами перевозчика, информацию уточняйте у оператора."
+      })
+      +radio-item({
+        "indexBlock": "02",
+        "subIndex": "02",
+        "value": "7",
+        "isRequired": "required",
+        "radioName": "delivery_id",
+        "radioTitle": "Служба экспресс-доставки СДЭК",
+        "radioDescription": "Стоимость доставки определяется тарифами перевозчика, информацию уточняйте у оператора."
+      })
+
+    basket-buttons
+      a(href="#").back вернуться к корзине
+      button(type="submit").continue продолжить    
+    
+  +footer()             
+  
++scripts()
