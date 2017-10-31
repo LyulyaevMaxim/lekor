@@ -1,0 +1,18 @@
+mixin basket-form-contacts()
+  basket-form-contacts
+    .attention
+      h3 авторизация
+      p <sup>*</sup>Обязательные поля
+    .block-for-inputs
+      <input type="text" placeholder="Фамилия" />
+      <input type="text" placeholder="Имя" required />  
+      <input type="e-mail" placeholder="E-mail" required />
+      <input type="tel" placeholder="Телефон" required />
+    .block-for-checkbox
+      checkbox
+        <input type="checkbox" id="checkbox-00-01" required/>
+        label(for="checkbox-00-01")
+          div
+            p Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности и даю согласие на обработку моих персональных данных.
+            a(href="#") Узнать больше
+      +checkbox("00", "02", "Получить доступ в личный кабинет", "")

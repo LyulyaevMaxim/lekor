@@ -1,0 +1,103 @@
+basket-form-contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 18px;
+
+  .attention {
+    h3 {
+      font-weight: $PTSansBold;
+      font-size: 16px;
+      line-height: 18px;
+      color: $gold;
+      text-transform: uppercase;
+
+      & + p {
+        margin-top: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 17px;
+      color: $black;
+      padding-left: 4px;
+    }
+
+    sup {
+      font-size: 16px;
+      top: 1px;
+      margin-top: 2px;
+      left: -4px;
+      color: $gold;
+    }
+    & + .block-for-inputs {
+      margin-top: 20px;
+    }
+  }
+
+  .block-for-inputs {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 272px;
+      height: 50px;
+      border: 1px solid #e1e1e1;
+      border-radius: 30px;
+      padding-left: 18px;
+
+      & + input {
+        margin-top: 20px;
+      }
+
+      &::placeholder {
+        font-size: 15px;
+        color: $light-black;
+        transition: transform 1s, opacity 0.5s;
+        opacity: 1;
+      }
+
+      &:focus::placeholder {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+
+      &[required] {
+        transition: box-shadow 1s, border-color 1s;
+      }
+
+      &[required]:invalid {
+        box-shadow: 0 0 0px 1px $gold;
+        border-color: transparent;
+      }
+    }
+    & + .block-for-checkbox {
+      margin-top: 30px;
+    }
+  }
+
+  .block-for-checkbox {
+    checkbox + checkbox {
+      margin-top: 22px;
+    }
+    label {
+      align-items: flex-start;
+    }
+    div {
+      padding-top: 4px;
+    }
+    a {
+      display: block;
+      margin-top: 8px;
+      color: $black;
+      font-size: 14px;
+      line-height: 17px;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}
