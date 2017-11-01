@@ -12,8 +12,8 @@
     @media (min-width: $tablet) {
       padding-top: 11px;
       padding-bottom: 31px;
-      padding-left: 38px;
-      padding-right: 38px;
+      padding-left: $margin-768;
+      padding-right: $margin-768;
     }
 
     @media (min-width: $desktop) {
@@ -27,21 +27,21 @@
     }
   }
 
-  breadcrumbs {
-    @media (min-width: $tablet) {
-      padding-left: 38px;
-      padding-right: 38px;
-    }
+  // breadcrumbs {
+  //   @media (min-width: $tablet) {
+  //     padding-left: 38px;
+  //     padding-right: 38px;
+  //   }
 
-    @media (min-width: $desktop) {
-      padding-left: 44px;
-      padding-right: 44px;
-    }
-    @media (min-width: $big-desktop) {
-      padding-left: 57px;
-      padding-right: 57px;
-    }
-  }
+  //   @media (min-width: $desktop) {
+  //     padding-left: 44px;
+  //     padding-right: 44px;
+  //   }
+  //   @media (min-width: $big-desktop) {
+  //     padding-left: 57px;
+  //     padding-right: 57px;
+  //   }
+  // }
 
   basket-step {
     grid-area: steps;
@@ -94,6 +94,41 @@
     }
   }
 
+  in-basket {
+    grid-area: in-basket;
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      background: white;
+      width: 236px;
+      margin-right: 42px;
+      border: 1px solid #e1e1e1;
+      padding-top: 29px;
+
+      & > p {
+        font-size: 24px;
+        line-height: 29px;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      basket-item {
+        margin-top: 29px;
+        display: block;
+        border-top: 1px solid #e1e1e1;
+        padding-top: 23px;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-right: $margin-1440;
+      width: 431px;
+    }
+  }
+
   basket-buttons {
     .back,
     .continue {
@@ -131,17 +166,6 @@
       @media (min-width: $tablet) {
         padding: 0 33px;
       }
-    }
-  }
-
-  in-basket {
-    basket-item {
-      margin-top: 29px;
-      display: block;
-      border-top: 1px solid #e1e1e1;
-      padding-top: 23px;
-      padding-left: 22px;
-      padding-right: 22px;
     }
   }
 }
@@ -184,29 +208,6 @@
   }
 
   in-basket {
-    grid-area: in-basket;
-    display: none;
-
-    @media (min-width: $desktop) {
-      display: block;
-      background: white;
-      width: 236px;
-      margin-right: 42px;
-      border: 1px solid #e1e1e1;
-      padding-top: 29px;
-
-      & > p {
-        font-size: 24px;
-        line-height: 29px;
-        padding-left: 22px;
-        padding-right: 22px;
-      }
-    }
-
-    @media (min-width: $big-desktop) {
-      margin-right: $margin-1440;
-      width: 431px;
-    }
   }
 }
 
@@ -215,6 +216,16 @@
   align-items: flex-start;
   grid-template: "header header" "breadcrumbs breadcrumbs" "steps steps"
     "title title" "form form" "footer footer";
+
+  @media (min-width: $tablet) {
+    grid-template: "header header" "breadcrumbs breadcrumbs" "title steps"
+      "form form" "footer footer";
+  }
+
+  @media (min-width: $desktop) {
+    grid-template: "header header" "breadcrumbs breadcrumbs" "title steps"
+      "form in-basket" "footer footer";
+  }
 
   & > form {
     background: white;
@@ -225,13 +236,16 @@
   }
 
   in-basket {
-    display: none;
   }
   basket-buttons {
     display: flex;
     justify-content: center;
     padding-top: 19px;
     padding-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      padding-top: 28px;
+    }
   }
 }
 

@@ -5,7 +5,29 @@ basket-form-contacts {
   padding-right: 22px;
   padding-top: 18px;
 
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template: "block-for-inputs attention attention attention attention"
+      "block-for-checkbox  block-for-checkbox block-for-checkbox  block-for-checkbox block-for-checkbox";
+    grid-template-columns: min-content;
+    align-items: flex-start;
+    padding-top: 22px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @media (min-width: $big-desktop) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
   .attention {
+    grid-area: attention;
+
+    @media (min-width: $tablet) {
+      padding-left: 41px;
+    }
+
     h3 {
       font-weight: $PTSansBold;
       font-size: 16px;
@@ -33,13 +55,16 @@ basket-form-contacts {
       color: $gold;
     }
     & + .block-for-inputs {
-      margin-top: 20px;
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
     }
   }
 
   .block-for-inputs {
     display: flex;
     flex-direction: column;
+    grid-area: block-for-inputs;
 
     input {
       width: 272px;
@@ -47,6 +72,10 @@ basket-form-contacts {
       border: 1px solid #e1e1e1;
       border-radius: 30px;
       padding-left: 18px;
+
+      @media (min-width: $tablet) {
+        width: 322px;
+      }
 
       & + input {
         margin-top: 20px;
@@ -79,6 +108,7 @@ basket-form-contacts {
   }
 
   .block-for-checkbox {
+    grid-area: block-for-checkbox;
     checkbox + checkbox {
       margin-top: 22px;
     }
