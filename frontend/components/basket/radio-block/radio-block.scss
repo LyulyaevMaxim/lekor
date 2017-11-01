@@ -34,13 +34,13 @@ radio-block {
     padding-left: calc(24px + 12px);
     margin-top: 17px;
 
-    p,
+    & > p,
     span {
       font-size: 14px;
       line-height: 20px;
     }
 
-    p {
+    & > p {
       color: #9b9b9b;
 
       & + a {
@@ -122,6 +122,7 @@ radio-item {
 
   radio-description {
     display: block;
+    width: 100%;
     max-width: 78%;
     padding-top: 5px;
 

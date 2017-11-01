@@ -1,0 +1,54 @@
+include ../components/head/head
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+include ../components/header/header
+include ../components/footer/footer
+include ../components/connect-js/scripts
+//- контент
+include ../components/content/content
+include ../components/content/breadcrumbs/breadcrumbs
+include ../components/content/rating/rating
+include ../components/content/accordion/accordion
+include ../components/content/checkbox/checkbox
+//- корзина
+include ../components/basket/in-basket/in-basket
+include ../components/basket/in-basket/basket-item
+include ../components/basket/radio-block/radio-item
+include ../components/basket/form-payment/form-payment
+
+ 
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Оплата",
+      "description": "Страница корзины"
+    })
+
++header()
++b.BODY.basket-page.payment
+  +breadcrumbs({"index": [0, 1, 2],
+    "title": ["Главная", "Корзина", "Оплата"]
+  })
+  
+  h1 Оплата
+
+  basket-step
+    a(href="#").active
+    a(href="#").active
+    a(href="#").active
+  
+  in-basket
+    p В корзине
+    basket-item
+      p Тест
+
+  form
+    +basket-form-payment()   
+    basket-buttons
+      a(href="#").back вернуться к личным данным
+      button(type="submit").continue оформить заказ    
+    
+  +footer()             
+  
++scripts()

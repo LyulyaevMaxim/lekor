@@ -1,0 +1,39 @@
+mixin basket-form-payment()
+  basket-form-payment
+    h2 Оплата
+    block-for-radio
+      radio-item
+        input(type="radio" name="payment_id" value="1" required)#radio-payment-01
+        label(for="radio-payment-01")
+        radio-description
+          p.bright Оплата наличными в пункте выдачи товаров
+      radio-item
+        input(type="radio" name="payment_id" value="2" required checked)#radio-payment-02
+        label(for="radio-payment-02")
+        radio-description
+          p.bright Онлайн оплата
+          variants-payment-online 
+            variant
+              h3 Банковские карты
+              div
+                div
+                  img(src="img/content/card--visa.svg" alt="visa")
+                div
+                  img(src="img/content/card--visa-electron.svg" alt="visa-electron")
+                div
+                  img(src="img/content/card--master-card.svg" alt="master-card")
+                div
+                  img(src="img/content/card--maestro.svg" alt="maestro card")
+                div
+                  img(src="img/content/card--mir.svg" alt ="mir card")
+            variant
+              h3 Электронные кошельки
+              div
+                div
+                  img(src="img/content/card--web-money.svg" alt="web-money")
+                div
+                  img(src="img/content/card--qiwi.svg" alt="qiwi card")
+                .yandex
+                  img(src="img/content/card--yandex-money.svg" alt="yandex-money")
+
+
