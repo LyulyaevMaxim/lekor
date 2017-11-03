@@ -357,15 +357,14 @@ header {
     flex-wrap: wrap;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 50px;
     border: 1px solid #e1e1e1;
     margin-top: -1px;
     max-width: 330px;
 
     @media (min-width: $tablet) {
       margin-top: 16px;
-      padding: 24px 32px;
+      padding-top: 24px;
+      padding-bottom: 24px;
       flex-wrap: nowrap;
       max-width: none;
       width: 430px;
@@ -373,6 +372,60 @@ header {
 
     @media (min-width: $desktop) {
       width: 454px;
+    }
+
+    .no-auth {
+      padding-left: 20px;
+      padding-right: 50px;
+
+      @media (min-width: $tablet) {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    }
+
+    &.auth-successful {
+      width: 250px;
+      @media (min-width: $tablet) {
+        width: 282px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .auth-successful {
+      display: none;
+      width: 100%;
+
+      & > a {
+        margin-left: 20px;
+
+        @media (min-width: $tablet) {
+          margin-left: 32px;
+        }
+      }
+
+      .auth-successful__links {
+        border-top: 1px solid #e1e1e1;
+        margin-top: 24px;
+        padding-top: 23px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        & > a {
+          display: block;
+          font-size: 16px;
+          line-height: 18px;
+          color: $light-black;
+
+          &:hover {
+            color: $gold;
+          }
+
+          & + a {
+            margin-top: 15px;
+          }
+        }
+      }
     }
 
     .first-button,
@@ -424,6 +477,15 @@ header {
         color: $gold;
         border-color: $gold;
       }
+    }
+  }
+
+  &__auth-form.auth-successful {
+    .no-auth {
+      display: none;
+    }
+    .auth-successful {
+      display: block;
     }
   }
 }

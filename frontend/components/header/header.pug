@@ -18,8 +18,17 @@ mixin header()
           +e.icon
           +e.text Вход
         +e.auth-form
-          a(href="#popup-login").first-button войти
-          a(href="#").second-button зарегистрироваться
+          .no-auth
+            a(href="#popup-login").first-button войти
+            a(href="#").second-button зарегистрироваться
+          .auth-successful
+            a(href="#" onclick="$(this).closest('.header-login__auth-form').removeClass('auth-successful');").second-button выйти
+            .auth-successful__links 
+              a(href="#") Личные данные
+              a(href="#") История заказов
+              a(href="#") Персональные скидки
+              a(href="#") Сменить пароль
+              a(href="#") Отзывы
       +b.header-cart
         +e.icon(quantity=2)
         +e.text 2 690 руб

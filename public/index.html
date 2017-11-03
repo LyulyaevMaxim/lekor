@@ -53,7 +53,11 @@
 				<div class="header-login__text">Вход
 				</div>
 			</label>
-			<div class="header-login__auth-form"><a class="first-button" href="#popup-login">войти</a><a class="second-button" href="#">зарегистрироваться</a>
+			<div class="header-login__auth-form">
+				<div class="no-auth"><a class="first-button" href="#popup-login">войти</a><a class="second-button" href="#">зарегистрироваться</a></div>
+				<div class="auth-successful"><a class="second-button" href="#" onclick="$(this).closest('.header-login__auth-form').removeClass('auth-successful');">выйти</a>
+					<div class="auth-successful__links"> <a href="#">Личные данные</a><a href="#">История заказов</a><a href="#">Персональные скидки</a><a href="#">Сменить пароль</a><a href="#">Отзывы</a></div>
+				</div>
 			</div>
 		</div>
 		<div class="header-cart">
@@ -478,7 +482,7 @@
 		</div>
 	</footer>
 	<div class="light-modal" id="popup-login" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
-		<form class="light-modal-content animated zoomInUp" onsubmit="$('.header-login__auth-form').addClass('auth'); location.href='#';">
+		<form class="light-modal-content animated zoomInUp" onsubmit="location.href='#'; $('.header-login__auth-form').addClass('auth-successful');">
 			<div class="light-modal-header">
 				<h3 class="light-modal-heading">Вход</h3><a class="light-modal-close-icon" href="#" aria-label="close"></a>
 			</div>
