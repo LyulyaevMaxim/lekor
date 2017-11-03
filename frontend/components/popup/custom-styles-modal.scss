@@ -1,0 +1,134 @@
+.light-modal-content {
+  background: $white;
+  max-height: none;
+  min-width: 280px;
+  max-height: 90vh;
+}
+
+.light-modal-body,
+.light-modal-footer {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+.light-modal-header {
+  background: $white;
+  padding-top: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  @media (min-width: $tablet) {
+    padding-left: 34px;
+    padding-right: 26px;
+  }
+}
+
+.light-modal-heading {
+  font-size: 36px;
+  line-height: 42px;
+  color: $light-black;
+}
+
+.light-modal-close-icon {
+  padding: 16px;
+  background-color: transparent;
+  background-origin: content-box;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transition: initial;
+
+  &:hover {
+    background-color: transparent;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
+.light-modal-body {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  overflow: visible;
+
+  .classic-input {
+    width: auto;
+
+    &[required]:invalid {
+      box-shadow: none;
+      border-color: #e1e1e1;
+    }
+  }
+}
+
+.light-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  background: $white;
+  padding-bottom: 30px;
+  justify-content: center;
+  @media (min-width: $tablet) {
+    padding-bottom: 40px;
+  }
+
+  .first-button,
+  .second-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: $PTSansBold;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 30px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0 20px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .first-button {
+    color: $white;
+    background: $gold;
+    border-color: $gold;
+
+    &:hover {
+      background: $white;
+      color: $gold;
+    }
+
+    & + .second-button {
+      margin-top: 20px;
+
+      @media (min-width: $tablet) {
+        margin-left: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .second-button {
+    color: $light-black;
+    border-color: #b7b7b7;
+
+    &:hover {
+      color: $gold;
+      border-color: $gold;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin popup-login()
+  .light-modal(id="popup-login" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false")
+    form.light-modal-content.animated.zoomInUp
+      .light-modal-header
+        h3.light-modal-heading Вход
+        a(href="#" aria-label="close").light-modal-close-icon
+      .light-modal-body
+        <input type="e-mail" class="classic-input" placeholder="E-mail" required />
+        <input type="password" class="classic-input" placeholder="Пароль" required />
+      .light-modal-footer
+        button.first-button Войти
+        a(href="#").second-button Напомнить пароль?

@@ -12,7 +12,7 @@ mixin header()
         +e.text Нижний Новгород
       +b.header-timework
         +e.text Ежедневно с 8 до 17
-      +b.header-login
+      +b.A(href="#popup-login").header-login
         +e.icon
         +e.text Вход
       +b.header-cart
@@ -73,7 +73,7 @@ mixin header()
                   .header-callback-phone__icon
                   .header-callback-phone__numbers
                     a(href="tel:88007754330") 8 800 775-43-30
-                a(href="#").header-callback-button Заказать звонок              
+                a(href="#popup-callback").header-callback-button Заказать звонок              
               li.header-select-product
                 form
                   input(type="checkbox")#showSelectProduct

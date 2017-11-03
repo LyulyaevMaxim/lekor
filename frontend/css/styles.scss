@@ -11,13 +11,9 @@
 @import "../components/sliders/product-slider/product-slider.scss";
 /***************END: СЛАЙДЕРЫ *****************/
 
-/**************BEGIN: ФОРМЫ ************************/
-// @import "../components/forms/forms.scss";
-// @import "../components/forms/feedback/feedback.scss";
-/***************END: ФОРМЫ *****************/
-
 /**************BEGIN: КОНТЕНТ ************************/
 @import "../components/content/content.scss";
+@import "../components/content/input.scss";
 @import "../components/content/banner.scss";
 @import "../components/content/breadcrumbs/breadcrumbs.scss";
 @import "../components/content/rating/rating.scss";
@@ -25,7 +21,15 @@
 @import "../components/items/item.scss";
 @import "../components/items/items-section.scss";
 @import "../components/content/checkbox/checkbox.scss";
+@import "../components/content/select/select.scss";
 /***************END: КОНТЕНТ  *****************/
+
+/**************BEGIN: ФОРМЫ ************************/
+@import "../components/popup/light-modal.css";
+@import "../components/popup/custom-styles-modal.scss";
+@import "../components/popup/login/login.scss";
+@import "../components/popup/callback/callback.scss";
+/***************END: ФОРМЫ *****************/
 
 /*************** BEGIN: PRODUCT*****************/
 @import "../components/product/header/header.scss";

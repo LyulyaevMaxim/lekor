@@ -36,7 +36,9 @@
 //кнопка закрыть (жёлтая)
 .header-menu-main #showMainMenu:checked + label,
 .header-menu-catalog-body__title .close::before,
-block-for-filters.active > button {
+block-for-filters.active > button,
+.light-modal-close-icon,
+.light-modal-close-icon:hover {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGroup Copy%3C/title%3E%3Cg stroke='%23F9A61A' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cpath d='M1 1l16 16M17 1L1 17'/%3E%3C/g%3E%3C/svg%3E");
 }
 //кнопка закрыть (серая)
@@ -85,9 +87,19 @@ accordion > input:checked + label::after {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%234A4A4A' fill-rule='evenodd'%3E%3Cpath d='M13 7.6c.6.5 1.3.6 1.8.2.4-.4.5-1.2 0-1.7l-5-4.6-.8-1C8.6 0 8 0 7.4.5c-.5.4-.6 1-.2 1.6l6 5.6z'/%3E%3Cpath d='M3 7.6c-.5.5-1.2.6-1.7.2C.8 7.4.7 6.6 1 6l5-4.6 1-1C7.4 0 8.2 0 8.7.5c.4.4.5 1 0 1.6L3 7.6z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+//стрелка вверх (жёлтая)
+.select--title::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%23f9a61a' fill-rule='evenodd'%3E%3Cpath d='M13 7.6c.6.5 1.3.6 1.8.2.4-.4.5-1.2 0-1.7l-5-4.6-.8-1C8.6 0 8 0 7.4.5c-.5.4-.6 1-.2 1.6l6 5.6z'/%3E%3Cpath d='M3 7.6c-.5.5-1.2.6-1.7.2C.8 7.4.7 6.6 1 6l5-4.6 1-1C7.4 0 8.2 0 8.7.5c.4.4.5 1 0 1.6L3 7.6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 //стрелка вниз (чёрная)
 accordion > label::after {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%234A4A4A' fill-rule='evenodd'%3E%3Cpath d='M13 .5c.6-.5 1.3-.6 1.8-.2.4.4.5 1 0 1.6l-5 4.7-.8.8c-.4.5-1 .6-1.6.2-.5-.4-.6-1-.2-1.6l6-5.5z'/%3E%3Cpath d='M3 .5C2.4 0 1.7 0 1.2.3.8.7.7 1.3 1 2c0 0 3.4 3 5 4.7l1 .8c.4.5 1.2.6 1.7.2.4-.4.5-1 0-1.6L3 .6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+//стрелка вниз (жёлтая)
+.select--title.active::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1%3C/title%3E%3Cg fill='%23f9a61a' fill-rule='evenodd'%3E%3Cpath d='M13 .5c.6-.5 1.3-.6 1.8-.2.4.4.5 1 0 1.6l-5 4.7-.8.8c-.4.5-1 .6-1.6.2-.5-.4-.6-1-.2-1.6l6-5.5z'/%3E%3Cpath d='M3 .5C2.4 0 1.7 0 1.2.3.8.7.7 1.3 1 2c0 0 3.4 3 5 4.7l1 .8c.4.5 1.2.6 1.7.2.4-.4.5-1 0-1.6L3 .6z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 // слайдер: стрелка влево (серая)
@@ -226,7 +238,7 @@ item .product-in-stock::before {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1 Copy 5%3C/title%3E%3Cpath d='M1 5.8L6.6 13 13 1' stroke='%23F9A61A' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-// галочка (белая) 
+// галочка (белая)
 checkbox input:checked + label::after {
   background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EPage 1 Copy 5%3C/title%3E%3Cpath d='M1 5.8L6.6 13 13 1' stroke='%23FFF' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }

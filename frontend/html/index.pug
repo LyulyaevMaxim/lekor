@@ -8,21 +8,11 @@ include ../components/connect-js/scripts
 include ../components/items/items-section
 include ../components/items/item
 include ../components/content/content
-//- include ../components/content/block-with-img/block-with-img
-//- include ../components/content/content-with-img/content-with-img
-//- include ../components/content/block-for-features/block-for-features
-//- include ../components/content/block-for-advantages/block-for-advantages
-//- include ../components/content/block-for-articles/block-for-articles
-//- include ../components/content/block-for-lists/block-for-lists
-//- include ../components/content/files-for-download/files-for-download
 //- формы
-//- include ../components/forms/calculation-cost/calculation-cost
-//- include ../components/forms/feedback/feedback
-//- include ../components/forms/buy-one-click/buy-one-click
+include ../components/popup/login/login
+include ../components/popup/callback/callback
 //- слайдеры
-//- include ../components/sliders/tables/table
 include ../components/sliders/full-slider/full-slider
-//- include ../components/sliders/gallery/gallery
 
 doctype html
 html(lang="ru")
@@ -75,7 +65,9 @@ html(lang="ru")
     #vk_groups
       .vk-group-label: span Мы ВКонтакте
   +banner()
-  +footer()             
+  +footer()
+  +popup-login()  
+  +popup-callback()           
   
 +scripts()
 script(src="js/owl.carousel/owl.carousel.min.js")

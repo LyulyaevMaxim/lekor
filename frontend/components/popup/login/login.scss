@@ -1,0 +1,35 @@
+.light-modal#popup-login {
+  .light-modal-content {
+    @media (max-width: 767px) {
+      max-width: 370px;
+    }
+    @media (min-width: $tablet) {
+      width: 556px;
+    }
+  }
+  .light-modal-body {
+    .classic-input {
+      @media (min-width: $tablet) {
+        width: 430px;
+      }
+    }
+  }
+  .light-modal-footer {
+    @media (min-width: 520px) {
+      justify-content: space-between;
+
+      .first-button {
+        width: 95px;
+        & + .second-button {
+          margin-top: 0;
+        }
+      }
+      .second-button {
+        width: 212px;
+      }
+    }
+    @media (min-width: $tablet) {
+      justify-content: flex-start;
+    }
+  }
+}

@@ -44,13 +44,7 @@
 		<div class="header-timework">
 			<div class="header-timework__text">Ежедневно с 8 до 17
 			</div>
-		</div>
-		<div class="header-login">
-			<div class="header-login__icon">
-			</div>
-			<div class="header-login__text">Вход
-			</div>
-		</div>
+		</div><a class="header-login" href="#popup-login"><span class="header-login__icon"></span><span class="header-login__text">Вход</span></a>
 		<div class="header-cart">
 			<div class="header-cart__icon" quantity="2">
 			</div>
@@ -120,7 +114,7 @@
 							<div class="header-callback-phone">
 								<div class="header-callback-phone__icon"></div>
 								<div class="header-callback-phone__numbers"><a href="tel:88007754330">8 800 775-43-30</a></div>
-							</div><a class="header-callback-button" href="#">Заказать звонок              </a>
+							</div><a class="header-callback-button" href="#popup-callback">Заказать звонок              </a>
 						</li>
 						<li class="header-select-product">
 							<form>
@@ -472,9 +466,75 @@
 			</div>
 		</div>
 	</footer>
+	<div class="light-modal" id="popup-login" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+		<form class="light-modal-content animated zoomInUp">
+			<div class="light-modal-header">
+				<h3 class="light-modal-heading">Вход</h3><a class="light-modal-close-icon" href="#" aria-label="close"></a>
+			</div>
+			<div class="light-modal-body"><input type="e-mail" class="classic-input" placeholder="E-mail" required />
+<input type="password" class="classic-input" placeholder="Пароль" required />
+			</div>
+			<div class="light-modal-footer">
+				<button class="first-button">Войти</button><a class="second-button" href="#">Напомнить пароль?</a>
+			</div>
+		</form>
+	</div>
+	<div class="light-modal" id="popup-callback" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+		<form class="light-modal-content animated zoomInUp">
+			<div class="light-modal-header">
+				<h3 class="light-modal-heading">Заказать звонок</h3><a class="light-modal-close-icon" href="#" aria-label="close"></a>
+			</div>
+			<div class="light-modal-body"><input type="tel" class="classic-input" placeholder="Ваш телефон" required />
+<input type="text" class="classic-input" placeholder="Ваше имя" required />
+				<div class="time-for-callback">
+					<p>Предпочтетельное время для звонка</p>
+					<div class="select">
+						<label class="label"></label>
+						<select class="turnintodropdown_demo2">
+							<option>08.00</option>
+							<option>09.00</option>
+							<option>10.00</option>
+							<option>11.00</option>
+							<option>12.00</option>
+							<option>13.00</option>
+							<option>14.00</option>
+							<option>15.00</option>
+							<option>16.00</option>
+							<option>17.00</option>
+							<option>18.00</option>
+							<option>19.00</option>
+						</select>
+					</div>
+					<div class="separator"></div>
+					<div class="select">
+						<label class="label"></label>
+						<select class="turnintodropdown_demo2">
+							<option>20.00</option>
+							<option>19.00</option>
+							<option>18.00</option>
+							<option>17.00</option>
+							<option>16.00</option>
+							<option>15.00</option>
+							<option>14.00</option>
+							<option>13.00</option>
+							<option>12.00</option>
+							<option>11.00</option>
+							<option>10.00</option>
+							<option>09.00</option>
+							<option>08.00</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="light-modal-footer">
+				<button class="first-button">Заказать звонок</button>
+			</div>
+		</form>
+	</div>
 </body>
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/components/header/header.js" async="async"></script>
+<script src="js/components/content/select/select.js" async="async"></script>
 <script src="js/owl.carousel/owl.carousel.min.js"></script>
 <script src="js/components/sliders/full-slider/full-slider.js" async></script>
 <script src="js/components/items/items-section.js" async></script>

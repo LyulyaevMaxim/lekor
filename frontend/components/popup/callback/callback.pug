@@ -1,0 +1,45 @@
+mixin popup-callback()
+  .light-modal(id="popup-callback" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false")
+    form.light-modal-content.animated.zoomInUp
+      .light-modal-header
+        h3.light-modal-heading Заказать звонок
+        a(href="#" aria-label="close").light-modal-close-icon
+      .light-modal-body
+        <input type="tel" class="classic-input" placeholder="Ваш телефон" required />
+        <input type="text" class="classic-input" placeholder="Ваше имя" required />
+        .time-for-callback
+          p Предпочтетельное время для звонка
+          .select
+            label.label
+            select.turnintodropdown_demo2
+              option 08.00
+              option 09.00
+              option 10.00
+              option 11.00
+              option 12.00
+              option 13.00
+              option 14.00
+              option 15.00
+              option 16.00
+              option 17.00
+              option 18.00
+              option 19.00
+          .separator
+          .select
+            label.label
+            select.turnintodropdown_demo2
+              option 20.00
+              option 19.00
+              option 18.00
+              option 17.00
+              option 16.00
+              option 15.00
+              option 14.00
+              option 13.00
+              option 12.00
+              option 11.00
+              option 10.00
+              option 09.00
+              option 08.00
+      .light-modal-footer
+        button.first-button Заказать звонок

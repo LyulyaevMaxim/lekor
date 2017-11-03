@@ -66,42 +66,6 @@ basket-form-contacts {
     flex-direction: column;
     grid-area: block-for-inputs;
 
-    input {
-      width: 272px;
-      height: 50px;
-      border: 1px solid #e1e1e1;
-      border-radius: 30px;
-      padding-left: 18px;
-
-      @media (min-width: $tablet) {
-        width: 322px;
-      }
-
-      & + input {
-        margin-top: 20px;
-      }
-
-      &::placeholder {
-        font-size: 15px;
-        color: $light-black;
-        transition: transform 1s, opacity 0.5s;
-        opacity: 1;
-      }
-
-      &:focus::placeholder {
-        transform: translateY(-40px);
-        opacity: 0;
-      }
-
-      &[required] {
-        transition: box-shadow 1s, border-color 1s;
-      }
-
-      &[required]:invalid {
-        box-shadow: 0 0 0px 1px $gold;
-        border-color: transparent;
-      }
-    }
     & + .block-for-checkbox {
       margin-top: 30px;
     }
