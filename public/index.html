@@ -478,7 +478,7 @@
 		</div>
 	</footer>
 	<div class="light-modal" id="popup-login" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
-		<form class="light-modal-content animated zoomInUp">
+		<form class="light-modal-content animated zoomInUp" onsubmit="$('.header-login__auth-form').addClass('auth'); location.href='#';">
 			<div class="light-modal-header">
 				<h3 class="light-modal-heading">Вход</h3><a class="light-modal-close-icon" href="#" aria-label="close"></a>
 			</div>
@@ -486,7 +486,7 @@
 <input type="password" class="classic-input" placeholder="Пароль" required />
 			</div>
 			<div class="light-modal-footer">
-				<button class="first-button">Войти</button><a class="second-button" href="#">Напомнить пароль?</a>
+				<button class="first-button" type="submit">Войти</button><a class="second-button" href="#">Напомнить пароль?</a>
 			</div>
 		</form>
 	</div>
