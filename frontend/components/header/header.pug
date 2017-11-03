@@ -12,9 +12,14 @@ mixin header()
         +e.text Нижний Новгород
       +b.header-timework
         +e.text Ежедневно с 8 до 17
-      +b.A(href="#popup-login").header-login
-        +e.icon
-        +e.text Вход
+      +b.header-login
+        input(type="checkbox")#showAuthForm
+        label(for="showAuthForm")
+          +e.icon
+          +e.text Вход
+        +e.auth-form
+          a(href="#popup-login").first-button войти
+          a(href="#").second-button зарегистрироваться
       +b.header-cart
         +e.icon(quantity=2)
         +e.text 2 690 руб

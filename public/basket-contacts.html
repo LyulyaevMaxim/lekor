@@ -44,7 +44,18 @@
 		<div class="header-timework">
 			<div class="header-timework__text">Ежедневно с 8 до 17
 			</div>
-		</div><a class="header-login" href="#popup-login"><span class="header-login__icon"></span><span class="header-login__text">Вход</span></a>
+		</div>
+		<div class="header-login">
+			<input type="checkbox" id="showAuthForm"/>
+			<label for="showAuthForm">
+				<div class="header-login__icon">
+				</div>
+				<div class="header-login__text">Вход
+				</div>
+			</label>
+			<div class="header-login__auth-form"><a class="first-button" href="#popup-login">войти</a><a class="second-button" href="#">зарегистрироваться</a>
+			</div>
+		</div>
 		<div class="header-cart">
 			<div class="header-cart__icon" quantity="2">
 			</div>
@@ -114,7 +125,7 @@
 							<div class="header-callback-phone">
 								<div class="header-callback-phone__icon"></div>
 								<div class="header-callback-phone__numbers"><a href="tel:88007754330">8 800 775-43-30</a></div>
-							</div><a class="header-callback-button" href="#">Заказать звонок              </a>
+							</div><a class="header-callback-button" href="#popup-callback">Заказать звонок              </a>
 						</li>
 						<li class="header-select-product">
 							<form>
@@ -216,3 +227,4 @@
 </body>
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/components/header/header.js" async="async"></script>
+<script src="js/components/content/select/select.js" async="async"></script>
