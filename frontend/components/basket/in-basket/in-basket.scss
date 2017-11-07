@@ -1,12 +1,14 @@
 .basket-page.basket {
   & > h1 {
-    padding-top: 17px;
-    padding-bottom: 22px;
+    @media (max-width: 767px) {
+      padding-top: 17px;
+      padding-bottom: 22px;
+    }
   }
 }
 
 .basket-page.basket > form {
-  width: 100vw;
+  max-width: 100vw;
   background: $white;
   padding-bottom: 20px;
 
@@ -49,9 +51,16 @@
 
   .basket-item-description {
     width: calc(100% - 130px);
+    align-items: center;
 
     .name {
       margin-bottom: 15px;
+
+      @media (min-width: $tablet) {
+        max-width: 250px;
+        margin-bottom: 0;
+        margin-right: auto;
+      }
 
       a {
         display: block;
@@ -71,12 +80,24 @@
       line-height: 24px;
       font-weight: $PTSansBold;
       margin-bottom: 10px;
+
+      @media (min-width: $tablet) {
+        text-align: right;
+        padding-top: 3px;
+        position: relative;
+      }
     }
 
     .price {
       color: #9b9b9b;
       font-size: 16px;
       line-height: 18px;
+
+      @media (min-width: $tablet) {
+        width: max-content;
+        position: absolute;
+      }
+
       span {
         margin-left: 5px;
       }
@@ -84,7 +105,14 @@
 
     .cnt {
       display: flex;
+      align-items: center;
       margin-bottom: 15px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 0;
+        margin-right: 57px;
+        margin-top: 3px;
+      }
 
       .minus,
       .plus {
