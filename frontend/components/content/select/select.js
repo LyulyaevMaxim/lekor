@@ -1,5 +1,7 @@
 (function() {
-  select_button();
+  if (window.matchMedia("(min-width: 767px)").matches) {
+    select_button();
+  }
 
   function select_button() {
     if (!document.getElementById && !document.createTextNode) {

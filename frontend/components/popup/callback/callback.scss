@@ -1,8 +1,14 @@
 .light-modal#popup-callback {
+  z-index: 111;
+
   .light-modal-content {
+    @media (max-width: 1023px) {
+      width: 100%;
+      min-height: 100vh;
+    }
+
     @media (min-width: $desktop) {
       width: 391px;
-      height: 458px;
     }
   }
   .light-modal-body {
@@ -10,22 +16,40 @@
       padding-top: 30px;
     }
   }
+  .light-modal-footer {
+    justify-content: flex-start;
+    padding-bottom: 35px;
+    padding-top: 16px;
+
+    .first-button {
+      @media (max-width: 767px) {
+        width: auto;
+      }
+    }
+  }
+
   .time-for-callback {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 25px;
 
     p {
       color: $light-black;
       font-size: 16px;
       line-height: 18px;
       width: 100%;
+      margin-bottom: 5px;
+
+      @media (max-width: 1023px) {
+        margin-bottom: 15px;
+      }
     }
 
     .separator {
       display: inline-flex;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 8px;
+      margin-right: 8px;
       width: 21px;
       height: 2px;
       background: #979797;
